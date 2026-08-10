@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ORAA To Do</title>
+<style>
+  :root {
+    --navy: #1b2a4a;
+    --navy-dark: #12203a;
+    --gold: #b3924a;
+    --bg: #f4f5f7;
+    --card: #ffffff;
+    --border: #e2e4e9;
+    --text: #22273a;
+    --muted: #6b7280;
+    --done: #9ca3af;
+    --danger: #b3454a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+  }
+  header {
+    background: var(--navy);
+    color: #fff;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  header h1 {
+    font-size: 18px;
+    margin: 0;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+  }
+  header .status {
+    font-size: 12px;
+    color: #cfd6e4;
+  }
+  header .status.error { color: #f3b3b3; }
+  header .status.ok { color: #b6e3c6; }
+  #syncBtn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+    border-radius: 6px;
+    padding: 6px 10px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  #syncBtn:hover { background: rgba(255,255,255,0.1); }
+
+  nav#tabs {
+    display: flex;
+    overflow-x: auto;
+    background: var(--navy-dark);
+    padding: 0 10px;
+  }
+  nav#tabs button {
+    background: none;
+    border: none;
+    color: #b9c2d6;
+    padding: 12px 14px;
+    font-size: 13.5px;
+    white-space: nowrap;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+  }
+  nav#tabs button.active {
+    color: #fff;
+    border-bottom: 3px solid var(--gold);
+    font-weight: 600;
+  }
+
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 18px 14px 80px;
+  }
+
+  .addRow {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .addRow input[type=text] {
+    flex: 1;
+    padding: 11px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    background: var(--card);
+  }
+  .addRow button {
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0 16px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .addRow button:active { opacity: 0.85; }
+
+  ul.tasks { list-style: none; margin: 0; padding: 0; }
+  li.task {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 12px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  li.task .chk {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--navy);
+    flex-shrink: 0;
+    margin-top: 2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  li.task.done .chk {
+    background: var(--navy);
+  }
+  li.task .chk svg { display: none; width: 12px; height: 12px; }
+  li.task.done .chk svg { display: block; }
+  li.task .txt {
+    flex: 1;
+    font-size: 14.5px;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+  li.task.done .txt {
+    color: var(--done);
+    text-decoration: line-through;
+  }
+  li.task .meta {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+  li.task .actions {
+    display: flex;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+  li.task .actions button {
+    background: none;
+    border: none;
+    color: var(--muted);
+    font-size: 16px;
+    cursor: pointer;
+    padding: 2px 4px;
+  }
+  li.task .actions button.del:hover { color: var(--danger); }
+  li.task .actions button.pull:hover { color: var(--navy); }
+
+  .empty {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13.5px;
+    padding: 30px 10px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--muted);
+    margin: 18px 0 8px;
+  }
+
+  #setupOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(20,25,45,0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 100;
+  }
+  #setupOverlay .box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 24px;
+    max-width: 420px;
+    width: 100%;
+  }
+  #setupOverlay h2 { margin-top: 0; font-size: 17px; color: var(--navy); }
+  #setupOverlay p { font-size: 13.5px; color: var(--muted); line-height: 1.5; }
+  #setupOverlay input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  #setupOverlay button.primary {
+    width: 100%;
+    background: var(--navy);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 11px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #setupOverlay .err { color: var(--danger); font-size: 12.5px; margin-top: 6px; min-height: 16px; }
+
+  .pullPicker {
+    position: fixed;
+    inset: 0;
+    background: rgba(20,25,45,0.5);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 90;
+  }
+  .pullPicker .sheet {
+    background: #fff;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 14px 14px 0 0;
+    padding: 16px;
+    max-height: 70vh;
+    overflow-y: auto;
+  }
+  .pullPicker .sheet h3 { margin: 0 0 10px; font-size: 15px; color: var(--navy); }
+  .pullPicker .opt {
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .pullPicker .opt:hover { background: var(--bg); }
+  .pullPicker .cancel {
+    margin-top: 10px;
+    width: 100%;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<div id="setupOverlay">
+  <div class="box">
+    <h2>Connect to GitHub</h2>
+    <p>Enter your fine-grained personal access token to sync tasks to <b>joeoreilly79/ORAA-ToDo</b>. This is stored only in this browser's local storage — never sent anywhere except directly to GitHub's API.</p>
+    <input id="tokenInput" type="password" placeholder="github_pat_...">
+    <button class="primary" id="saveTokenBtn">Connect</button>
+    <div class="err" id="tokenErr"></div>
+  </div>
+</div>
+
+<header>
+  <h1>ORAA To Do</h1>
+  <div style="display:flex; align-items:center; gap:10px;">
+    <span class="status" id="statusText">Loading…</span>
+    <button id="syncBtn" title="Sync now">Sync</button>
+  </div>
+</header>
+
+<nav id="tabs"></nav>
+
+<main>
+  <div class="addRow">
+    <input type="text" id="newTaskInput" placeholder="Add a task…">
+    <button id="addTaskBtn">Add</button>
+  </div>
+  <ul class="tasks" id="taskList"></ul>
+</main>
+
+<script>
+const OWNER = "joeoreilly79";
+const REPO = "ORAA-ToDo";
+const FILE_PATH = "data.json";
+const API_BASE = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`;
+
+const PROJECTS = ["Day to Day", "Jamestown & Belgard", "Lapitus", "Sorrento", "RTB", "Ballsbridge", "Raheny", "Personal"];
+
+let state = {
+  tasks: {} // { projectName: [ {id, text, done, created} ] }
+};
+let fileSha = null;
+let currentTab = PROJECTS[0];
+let token = localStorage.getItem("oraa_todo_token") || "";
+let dirty = false;
+
+function emptyState() {
+  const s = { tasks: {} };
+  PROJECTS.forEach(p => s.tasks[p] = []);
+  return s;
+}
+
+function setStatus(text, cls) {
+  const el = document.getElementById("statusText");
+  el.textContent = text;
+  el.className = "status" + (cls ? " " + cls : "");
+}
+
+function ghHeaders() {
+  return {
+    "Authorization": "Bearer " + token,
+    "Accept": "application/vnd.github+json"
+  };
+}
+
+async function loadFromGitHub() {
+  setStatus("Syncing…");
+  try {
+    const res = await fetch(API_BASE, { headers: ghHeaders() });
+    if (res.status === 404) {
+      // file doesn't exist yet - initialize
+      state = emptyState();
+      await saveToGitHub(true);
+      setStatus("Connected", "ok");
+      return;
+    }
+    if (!res.ok) {
+      throw new Error("HTTP " + res.status);
+    }
+    const json = await res.json();
+    fileSha = json.sha;
+    const content = decodeURIComponent(escape(atob(json.content.replace(/\n/g, ""))));
+    const parsed = JSON.parse(content);
+    state = parsed;
+    PROJECTS.forEach(p => { if (!state.tasks[p]) state.tasks[p] = []; });
+    setStatus("Synced just now", "ok");
+  } catch (e) {
+    console.error(e);
+    setStatus("Sync failed — check token", "error");
+  }
+  render();
+}
+
+async function saveToGitHub(isInit) {
+  setStatus("Saving…");
+  try {
+    const body = {
+      message: isInit ? "Initialize ORAA To Do data" : "Update tasks " + new Date().toISOString(),
+      content: btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2))))
+    };
+    if (fileSha) body.sha = fileSha;
+    const res = await fetch(API_BASE, {
+      method: "PUT",
+      headers: { ...ghHeaders(), "Content-Type": "application/json" },
+      body: JSON.stringify(body)
+    });
+    if (!res.ok) {
+      const errJson = await res.json().catch(() => ({}));
+      throw new Error(errJson.message || ("HTTP " + res.status));
+    }
+    const json = await res.json();
+    fileSha = json.content.sha;
+    dirty = false;
+    setStatus("Saved", "ok");
+  } catch (e) {
+    console.error(e);
+    setStatus("Save failed: " + e.message, "error");
+  }
+}
+
+let saveTimer = null;
+function queueSave() {
+  dirty = true;
+  setStatus("Unsaved changes…");
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(() => saveToGitHub(false), 1200);
+}
+
+function renderTabs() {
+  const nav = document.getElementById("tabs");
+  nav.innerHTML = "";
+  PROJECTS.forEach(p => {
+    const btn = document.createElement("button");
+    btn.textContent = p;
+    if (p === currentTab) btn.classList.add("active");
+    btn.onclick = () => { currentTab = p; render(); };
+    nav.appendChild(btn);
+  });
+}
+
+function fmtDate(iso) {
+  try {
+    const d = new Date(iso);
+    return d.toLocaleDateString(undefined, { day: "numeric", month: "short" });
+  } catch (e) { return ""; }
+}
+
+function render() {
+  renderTabs();
+  const list = document.getElementById("taskList");
+  list.innerHTML = "";
+  const tasks = state.tasks[currentTab] || [];
+  const sorted = [...tasks].sort((a, b) => {
+    if (a.done !== b.done) return a.done ? 1 : -1;
+    return (a.created || "").localeCompare(b.created || "");
+  });
+  if (sorted.length === 0) {
+    const div = document.createElement("div");
+    div.className = "empty";
+    div.textContent = "No tasks yet in " + currentTab + ".";
+    list.appendChild(div);
+    return;
+  }
+  sorted.forEach(t => {
+    const li = document.createElement("li");
+    li.className = "task" + (t.done ? " done" : "");
+
+    const chk = document.createElement("div");
+    chk.className = "chk";
+    chk.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"><path d="M4 12l6 6L20 6"/></svg>';
+    chk.onclick = () => toggleTask(t.id);
+
+    const txtWrap = document.createElement("div");
+    txtWrap.style.flex = "1";
+    const txt = document.createElement("div");
+    txt.className = "txt";
+    txt.textContent = t.text;
+    const meta = document.createElement("div");
+    meta.className = "meta";
+    meta.textContent = (t.origin ? ("from " + t.origin + " · ") : "") + fmtDate(t.created);
+    txtWrap.appendChild(txt);
+    txtWrap.appendChild(meta);
+
+    const actions = document.createElement("div");
+    actions.className = "actions";
+
+    if (currentTab !== "Day to Day") {
+      const pullBtn = document.createElement("button");
+      pullBtn.className = "pull";
+      pullBtn.title = "Pull into Day to Day";
+      pullBtn.textContent = "↗";
+      pullBtn.onclick = () => pullToDayToDay(t);
+      actions.appendChild(pullBtn);
+    }
+
+    const delBtn = document.createElement("button");
+    delBtn.className = "del";
+    delBtn.title = "Delete";
+    delBtn.textContent = "✕";
+    delBtn.onclick = () => deleteTask(t.id);
+    actions.appendChild(delBtn);
+
+    li.appendChild(chk);
+    li.appendChild(txtWrap);
+    li.appendChild(actions);
+    list.appendChild(li);
+  });
+}
+
+function toggleTask(id) {
+  const tasks = state.tasks[currentTab];
+  const t = tasks.find(x => x.id === id);
+  if (t) { t.done = !t.done; queueSave(); render(); }
+}
+
+function deleteTask(id) {
+  state.tasks[currentTab] = state.tasks[currentTab].filter(x => x.id !== id);
+  queueSave();
+  render();
+}
+
+function addTask(text) {
+  if (!text.trim()) return;
+  const t = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+    text: text.trim(),
+    done: false,
+    created: new Date().toISOString()
+  };
+  state.tasks[currentTab].push(t);
+  queueSave();
+  render();
+}
+
+function pullToDayToDay(task) {
+  const copy = {
+    id: Date.now().toString(36) + Math.random().toString(36).slice(2, 7),
+    text: task.text,
+    done: false,
+    created: new Date().toISOString(),
+    origin: currentTab
+  };
+  state.tasks["Day to Day"].push(copy);
+  queueSave();
+  setStatus("Pulled into Day to Day", "ok");
+  render();
+}
+
+document.getElementById("addTaskBtn").onclick = () => {
+  const input = document.getElementById("newTaskInput");
+  addTask(input.value);
+  input.value = "";
+  input.focus();
+};
+document.getElementById("newTaskInput").addEventListener("keydown", e => {
+  if (e.key === "Enter") document.getElementById("addTaskBtn").click();
+});
+document.getElementById("syncBtn").onclick = () => loadFromGitHub();
+
+document.getElementById("saveTokenBtn").onclick = async () => {
+  const val = document.getElementById("tokenInput").value.trim();
+  if (!val.startsWith("github_pat_") && !val.startsWith("ghp_")) {
+    document.getElementById("tokenErr").textContent = "That doesn't look like a GitHub token.";
+    return;
+  }
+  token = val;
+  localStorage.setItem("oraa_todo_token", token);
+  document.getElementById("setupOverlay").style.display = "none";
+  await loadFromGitHub();
+};
+
+// init
+if (token) {
+  document.getElementById("setupOverlay").style.display = "none";
+  loadFromGitHub();
+} else {
+  setStatus("Not connected");
+}
+render();
+
+// warn before closing with unsaved changes
+window.addEventListener("beforeunload", (e) => {
+  if (dirty) { e.preventDefault(); e.returnValue = ""; }
+});
+</script>
+</body>
+</html>
