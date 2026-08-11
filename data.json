@@ -295,7 +295,15 @@
       "project": "TH Projects",
       "priority": 2,
       "due": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "msoquls6a89t",
+          "text": "Chat Pearse and get update",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
