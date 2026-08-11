@@ -232,6 +232,16 @@
           "priority": 5
         }
       ]
+    },
+    {
+      "id": "msoiw0x2wzx8w",
+      "text": "Bicycle Chanel - get info over to MMP for pricing",
+      "done": false,
+      "created": "2026-08-11T10:33:51.014Z",
+      "project": "RTB",
+      "priority": 5,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
