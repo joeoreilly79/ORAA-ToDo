@@ -88,7 +88,14 @@
       "project": "Personal",
       "priority": 3,
       "due": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "msog5whbjfiy",
+          "text": "follow up sith Simon",
+          "done": false,
+          "priority": 3
+        }
+      ]
     }
   ],
   "projects": [
