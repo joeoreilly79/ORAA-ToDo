@@ -71,7 +71,13 @@
       "project": "Personal",
       "priority": 3,
       "due": "2026-08-31",
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "msoa1wkdywcw",
+          "text": "look at the numbers",
+          "done": false
+        }
+      ]
     }
   ],
   "projects": [
