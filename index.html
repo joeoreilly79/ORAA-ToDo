@@ -282,7 +282,35 @@ function migrateIfNeeded(parsed) {
   return { tasks: [], projects: DEFAULT_PROJECTS.slice(), archivedProjects: [] };
 }
 
+const CACHE_KEY = "oraa_todo_cache";
+
+function cacheLocally() {
+  try {
+    localStorage.setItem(CACHE_KEY, JSON.stringify({ state: state, fileSha: fileSha, savedAt: new Date().toISOString() }));
+  } catch (e) { /* ignore quota errors */ }
+}
+
+function loadLocalCache() {
+  try {
+    const raw = localStorage.getItem(CACHE_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw);
+  } catch (e) { return null; }
+}
+
 async function loadFromGitHub() {
+  if (!navigator.onLine) {
+    const cached = loadLocalCache();
+    if (cached) {
+      state = cached.state;
+      fileSha = cached.fileSha;
+      setStatus("Offline — showing last synced version", "error");
+    } else {
+      setStatus("Offline — nothing cached yet", "error");
+    }
+    render();
+    return;
+  }
   setStatus("Syncing…");
   try {
     const res = await fetch(API_BASE, { headers: ghHeaders() });
@@ -299,15 +327,28 @@ async function loadFromGitHub() {
     const content = decodeURIComponent(escape(atob(json.content.replace(/\n/g, ""))));
     const parsed = JSON.parse(content);
     state = migrateIfNeeded(parsed);
+    cacheLocally();
     setStatus("Synced just now", "ok");
   } catch (e) {
     console.error(e);
-    setStatus("Sync failed — check token", "error");
+    const cached = loadLocalCache();
+    if (cached) {
+      state = cached.state;
+      fileSha = cached.fileSha;
+      setStatus("Offline — showing last synced version", "error");
+    } else {
+      setStatus("Sync failed — check token", "error");
+    }
   }
   render();
 }
 
 async function saveToGitHub(isInit) {
+  cacheLocally();
+  if (!navigator.onLine) {
+    setStatus("Offline — saved locally, will sync", "error");
+    return;
+  }
   setStatus("Saving…");
   try {
     const body = {
@@ -327,20 +368,31 @@ async function saveToGitHub(isInit) {
     const json = await res.json();
     fileSha = json.content.sha;
     dirty = false;
+    cacheLocally();
     setStatus("Saved", "ok");
   } catch (e) {
     console.error(e);
-    setStatus("Save failed: " + e.message, "error");
+    // Likely a network drop mid-request — keep it queued, don't discard the change.
+    setStatus("Offline — saved locally, will sync", "error");
   }
 }
 
 let saveTimer = null;
 function queueSave() {
   dirty = true;
-  setStatus("Unsaved changes…");
+  cacheLocally();
+  setStatus(navigator.onLine ? "Unsaved changes…" : "Offline — saved locally, will sync", "error");
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => saveToGitHub(false), 1200);
 }
+
+window.addEventListener("online", () => {
+  setStatus("Back online — syncing…");
+  if (dirty) { saveToGitHub(false); } else { loadFromGitHub(); }
+});
+window.addEventListener("offline", () => {
+  setStatus("Offline — you can keep working", "error");
+});
 
 function renderTabs() {
   const nav = document.getElementById("tabs");
@@ -967,6 +1019,12 @@ render();
 window.addEventListener("beforeunload", (e) => {
   if (dirty) { e.preventDefault(); e.returnValue = ""; }
 });
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("sw.js").catch(() => {});
+  });
+}
 </script>
 </body>
 </html>
