@@ -129,6 +129,36 @@
     padding: 11px; font-size: 14px; cursor: pointer;
   }
   #setupOverlay .err { color: var(--danger); font-size: 12.5px; margin-top: 6px; min-height: 16px; }
+
+  li.task .actions button.edit:hover { color: var(--navy); }
+  li.task .actions button.sub:hover { color: var(--navy); }
+  .editInput {
+    flex: 1; font-size: 14.5px; padding: 4px 6px; border: 1px solid var(--navy);
+    border-radius: 5px; font-family: inherit;
+  }
+  .subToggle {
+    font-size: 11px; color: var(--muted); cursor: pointer; user-select: none;
+  }
+  .subSection { margin-top: 8px; padding-left: 4px; border-left: 2px solid var(--border); }
+  .subRow { display: flex; align-items: center; gap: 8px; padding: 4px 0 4px 8px; }
+  .subRow .subChk {
+    width: 15px; height: 15px; border-radius: 4px; border: 2px solid var(--navy);
+    flex-shrink: 0; cursor: pointer; display: flex; align-items: center; justify-content: center;
+  }
+  .subRow.done .subChk { background: var(--navy); }
+  .subRow .subChk svg { display: none; width: 9px; height: 9px; }
+  .subRow.done .subChk svg { display: block; }
+  .subRow .subTxt { flex: 1; font-size: 13px; word-break: break-word; }
+  .subRow.done .subTxt { color: var(--done); text-decoration: line-through; }
+  .subRow .subDel { background: none; border: none; color: var(--muted); font-size: 13px; cursor: pointer; }
+  .subRow .subDel:hover { color: var(--danger); }
+  .subAddRow { display: flex; gap: 6px; padding: 4px 0 4px 8px; }
+  .subAddRow input {
+    flex: 1; font-size: 13px; padding: 5px 8px; border: 1px solid var(--border); border-radius: 6px;
+  }
+  .subAddRow button {
+    background: var(--navy); color: #fff; border: none; border-radius: 6px; padding: 0 10px; font-size: 12px; cursor: pointer;
+  }
 </style>
 </head>
 <body>
@@ -219,7 +249,11 @@ function migrateIfNeeded(parsed) {
     return { tasks: flat };
   }
   if (parsed && Array.isArray(parsed.tasks)) {
-    parsed.tasks.forEach(t => { if (!t.priority) t.priority = 3; if (!t.project) t.project = GENERAL_PROJECT; });
+    parsed.tasks.forEach(t => {
+      if (!t.priority) t.priority = 3;
+      if (!t.project) t.project = GENERAL_PROJECT;
+      if (!t.subtasks) t.subtasks = [];
+    });
     return parsed;
   }
   return { tasks: [] };
@@ -362,9 +396,19 @@ function priorityLabel(p) {
   return { 5: "5 — Today", 4: "4 — High", 3: "3 — Medium", 2: "2 — Low", 1: "1 — Someday" }[p] || (p + "");
 }
 
+let expandedTasks = {};
+
 function taskRow(t) {
+  if (!t.subtasks) t.subtasks = [];
   const li = document.createElement("li");
+  li.style.flexDirection = "column";
+  li.style.alignItems = "stretch";
   li.className = "task p" + t.priority + (t.done ? " done" : "");
+
+  const topRow = document.createElement("div");
+  topRow.style.display = "flex";
+  topRow.style.alignItems = "flex-start";
+  topRow.style.gap = "10px";
 
   const chk = document.createElement("div");
   chk.className = "chk";
@@ -373,9 +417,11 @@ function taskRow(t) {
 
   const txtWrap = document.createElement("div");
   txtWrap.style.flex = "1";
+
   const txt = document.createElement("div");
   txt.className = "txt";
   txt.textContent = t.text;
+  txt.ondblclick = () => startEdit(t.id, txt, txtWrap);
 
   const meta = document.createElement("div");
   meta.className = "meta";
@@ -402,11 +448,27 @@ function taskRow(t) {
   prioSelect.onchange = () => changePriority(t.id, parseInt(prioSelect.value, 10));
   meta.appendChild(prioSelect);
 
+  const doneSubs = t.subtasks.filter(s => s.done).length;
+  const subToggle = document.createElement("span");
+  subToggle.className = "subToggle";
+  const isExpanded = !!expandedTasks[t.id];
+  subToggle.textContent = (isExpanded ? "▾ " : "▸ ") + "Subtasks" + (t.subtasks.length ? " (" + doneSubs + "/" + t.subtasks.length + ")" : "");
+  subToggle.onclick = () => { expandedTasks[t.id] = !expandedTasks[t.id]; render(); };
+  meta.appendChild(subToggle);
+
   txtWrap.appendChild(txt);
   txtWrap.appendChild(meta);
 
   const actions = document.createElement("div");
   actions.className = "actions";
+
+  const editBtn = document.createElement("button");
+  editBtn.className = "edit";
+  editBtn.title = "Edit";
+  editBtn.textContent = "✎";
+  editBtn.onclick = () => startEdit(t.id, txt, txtWrap);
+  actions.appendChild(editBtn);
+
   const delBtn = document.createElement("button");
   delBtn.className = "del";
   delBtn.title = "Delete";
@@ -414,10 +476,102 @@ function taskRow(t) {
   delBtn.onclick = () => deleteTask(t.id);
   actions.appendChild(delBtn);
 
-  li.appendChild(chk);
-  li.appendChild(txtWrap);
-  li.appendChild(actions);
+  topRow.appendChild(chk);
+  topRow.appendChild(txtWrap);
+  topRow.appendChild(actions);
+  li.appendChild(topRow);
+
+  if (isExpanded) {
+    li.appendChild(subtaskSection(t));
+  }
+
   return li;
+}
+
+function startEdit(id, txtEl, container) {
+  const t = state.tasks.find(x => x.id === id);
+  if (!t) return;
+  const input = document.createElement("input");
+  input.className = "editInput";
+  input.type = "text";
+  input.value = t.text;
+  container.replaceChild(input, txtEl);
+  input.focus();
+  input.select();
+  const commit = () => {
+    const val = input.value.trim();
+    if (val) t.text = val;
+    queueSave();
+    render();
+  };
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") { commit(); }
+    if (e.key === "Escape") { render(); }
+  });
+  input.addEventListener("blur", commit);
+}
+
+function subtaskSection(t) {
+  const wrap = document.createElement("div");
+  wrap.className = "subSection";
+
+  t.subtasks.forEach(s => {
+    const row = document.createElement("div");
+    row.className = "subRow" + (s.done ? " done" : "");
+
+    const chk = document.createElement("div");
+    chk.className = "subChk";
+    chk.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"><path d="M4 12l6 6L20 6"/></svg>';
+    chk.onclick = () => { s.done = !s.done; queueSave(); render(); };
+
+    const txt = document.createElement("div");
+    txt.className = "subTxt";
+    txt.textContent = s.text;
+    txt.ondblclick = () => {
+      const input = document.createElement("input");
+      input.className = "editInput";
+      input.style.fontSize = "13px";
+      input.value = s.text;
+      row.replaceChild(input, txt);
+      input.focus(); input.select();
+      const commit = () => { const v = input.value.trim(); if (v) s.text = v; queueSave(); render(); };
+      input.addEventListener("keydown", e => { if (e.key === "Enter") commit(); if (e.key === "Escape") render(); });
+      input.addEventListener("blur", commit);
+    };
+
+    const del = document.createElement("button");
+    del.className = "subDel";
+    del.textContent = "✕";
+    del.onclick = () => { t.subtasks = t.subtasks.filter(x => x.id !== s.id); queueSave(); render(); };
+
+    row.appendChild(chk);
+    row.appendChild(txt);
+    row.appendChild(del);
+    wrap.appendChild(row);
+  });
+
+  const addRow = document.createElement("div");
+  addRow.className = "subAddRow";
+  const input = document.createElement("input");
+  input.type = "text";
+  input.placeholder = "Add subtask…";
+  const addBtn = document.createElement("button");
+  addBtn.textContent = "Add";
+  const doAdd = () => {
+    const val = input.value.trim();
+    if (!val) return;
+    t.subtasks.push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), text: val, done: false });
+    input.value = "";
+    queueSave();
+    render();
+  };
+  addBtn.onclick = doAdd;
+  input.addEventListener("keydown", e => { if (e.key === "Enter") doAdd(); });
+  addRow.appendChild(input);
+  addRow.appendChild(addBtn);
+  wrap.appendChild(addRow);
+
+  return wrap;
 }
 
 function toggleTask(id) {
