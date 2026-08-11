@@ -1,6 +1,6 @@
 {
-  "name": "ORAA To Do",
-  "short_name": "ORAA To Do",
+  "name": "Joe To Do",
+  "short_name": "Joe To Do",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
