@@ -226,9 +226,22 @@ const DEFAULT_PROJECTS = ["Jamestown & Belgard", "Lapitus", "Sorrento", "RTB", "
 const GENERAL_PROJECT = "General";
 function currentTabs() {
   const active = state.projects.filter(p => !(state.archivedProjects||[]).includes(p));
-  const hasPersonal = active.includes("Personal");
-  const rest = active.filter(p => p !== "Personal");
-  return ["Day to Day", ...(hasPersonal ? ["Personal"] : []), ...rest];
+  return ["Day to Day", ...active];
+}
+
+function moveProject(name, dir) {
+  const archived = state.archivedProjects || [];
+  const activeNames = state.projects.filter(p => !archived.includes(p));
+  const idx = activeNames.indexOf(name);
+  const targetIdx = idx + dir;
+  if (targetIdx < 0 || targetIdx >= activeNames.length) return;
+  const otherName = activeNames[targetIdx];
+  const i1 = state.projects.indexOf(name);
+  const i2 = state.projects.indexOf(otherName);
+  const tmp = state.projects[i1];
+  state.projects[i1] = state.projects[i2];
+  state.projects[i2] = tmp;
+  queueSave();
 }
 
 // state.tasks is a FLAT array: {id, text, done, created, project, priority}
@@ -422,6 +435,12 @@ function renderTabs() {
   nav.appendChild(manageBtn);
 }
 
+function refreshManagePanel(overlay) {
+  document.body.removeChild(overlay);
+  render();
+  openManageProjects();
+}
+
 function openManageProjects() {
   const overlay = document.createElement("div");
   overlay.id = "manageOverlay";
@@ -447,12 +466,30 @@ function openManageProjects() {
     e.textContent = "No active projects.";
     box.appendChild(e);
   }
-  active.forEach(p => {
+  active.forEach((p, i) => {
     const row = document.createElement("div");
-    row.style.cssText = "display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #e2e4e9;";
+    row.style.cssText = "display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #e2e4e9;gap:8px;";
     const name = document.createElement("span");
     name.textContent = p;
-    name.style.fontSize = "14px";
+    name.style.cssText = "font-size:14px;flex:1;";
+
+    const controls = document.createElement("div");
+    controls.style.cssText = "display:flex;gap:4px;align-items:center;";
+
+    const leftBtn = document.createElement("button");
+    leftBtn.textContent = "←";
+    leftBtn.disabled = i === 0;
+    leftBtn.style.cssText = "background:none;border:1px solid #e2e4e9;border-radius:6px;width:26px;height:26px;font-size:13px;cursor:pointer;color:" + (i === 0 ? "#d1d5db" : "#1b2a4a") + ";";
+    leftBtn.onclick = () => { moveProject(p, -1); refreshManagePanel(overlay); };
+    controls.appendChild(leftBtn);
+
+    const rightBtn = document.createElement("button");
+    rightBtn.textContent = "→";
+    rightBtn.disabled = i === active.length - 1;
+    rightBtn.style.cssText = "background:none;border:1px solid #e2e4e9;border-radius:6px;width:26px;height:26px;font-size:13px;cursor:pointer;color:" + (i === active.length - 1 ? "#d1d5db" : "#1b2a4a") + ";";
+    rightBtn.onclick = () => { moveProject(p, 1); refreshManagePanel(overlay); };
+    controls.appendChild(rightBtn);
+
     const btn = document.createElement("button");
     btn.textContent = "Archive";
     btn.style.cssText = "background:none;border:1px solid #e2e4e9;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;color:#6b7280;";
@@ -464,8 +501,9 @@ function openManageProjects() {
       document.body.removeChild(overlay);
       render();
     };
+    controls.appendChild(btn);
     row.appendChild(name);
-    row.appendChild(btn);
+    row.appendChild(controls);
     box.appendChild(row);
   });
 
