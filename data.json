@@ -7,18 +7,7 @@
       "created": "2026-08-11T05:49:00.005Z",
       "project": "Jamestown & Belgard",
       "priority": 3,
-      "subtasks": [
-        {
-          "id": "mso927mikdvw",
-          "text": "Chase HJL",
-          "done": false
-        },
-        {
-          "id": "mso92h7xkh9d",
-          "text": "Call DCC and make intro",
-          "done": false
-        }
-      ],
+      "subtasks": [],
       "due": null
     },
     {
