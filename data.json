@@ -18,7 +18,8 @@
           "text": "Call DCC and make intro",
           "done": false
         }
-      ]
+      ],
+      "due": null
     },
     {
       "id": "mso9368s5pek5",
@@ -33,7 +34,18 @@
           "text": "make the agenda",
           "done": false
         }
-      ]
+      ],
+      "due": null
+    },
+    {
+      "id": "mso9vj1ksw75z",
+      "text": "Clare's New Car",
+      "done": false,
+      "created": "2026-08-11T06:21:31.304Z",
+      "project": "Personal",
+      "priority": 3,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
@@ -44,5 +56,6 @@
     "Ballsbridge",
     "Raheny",
     "Personal"
-  ]
+  ],
+  "archivedProjects": []
 }
