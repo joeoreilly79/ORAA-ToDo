@@ -27,7 +27,13 @@
       "created": "2026-08-11T05:59:28.348Z",
       "project": "Sorrento",
       "priority": 3,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mso93hogw4zw",
+          "text": "make the agenda",
+          "done": false
+        }
+      ]
     }
   ],
   "projects": [
