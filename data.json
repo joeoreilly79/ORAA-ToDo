@@ -299,7 +299,7 @@
         {
           "id": "msoquls6a89t",
           "text": "Chat Pearse and get update",
-          "done": false,
+          "done": true,
           "priority": 5,
           "due": null
         }
