@@ -202,7 +202,10 @@
     <input type="date" id="dueDateInput" title="Due date (optional)">
     <button id="addTaskBtn">Add</button>
   </div>
-  <div class="addHint" id="addHint"></div>
+  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+    <div class="addHint" id="addHint" style="margin-bottom:0;"></div>
+    <button id="shareListBtn" style="background:none;border:1px solid var(--border);border-radius:7px;padding:5px 10px;font-size:12px;color:var(--navy);cursor:pointer;white-space:nowrap;">↥ Share list</button>
+  </div>
   <ul class="tasks" id="taskList"></ul>
 </main>
 
@@ -452,6 +455,51 @@ function taskShareText(t) {
   }
   return lines.join("\n");
 }
+
+function listShareText() {
+  const tasks = tasksForCurrentTab();
+  const notDone = tasks.filter(t => !t.done).sort((a, b) => {
+    const ap = effectivePriority(a), bp = effectivePriority(b);
+    if (bp !== ap) return bp - ap;
+    return (a.created || "").localeCompare(b.created || "");
+  });
+  const done = tasks.filter(t => t.done);
+
+  let lines = ["ORAA To Do — " + currentTab, ""];
+  let lastP = null;
+  notDone.forEach(t => {
+    const ep = effectivePriority(t);
+    if (ep !== lastP) {
+      lastP = ep;
+      lines.push(priorityLabel(ep) + ":");
+    }
+    let line = "  • " + t.text;
+    if (currentTab === "Day to Day") line += " (" + t.project + ")";
+    if (t.due) line += " — due " + fmtDue(t.due);
+    lines.push(line);
+  });
+  if (notDone.length === 0) lines.push("(nothing outstanding)");
+  if (done.length) {
+    lines.push("");
+    lines.push("Done (" + done.length + "):");
+    done.forEach(t => lines.push("  ✓ " + t.text));
+  }
+  return lines.join("\n");
+}
+
+async function shareList() {
+  const text = listShareText();
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: "ORAA To Do — " + currentTab, text: text });
+      return;
+    } catch (e) {
+      if (e && e.name === "AbortError") return;
+    }
+  }
+  showShareFallback(text);
+}
+document.getElementById("shareListBtn").onclick = shareList;
 
 async function shareTask(t) {
   const text = taskShareText(t);
