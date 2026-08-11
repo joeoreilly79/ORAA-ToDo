@@ -207,6 +207,12 @@
           "text": "Send the MJT info to Xinjia & TC",
           "done": false,
           "priority": 5
+        },
+        {
+          "id": "msoguyjavrmc",
+          "text": "Get the consultant invoices over for payment",
+          "done": false,
+          "priority": 4
         }
       ]
     }
