@@ -28,7 +28,8 @@
         {
           "id": "mso93hogw4zw",
           "text": "make the agenda",
-          "done": false
+          "done": false,
+          "priority": 3
         }
       ],
       "due": null
@@ -45,17 +46,20 @@
         {
           "id": "mso9yzoobyzc",
           "text": "move cash",
-          "done": false
+          "done": false,
+          "priority": 5
         },
         {
           "id": "mso9z4bc7qii",
           "text": "sort insurance",
-          "done": false
+          "done": false,
+          "priority": 3
         },
         {
           "id": "mso9zdcckbyu",
           "text": "road tax",
-          "done": false
+          "done": false,
+          "priority": 3
         }
       ]
     },
