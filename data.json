@@ -45,7 +45,13 @@
       "project": "Personal",
       "priority": 3,
       "due": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mso9yzoobyzc",
+          "text": "move cash",
+          "done": false
+        }
+      ]
     }
   ],
   "projects": [
