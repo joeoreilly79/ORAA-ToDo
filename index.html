@@ -841,6 +841,13 @@ function taskRow(t) {
   const txtWrap = document.createElement("div");
   txtWrap.style.flex = "1";
 
+  if (currentTab === "Day to Day") {
+    const projLabel = document.createElement("div");
+    projLabel.textContent = t.project;
+    projLabel.style.cssText = "font-size:10.5px; font-weight:700; text-transform:uppercase; letter-spacing:0.5px; color:var(--gold); margin-bottom:2px;";
+    txtWrap.appendChild(projLabel);
+  }
+
   const txt = document.createElement("div");
   txt.className = "txt";
   txt.textContent = t.text;
@@ -849,15 +856,9 @@ function taskRow(t) {
   const meta = document.createElement("div");
   meta.className = "meta";
 
-  const projSpan = document.createElement("span");
-  projSpan.textContent = (currentTab === "Day to Day" ? t.project : fmtDate(t.created));
-  meta.appendChild(projSpan);
-
-  if (currentTab === "Day to Day") {
-    const dateSpan = document.createElement("span");
-    dateSpan.textContent = "· " + fmtDate(t.created);
-    meta.appendChild(dateSpan);
-  }
+  const dateSpanOnly = document.createElement("span");
+  dateSpanOnly.textContent = fmtDate(t.created);
+  meta.appendChild(dateSpanOnly);
 
   const prioSelect = document.createElement("select");
   prioSelect.className = "prioPick";
