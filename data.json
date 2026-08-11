@@ -201,6 +201,12 @@
           "text": "Get MJT to send info out to GB for pricing",
           "done": false,
           "priority": 5
+        },
+        {
+          "id": "msogu1skbg3s",
+          "text": "Send the MJT info to Xinjia & TC",
+          "done": false,
+          "priority": 5
         }
       ]
     }
