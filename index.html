@@ -605,8 +605,8 @@ async function shareList() {
 document.getElementById("shareListBtn").onclick = shareList;
 document.getElementById("toggleSubtasksBtn").onclick = () => {
   const tasksWithSubs = tasksForCurrentTab().filter(t => t.subtasks && t.subtasks.length);
-  const anyCollapsed = tasksWithSubs.some(t => !expandedTasks[t.id]);
-  tasksWithSubs.forEach(t => { expandedTasks[t.id] = anyCollapsed; });
+  const anyCollapsed = tasksWithSubs.some(t => expandedTasks[t.id] === false);
+  tasksWithSubs.forEach(t => { expandedTasks[t.id] = anyCollapsed ? true : false; });
   render();
 };
 
@@ -728,7 +728,7 @@ function render() {
     toggleBtn.style.display = "none";
   } else {
     toggleBtn.style.display = "";
-    const anyCollapsed = tasksWithSubs.some(t => !expandedTasks[t.id]);
+    const anyCollapsed = tasksWithSubs.some(t => expandedTasks[t.id] === false);
     toggleBtn.textContent = anyCollapsed ? "Show subtasks" : "Hide subtasks";
   }
 
@@ -881,9 +881,9 @@ function taskRow(t) {
   const doneSubs = t.subtasks.filter(s => s.done).length;
   const subToggle = document.createElement("span");
   subToggle.className = "subToggle";
-  const isExpanded = !!expandedTasks[t.id];
+  const isExpanded = expandedTasks[t.id] !== false;
   subToggle.textContent = (isExpanded ? "▾ " : "▸ ") + "Subtasks" + (t.subtasks.length ? " (" + doneSubs + "/" + t.subtasks.length + ")" : "");
-  subToggle.onclick = () => { expandedTasks[t.id] = !expandedTasks[t.id]; render(); };
+  subToggle.onclick = () => { expandedTasks[t.id] = !isExpanded; render(); };
   meta.appendChild(subToggle);
 
   txtWrap.appendChild(txt);
