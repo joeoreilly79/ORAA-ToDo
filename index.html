@@ -210,14 +210,14 @@ const REPO = "ORAA-ToDo";
 const FILE_PATH = "data.json";
 const API_BASE = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_PATH}`;
 
-const REAL_PROJECTS = ["Jamestown & Belgard", "Lapitus", "Sorrento", "RTB", "Ballsbridge", "Raheny", "Personal"];
-const TABS = ["Day to Day", ...REAL_PROJECTS];
+const DEFAULT_PROJECTS = ["Jamestown & Belgard", "Lapitus", "Sorrento", "RTB", "Ballsbridge", "Raheny", "Personal"];
 const GENERAL_PROJECT = "General";
+function currentTabs() { return ["Day to Day", ...state.projects]; }
 
 // state.tasks is a FLAT array: {id, text, done, created, project, priority}
-let state = { tasks: [] };
+let state = { tasks: [], projects: DEFAULT_PROJECTS.slice() };
 let fileSha = null;
-let currentTab = TABS[0];
+let currentTab = "Day to Day";
 let token = localStorage.getItem("oraa_todo_token") || "";
 let dirty = false;
 
@@ -251,7 +251,9 @@ function migrateIfNeeded(parsed) {
         });
       });
     });
-    return { tasks: flat };
+    const projectsSet = new Set(DEFAULT_PROJECTS);
+    flat.forEach(t => { if (t.project !== GENERAL_PROJECT) projectsSet.add(t.project); });
+    return { tasks: flat, projects: Array.from(projectsSet) };
   }
   if (parsed && Array.isArray(parsed.tasks)) {
     parsed.tasks.forEach(t => {
@@ -259,9 +261,11 @@ function migrateIfNeeded(parsed) {
       if (!t.project) t.project = GENERAL_PROJECT;
       if (!t.subtasks) t.subtasks = [];
     });
-    return parsed;
+    let projects = Array.isArray(parsed.projects) ? parsed.projects.slice() : DEFAULT_PROJECTS.slice();
+    parsed.tasks.forEach(t => { if (t.project !== GENERAL_PROJECT && !projects.includes(t.project)) projects.push(t.project); });
+    return { tasks: parsed.tasks, projects: projects };
   }
-  return { tasks: [] };
+  return { tasks: [], projects: DEFAULT_PROJECTS.slice() };
 }
 
 async function loadFromGitHub() {
@@ -269,7 +273,7 @@ async function loadFromGitHub() {
   try {
     const res = await fetch(API_BASE, { headers: ghHeaders() });
     if (res.status === 404) {
-      state = { tasks: [] };
+      state = { tasks: [], projects: DEFAULT_PROJECTS.slice() };
       await saveToGitHub(true);
       setStatus("Connected", "ok");
       render();
@@ -327,13 +331,33 @@ function queueSave() {
 function renderTabs() {
   const nav = document.getElementById("tabs");
   nav.innerHTML = "";
-  TABS.forEach(p => {
+  currentTabs().forEach(p => {
     const btn = document.createElement("button");
     btn.textContent = p;
     if (p === currentTab) btn.classList.add("active");
     btn.onclick = () => { currentTab = p; render(); };
     nav.appendChild(btn);
   });
+  const addBtn = document.createElement("button");
+  addBtn.textContent = "+ Add project";
+  addBtn.style.color = "#d9c98a";
+  addBtn.onclick = addProject;
+  nav.appendChild(addBtn);
+}
+
+function addProject() {
+  const name = prompt("New project name:");
+  if (!name) return;
+  const trimmed = name.trim();
+  if (!trimmed) return;
+  if (currentTabs().some(p => p.toLowerCase() === trimmed.toLowerCase())) {
+    alert("A project with that name already exists.");
+    return;
+  }
+  state.projects.push(trimmed);
+  currentTab = trimmed;
+  queueSave();
+  render();
 }
 
 function fmtDate(iso) {
