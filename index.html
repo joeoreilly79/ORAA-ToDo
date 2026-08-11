@@ -723,12 +723,20 @@ function daysUntilDue(t) {
 
 function effectivePriority(t) {
   const d = daysUntilDue(t);
-  if (d === null) return t.priority;
-  let bump = null;
-  if (d <= 0) bump = 5;      // due today or overdue
-  else if (d === 1) bump = 4; // due tomorrow
-  if (bump === null) return t.priority;
-  return Math.max(t.priority, bump);
+  let base = t.priority;
+  if (d !== null) {
+    let bump = null;
+    if (d <= 0) bump = 5;      // due today or overdue
+    else if (d === 1) bump = 4; // due tomorrow
+    if (bump !== null) base = Math.max(base, bump);
+  }
+  if (t.subtasks && t.subtasks.length) {
+    const openSubPriorities = t.subtasks.filter(s => !s.done).map(s => s.priority || 3);
+    if (openSubPriorities.length) {
+      base = Math.max(base, Math.max(...openSubPriorities));
+    }
+  }
+  return base;
 }
 
 function fmtDue(iso) {
@@ -885,6 +893,7 @@ function subtaskSection(t) {
   wrap.className = "subSection";
 
   t.subtasks.forEach(s => {
+    if (!s.priority) s.priority = 3;
     const row = document.createElement("div");
     row.className = "subRow" + (s.done ? " done" : "");
 
@@ -896,6 +905,7 @@ function subtaskSection(t) {
     const txt = document.createElement("div");
     txt.className = "subTxt";
     txt.textContent = s.text;
+    txt.style.color = s.done ? "" : ({5:"var(--p5)",4:"var(--p4)",3:"var(--p3)",2:"var(--p2)",1:"var(--p1)"}[s.priority] || "");
     txt.ondblclick = () => {
       const input = document.createElement("input");
       input.className = "editInput";
@@ -908,6 +918,17 @@ function subtaskSection(t) {
       input.addEventListener("blur", commit);
     };
 
+    const subPrio = document.createElement("select");
+    subPrio.style.cssText = "font-size:11px; border:1px solid var(--border); border-radius:5px; padding:1px 3px;";
+    [5,4,3,2,1].forEach(p => {
+      const opt = document.createElement("option");
+      opt.value = p;
+      opt.textContent = "P" + p;
+      if (p === s.priority) opt.selected = true;
+      subPrio.appendChild(opt);
+    });
+    subPrio.onchange = () => { s.priority = parseInt(subPrio.value, 10); queueSave(); render(); };
+
     const del = document.createElement("button");
     del.className = "subDel";
     del.textContent = "✕";
@@ -915,6 +936,7 @@ function subtaskSection(t) {
 
     row.appendChild(chk);
     row.appendChild(txt);
+    row.appendChild(subPrio);
     row.appendChild(del);
     wrap.appendChild(row);
   });
@@ -924,12 +946,26 @@ function subtaskSection(t) {
   const input = document.createElement("input");
   input.type = "text";
   input.placeholder = "Add subtask…";
+  const subPrioSelect = document.createElement("select");
+  subPrioSelect.style.cssText = "font-size:12px; border:1px solid var(--border); border-radius:6px; padding:2px 4px;";
+  [5,4,3,2,1].forEach(p => {
+    const opt = document.createElement("option");
+    opt.value = p;
+    opt.textContent = "P" + p;
+    if (p === 3) opt.selected = true;
+    subPrioSelect.appendChild(opt);
+  });
   const addBtn = document.createElement("button");
   addBtn.textContent = "Add";
   const doAdd = () => {
     const val = input.value.trim();
     if (!val) return;
-    t.subtasks.push({ id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6), text: val, done: false });
+    t.subtasks.push({
+      id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
+      text: val,
+      done: false,
+      priority: parseInt(subPrioSelect.value, 10)
+    });
     input.value = "";
     queueSave();
     render();
@@ -937,6 +973,7 @@ function subtaskSection(t) {
   addBtn.onclick = doAdd;
   input.addEventListener("keydown", e => { if (e.key === "Enter") doAdd(); });
   addRow.appendChild(input);
+  addRow.appendChild(subPrioSelect);
   addRow.appendChild(addBtn);
   wrap.appendChild(addRow);
 
