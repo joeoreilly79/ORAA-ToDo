@@ -199,7 +199,7 @@
         {
           "id": "msogtpcdrhyv",
           "text": "Get MJT to send info out to GB for pricing",
-          "done": false,
+          "done": true,
           "priority": 5
         },
         {
