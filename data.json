@@ -126,7 +126,7 @@
         {
           "id": "msog9x7mj2dy",
           "text": "Close out WM appoinment",
-          "done": false,
+          "done": true,
           "priority": 5
         },
         {
