@@ -147,6 +147,12 @@
           "text": "Have we a DCC Planning meeting date yet?",
           "done": false,
           "priority": 3
+        },
+        {
+          "id": "msogc6z9geen",
+          "text": "Tidy up the meeting tracker",
+          "done": false,
+          "priority": 3
         }
       ]
     }
