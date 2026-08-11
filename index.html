@@ -791,26 +791,35 @@ function todayISO() {
   return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
 }
 
-function daysUntilDue(t) {
-  if (!t.due) return null;
-  const due = new Date(t.due + "T00:00:00");
+function daysUntilDueFor(dueStr) {
+  if (!dueStr) return null;
+  const due = new Date(dueStr + "T00:00:00");
   const today = new Date(todayISO() + "T00:00:00");
   return Math.round((due - today) / 86400000);
 }
 
-function effectivePriority(t) {
-  const d = daysUntilDue(t);
-  let base = t.priority;
+function daysUntilDue(t) {
+  return daysUntilDueFor(t.due);
+}
+
+function escalatedPriority(priority, dueStr) {
+  const d = daysUntilDueFor(dueStr);
+  let base = priority;
   if (d !== null) {
     let bump = null;
     if (d <= 0) bump = 5;      // due today or overdue
     else if (d === 1) bump = 4; // due tomorrow
     if (bump !== null) base = Math.max(base, bump);
   }
+  return base;
+}
+
+function effectivePriority(t) {
+  let base = escalatedPriority(t.priority, t.due);
   if (t.subtasks && t.subtasks.length) {
-    const openSubPriorities = t.subtasks.filter(s => !s.done).map(s => s.priority || 3);
-    if (openSubPriorities.length) {
-      base = Math.max(base, Math.max(...openSubPriorities));
+    const openSubEff = t.subtasks.filter(s => !s.done).map(s => escalatedPriority(s.priority || 3, s.due || null));
+    if (openSubEff.length) {
+      base = Math.max(base, Math.max(...openSubEff));
     }
   }
   return base;
@@ -1000,6 +1009,15 @@ function subtaskSection(t) {
     });
     subPrio.onchange = () => { s.priority = parseInt(subPrio.value, 10); queueSave(); render(); };
 
+    const subDueDays = daysUntilDueFor(s.due);
+    const subDueColor = s.due ? ((subDueDays !== null && subDueDays <= 0) ? "#b3454a" : subDueDays === 1 ? "#c97a3a" : "#e2e4e9") : "#e2e4e9";
+    const subDue = document.createElement("input");
+    subDue.type = "date";
+    subDue.value = s.due || "";
+    subDue.style.cssText = "font-size:10.5px; border:1px solid " + subDueColor + "; border-radius:5px; padding:0px 2px; color:" + (s.due ? subDueColor : "var(--muted)") + ";";
+    subDue.title = s.due ? (subDueDays !== null && subDueDays < 0 ? "Overdue" : subDueDays === 0 ? "Due today" : subDueDays === 1 ? "Due tomorrow" : "Due date") : "Set a due date (optional)";
+    subDue.onchange = () => { s.due = subDue.value || null; queueSave(); render(); };
+
     const del = document.createElement("button");
     del.className = "subDel";
     del.textContent = "✕";
@@ -1008,6 +1026,7 @@ function subtaskSection(t) {
     row.appendChild(chk);
     row.appendChild(txt);
     row.appendChild(subPrio);
+    row.appendChild(subDue);
     row.appendChild(del);
     wrap.appendChild(row);
   });
@@ -1026,6 +1045,10 @@ function subtaskSection(t) {
     if (p === 3) opt.selected = true;
     subPrioSelect.appendChild(opt);
   });
+  const subDueSelect = document.createElement("input");
+  subDueSelect.type = "date";
+  subDueSelect.title = "Due date (optional)";
+  subDueSelect.style.cssText = "font-size:12px; border:1px solid var(--border); border-radius:6px; padding:1px 4px;";
   const addBtn = document.createElement("button");
   addBtn.textContent = "Add";
   const doAdd = () => {
@@ -1035,9 +1058,11 @@ function subtaskSection(t) {
       id: Date.now().toString(36) + Math.random().toString(36).slice(2, 6),
       text: val,
       done: false,
-      priority: parseInt(subPrioSelect.value, 10)
+      priority: parseInt(subPrioSelect.value, 10),
+      due: subDueSelect.value || null
     });
     input.value = "";
+    subDueSelect.value = "";
     queueSave();
     render();
   };
@@ -1045,6 +1070,7 @@ function subtaskSection(t) {
   input.addEventListener("keydown", e => { if (e.key === "Enter") doAdd(); });
   addRow.appendChild(input);
   addRow.appendChild(subPrioSelect);
+  addRow.appendChild(subDueSelect);
   addRow.appendChild(addBtn);
   wrap.appendChild(addRow);
 
