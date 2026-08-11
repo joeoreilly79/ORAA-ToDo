@@ -30,6 +30,13 @@
           "text": "make the agenda",
           "done": true,
           "priority": 3
+        },
+        {
+          "id": "msokjpj5d96q",
+          "text": "get draft tender report - chase MMP",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "due": null
