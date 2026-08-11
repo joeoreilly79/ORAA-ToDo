@@ -212,10 +212,10 @@ const API_BASE = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_
 
 const DEFAULT_PROJECTS = ["Jamestown & Belgard", "Lapitus", "Sorrento", "RTB", "Ballsbridge", "Raheny", "Personal"];
 const GENERAL_PROJECT = "General";
-function currentTabs() { return ["Day to Day", ...state.projects]; }
+function currentTabs() { return ["Day to Day", ...state.projects.filter(p => !(state.archivedProjects||[]).includes(p))]; }
 
 // state.tasks is a FLAT array: {id, text, done, created, project, priority}
-let state = { tasks: [], projects: DEFAULT_PROJECTS.slice() };
+let state = { tasks: [], projects: DEFAULT_PROJECTS.slice(), archivedProjects: [] };
 let fileSha = null;
 let currentTab = "Day to Day";
 let token = localStorage.getItem("oraa_todo_token") || "";
@@ -253,7 +253,7 @@ function migrateIfNeeded(parsed) {
     });
     const projectsSet = new Set(DEFAULT_PROJECTS);
     flat.forEach(t => { if (t.project !== GENERAL_PROJECT) projectsSet.add(t.project); });
-    return { tasks: flat, projects: Array.from(projectsSet) };
+    return { tasks: flat, projects: Array.from(projectsSet), archivedProjects: [] };
   }
   if (parsed && Array.isArray(parsed.tasks)) {
     parsed.tasks.forEach(t => {
@@ -263,9 +263,10 @@ function migrateIfNeeded(parsed) {
     });
     let projects = Array.isArray(parsed.projects) ? parsed.projects.slice() : DEFAULT_PROJECTS.slice();
     parsed.tasks.forEach(t => { if (t.project !== GENERAL_PROJECT && !projects.includes(t.project)) projects.push(t.project); });
-    return { tasks: parsed.tasks, projects: projects };
+    const archivedProjects = Array.isArray(parsed.archivedProjects) ? parsed.archivedProjects : [];
+    return { tasks: parsed.tasks, projects: projects, archivedProjects: archivedProjects };
   }
-  return { tasks: [], projects: DEFAULT_PROJECTS.slice() };
+  return { tasks: [], projects: DEFAULT_PROJECTS.slice(), archivedProjects: [] };
 }
 
 async function loadFromGitHub() {
@@ -273,7 +274,7 @@ async function loadFromGitHub() {
   try {
     const res = await fetch(API_BASE, { headers: ghHeaders() });
     if (res.status === 404) {
-      state = { tasks: [], projects: DEFAULT_PROJECTS.slice() };
+      state = { tasks: [], projects: DEFAULT_PROJECTS.slice(), archivedProjects: [] };
       await saveToGitHub(true);
       setStatus("Connected", "ok");
       render();
@@ -343,6 +344,101 @@ function renderTabs() {
   addBtn.style.color = "#d9c98a";
   addBtn.onclick = addProject;
   nav.appendChild(addBtn);
+
+  const manageBtn = document.createElement("button");
+  manageBtn.textContent = "⚙ Manage";
+  manageBtn.style.color = "#8f9ab0";
+  manageBtn.onclick = openManageProjects;
+  nav.appendChild(manageBtn);
+}
+
+function openManageProjects() {
+  const overlay = document.createElement("div");
+  overlay.id = "manageOverlay";
+  overlay.style.cssText = "position:fixed;inset:0;background:rgba(20,25,45,0.55);display:flex;align-items:center;justify-content:center;padding:20px;z-index:100;";
+
+  const box = document.createElement("div");
+  box.style.cssText = "background:#fff;border-radius:12px;padding:22px;max-width:420px;width:100%;max-height:80vh;overflow-y:auto;";
+
+  const h = document.createElement("h2");
+  h.textContent = "Manage projects";
+  h.style.cssText = "margin-top:0;font-size:17px;color:#1b2a4a;";
+  box.appendChild(h);
+
+  const activeLabel = document.createElement("div");
+  activeLabel.textContent = "Active";
+  activeLabel.style.cssText = "font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:#6b7280;margin:14px 0 6px;";
+  box.appendChild(activeLabel);
+
+  const active = state.projects.filter(p => !(state.archivedProjects||[]).includes(p));
+  if (active.length === 0) {
+    const e = document.createElement("div");
+    e.style.cssText = "font-size:13px;color:#6b7280;padding:6px 0;";
+    e.textContent = "No active projects.";
+    box.appendChild(e);
+  }
+  active.forEach(p => {
+    const row = document.createElement("div");
+    row.style.cssText = "display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #e2e4e9;";
+    const name = document.createElement("span");
+    name.textContent = p;
+    name.style.fontSize = "14px";
+    const btn = document.createElement("button");
+    btn.textContent = "Archive";
+    btn.style.cssText = "background:none;border:1px solid #e2e4e9;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;color:#6b7280;";
+    btn.onclick = () => {
+      if (!state.archivedProjects) state.archivedProjects = [];
+      state.archivedProjects.push(p);
+      if (currentTab === p) currentTab = "Day to Day";
+      queueSave();
+      document.body.removeChild(overlay);
+      render();
+    };
+    row.appendChild(name);
+    row.appendChild(btn);
+    box.appendChild(row);
+  });
+
+  const archivedLabel = document.createElement("div");
+  archivedLabel.textContent = "Archived";
+  archivedLabel.style.cssText = "font-size:11px;text-transform:uppercase;letter-spacing:0.5px;color:#6b7280;margin:18px 0 6px;";
+  box.appendChild(archivedLabel);
+
+  const archived = state.archivedProjects || [];
+  if (archived.length === 0) {
+    const e = document.createElement("div");
+    e.style.cssText = "font-size:13px;color:#6b7280;padding:6px 0;";
+    e.textContent = "No archived projects.";
+    box.appendChild(e);
+  }
+  archived.forEach(p => {
+    const row = document.createElement("div");
+    row.style.cssText = "display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #e2e4e9;";
+    const name = document.createElement("span");
+    name.textContent = p;
+    name.style.cssText = "font-size:14px;color:#9ca3af;";
+    const btn = document.createElement("button");
+    btn.textContent = "Restore";
+    btn.style.cssText = "background:none;border:1px solid #e2e4e9;border-radius:6px;padding:5px 10px;font-size:12px;cursor:pointer;color:#1b2a4a;";
+    btn.onclick = () => {
+      state.archivedProjects = state.archivedProjects.filter(x => x !== p);
+      queueSave();
+      document.body.removeChild(overlay);
+      render();
+    };
+    row.appendChild(name);
+    row.appendChild(btn);
+    box.appendChild(row);
+  });
+
+  const closeBtn = document.createElement("button");
+  closeBtn.textContent = "Close";
+  closeBtn.style.cssText = "width:100%;margin-top:16px;background:#1b2a4a;color:#fff;border:none;border-radius:8px;padding:11px;font-size:14px;cursor:pointer;";
+  closeBtn.onclick = () => document.body.removeChild(overlay);
+  box.appendChild(closeBtn);
+
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
 }
 
 function addProject() {
@@ -368,7 +464,10 @@ function fmtDate(iso) {
 }
 
 function tasksForCurrentTab() {
-  if (currentTab === "Day to Day") return state.tasks.slice();
+  if (currentTab === "Day to Day") {
+    const arch = state.archivedProjects || [];
+    return state.tasks.filter(t => !arch.includes(t.project));
+  }
   return state.tasks.filter(t => t.project === currentTab);
 }
 
