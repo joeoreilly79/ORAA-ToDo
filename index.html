@@ -559,13 +559,25 @@ function taskShareText(t) {
   return lines.join("\n");
 }
 
+function projectRank(p) {
+  const order = state.projects; // full stored order (archived ones just won't normally appear here)
+  const idx = order.indexOf(p);
+  return idx === -1 ? 999 : idx;
+}
+
+function taskSortCompare(a, b) {
+  const ap = effectivePriority(a), bp = effectivePriority(b);
+  if (bp !== ap) return bp - ap;
+  if (currentTab === "Day to Day") {
+    const pr = projectRank(a.project) - projectRank(b.project);
+    if (pr !== 0) return pr;
+  }
+  return (a.created || "").localeCompare(b.created || "");
+}
+
 function listShareText() {
   const tasks = tasksForCurrentTab();
-  const notDone = tasks.filter(t => !t.done).sort((a, b) => {
-    const ap = effectivePriority(a), bp = effectivePriority(b);
-    if (bp !== ap) return bp - ap;
-    return (a.created || "").localeCompare(b.created || "");
-  });
+  const notDone = tasks.filter(t => !t.done).sort(taskSortCompare);
   const done = tasks.filter(t => t.done);
 
   let lines = ["Joe To Do — " + currentTab, ""];
@@ -732,11 +744,7 @@ function render() {
     toggleBtn.textContent = anyCollapsed ? "Show subtasks" : "Hide subtasks";
   }
 
-  const notDone = tasks.filter(t => !t.done).sort((a, b) => {
-    const ap = effectivePriority(a), bp = effectivePriority(b);
-    if (bp !== ap) return bp - ap;
-    return (a.created || "").localeCompare(b.created || "");
-  });
+  const notDone = tasks.filter(t => !t.done).sort(taskSortCompare);
   const done = tasks.filter(t => t.done).sort((a, b) => (b.created || "").localeCompare(a.created || ""));
 
   if (tasks.length === 0) {
