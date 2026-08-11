@@ -224,7 +224,12 @@ const API_BASE = `https://api.github.com/repos/${OWNER}/${REPO}/contents/${FILE_
 
 const DEFAULT_PROJECTS = ["Jamestown & Belgard", "Lapitus", "Sorrento", "RTB", "Ballsbridge", "Raheny", "Personal"];
 const GENERAL_PROJECT = "General";
-function currentTabs() { return ["Day to Day", ...state.projects.filter(p => !(state.archivedProjects||[]).includes(p))]; }
+function currentTabs() {
+  const active = state.projects.filter(p => !(state.archivedProjects||[]).includes(p));
+  const hasPersonal = active.includes("Personal");
+  const rest = active.filter(p => p !== "Personal");
+  return ["Day to Day", ...(hasPersonal ? ["Personal"] : []), ...rest];
+}
 
 // state.tasks is a FLAT array: {id, text, done, created, project, priority}
 let state = { tasks: [], projects: DEFAULT_PROJECTS.slice(), archivedProjects: [] };
