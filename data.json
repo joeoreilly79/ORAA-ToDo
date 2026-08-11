@@ -96,6 +96,16 @@
           "priority": 4
         }
       ]
+    },
+    {
+      "id": "msog72bl2moke",
+      "text": "The Island Sale - Fair Deal",
+      "done": false,
+      "created": "2026-08-11T09:18:27.201Z",
+      "project": "Personal",
+      "priority": 4,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
