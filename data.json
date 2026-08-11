@@ -75,7 +75,8 @@
         {
           "id": "msoa1wkdywcw",
           "text": "look at the numbers",
-          "done": false
+          "done": false,
+          "priority": 5
         }
       ]
     }
