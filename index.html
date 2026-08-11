@@ -57,7 +57,10 @@
   }
   #syncBtn:hover { background: rgba(255,255,255,0.1); }
 
-  nav#tabs { display: flex; overflow-x: auto; background: var(--navy-dark); padding: 0 10px; }
+  nav#tabs {
+    display: flex; overflow-x: auto; background: var(--navy-dark); padding: 0 10px;
+    position: sticky; top: var(--stick1, 0px); z-index: 9;
+  }
   nav#tabs button {
     background: none; border: none; color: #b9c2d6; padding: 12px 14px; font-size: 13.5px;
     white-space: nowrap; cursor: pointer; border-bottom: 3px solid transparent;
@@ -84,9 +87,16 @@
 
   .priorityHeader {
     font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px;
-    color: var(--muted); margin: 18px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border);
+    color: var(--muted); margin: 18px 0 8px; padding: 4px 2px; border-bottom: 1px solid var(--border);
+    position: sticky; top: var(--stick2, 0px); background: var(--bg); z-index: 8;
   }
   .priorityHeader:first-child { margin-top: 0; }
+
+  .projectHeader {
+    font-size: 14px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: 0.4px;
+    margin: 12px 0 6px; padding: 4px 2px;
+    position: sticky; top: var(--stick3, 0px); background: var(--bg); z-index: 7;
+  }
 
   ul.tasks { list-style: none; margin: 0; padding: 0; }
   li.task {
@@ -771,7 +781,7 @@ function render() {
       lastProject = t.project;
       const ph = document.createElement("div");
       ph.textContent = t.project;
-      ph.style.cssText = "font-size:14px; font-weight:700; color:var(--gold); margin:12px 2px 6px; text-transform:uppercase; letter-spacing:0.4px;";
+      ph.className = "projectHeader";
       list.appendChild(ph);
     }
     list.appendChild(taskRow(t));
@@ -784,7 +794,24 @@ function render() {
     list.appendChild(h);
     done.forEach(t => list.appendChild(taskRow(t)));
   }
+
+  updateStickyOffsets();
 }
+
+function updateStickyOffsets() {
+  requestAnimationFrame(() => {
+    const headerEl = document.querySelector("header");
+    const navEl = document.getElementById("tabs");
+    const prioEl = document.querySelector(".priorityHeader");
+    const headerH = headerEl ? headerEl.offsetHeight : 60;
+    const navH = navEl ? navEl.offsetHeight : 42;
+    const prioH = prioEl ? prioEl.offsetHeight : 32;
+    document.documentElement.style.setProperty("--stick1", headerH + "px");
+    document.documentElement.style.setProperty("--stick2", (headerH + navH) + "px");
+    document.documentElement.style.setProperty("--stick3", (headerH + navH + prioH) + "px");
+  });
+}
+window.addEventListener("resize", updateStickyOffsets);
 
 function todayISO() {
   const d = new Date();
