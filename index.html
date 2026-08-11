@@ -190,6 +190,7 @@
   <h1>Joe To Do</h1>
   <div style="display:flex; align-items:center; gap:10px;">
     <span class="status" id="statusText">Loading…</span>
+    <button id="toggleSubtasksBtn" style="background:transparent;border:1px solid rgba(255,255,255,0.35);color:#fff;border-radius:6px;padding:6px 10px;font-size:12px;cursor:pointer;white-space:nowrap;">Show subtasks</button>
     <button id="syncBtn" title="Sync now">Sync</button>
   </div>
 </header>
@@ -209,13 +210,10 @@
     <input type="date" id="dueDateInput" title="Due date (optional)">
     <button id="addTaskBtn">Add</button>
   </div>
-  <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; gap:8px; flex-wrap:wrap;">
-    <div class="addHint" id="addHint" style="margin-bottom:0;"></div>
-    <div style="display:flex; gap:8px;">
-      <button id="toggleSubtasksBtn" style="background:none;border:1px solid var(--border);border-radius:7px;padding:5px 10px;font-size:12px;color:var(--navy);cursor:pointer;white-space:nowrap;">Show subtasks</button>
-      <button id="shareListBtn" style="background:none;border:1px solid var(--border);border-radius:7px;padding:5px 10px;font-size:12px;color:var(--navy);cursor:pointer;white-space:nowrap;">↥ Share list</button>
-    </div>
+  <div style="display:flex; justify-content:flex-end; align-items:center; margin-bottom:16px;">
+    <button id="shareListBtn" style="background:none;border:1px solid var(--border);border-radius:7px;padding:5px 10px;font-size:12px;color:var(--navy);cursor:pointer;white-space:nowrap;">↥ Share list</button>
   </div>
+  <div class="addHint" id="addHint" style="margin-bottom:16px;margin-top:-10px;"></div>
   <ul class="tasks" id="taskList"></ul>
 </main>
 
