@@ -131,6 +131,7 @@
   #setupOverlay .err { color: var(--danger); font-size: 12.5px; margin-top: 6px; min-height: 16px; }
 
   li.task .actions button.edit:hover { color: var(--navy); }
+  li.task .actions button.share:hover { color: var(--navy); }
   li.task .actions button.sub:hover { color: var(--navy); }
   .editInput {
     flex: 1; font-size: 14.5px; padding: 4px 6px; border: 1px solid var(--navy);
@@ -441,6 +442,83 @@ function openManageProjects() {
   document.body.appendChild(overlay);
 }
 
+function taskShareText(t) {
+  let lines = ["ORAA To Do — " + t.project, priorityLabel(t.priority), "", t.text];
+  if (t.subtasks && t.subtasks.length) {
+    lines.push("");
+    t.subtasks.forEach(s => lines.push((s.done ? "[x] " : "[ ] ") + s.text));
+  }
+  return lines.join("\n");
+}
+
+async function shareTask(t) {
+  const text = taskShareText(t);
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: "ORAA To Do", text: text });
+      return;
+    } catch (e) {
+      if (e && e.name === "AbortError") return;
+      // fall through to fallback on other errors
+    }
+  }
+  showShareFallback(text);
+}
+
+function showShareFallback(text) {
+  const overlay = document.createElement("div");
+  overlay.style.cssText = "position:fixed;inset:0;background:rgba(20,25,45,0.55);display:flex;align-items:center;justify-content:center;padding:20px;z-index:110;";
+
+  const box = document.createElement("div");
+  box.style.cssText = "background:#fff;border-radius:12px;padding:22px;max-width:420px;width:100%;";
+
+  const h = document.createElement("h2");
+  h.textContent = "Share task";
+  h.style.cssText = "margin-top:0;font-size:17px;color:#1b2a4a;";
+  box.appendChild(h);
+
+  const ta = document.createElement("textarea");
+  ta.value = text;
+  ta.readOnly = true;
+  ta.style.cssText = "width:100%;height:110px;font-size:13px;padding:10px;border:1px solid #e2e4e9;border-radius:8px;font-family:inherit;resize:none;margin-bottom:12px;";
+  box.appendChild(ta);
+
+  const row = document.createElement("div");
+  row.style.cssText = "display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;";
+
+  const copyBtn = document.createElement("button");
+  copyBtn.textContent = "Copy text";
+  copyBtn.style.cssText = "flex:1;background:#1b2a4a;color:#fff;border:none;border-radius:8px;padding:10px;font-size:13px;cursor:pointer;";
+  copyBtn.onclick = () => {
+    navigator.clipboard.writeText(text).then(() => { copyBtn.textContent = "Copied ✓"; setTimeout(() => copyBtn.textContent = "Copy text", 1500); });
+  };
+  row.appendChild(copyBtn);
+
+  const waBtn = document.createElement("a");
+  waBtn.textContent = "WhatsApp";
+  waBtn.href = "https://wa.me/?text=" + encodeURIComponent(text);
+  waBtn.target = "_blank";
+  waBtn.style.cssText = "flex:1;text-align:center;background:#25D366;color:#fff;text-decoration:none;border-radius:8px;padding:10px;font-size:13px;";
+  row.appendChild(waBtn);
+
+  const mailBtn = document.createElement("a");
+  mailBtn.textContent = "Email";
+  mailBtn.href = "mailto:?subject=" + encodeURIComponent("ORAA To Do task") + "&body=" + encodeURIComponent(text);
+  mailBtn.style.cssText = "flex:1;text-align:center;background:#5a7fa6;color:#fff;text-decoration:none;border-radius:8px;padding:10px;font-size:13px;";
+  row.appendChild(mailBtn);
+
+  box.appendChild(row);
+
+  const closeBtn = document.createElement("button");
+  closeBtn.textContent = "Close";
+  closeBtn.style.cssText = "width:100%;background:none;border:1px solid #e2e4e9;border-radius:8px;padding:10px;font-size:13.5px;color:#6b7280;cursor:pointer;";
+  closeBtn.onclick = () => document.body.removeChild(overlay);
+  box.appendChild(closeBtn);
+
+  overlay.appendChild(box);
+  document.body.appendChild(overlay);
+}
+
 function addProject() {
   const name = prompt("New project name:");
   if (!name) return;
@@ -596,6 +674,13 @@ function taskRow(t) {
   editBtn.textContent = "✎";
   editBtn.onclick = () => startEdit(t.id, txt, txtWrap);
   actions.appendChild(editBtn);
+
+  const shareBtn = document.createElement("button");
+  shareBtn.className = "share";
+  shareBtn.title = "Share";
+  shareBtn.textContent = "↥";
+  shareBtn.onclick = () => shareTask(t);
+  actions.appendChild(shareBtn);
 
   const delBtn = document.createElement("button");
   delBtn.className = "del";
