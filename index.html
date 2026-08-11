@@ -64,7 +64,7 @@
     flex: 1; min-width: 160px; padding: 11px 12px; border: 1px solid var(--border);
     border-radius: 8px; font-size: 14px; background: var(--card);
   }
-  .addRow select#prioritySelect {
+  .addRow select#prioritySelect, .addRow input#dueDateInput {
     padding: 0 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px;
     background: var(--card);
   }
@@ -199,6 +199,7 @@
       <option value="2">2 — Low</option>
       <option value="1">1 — Someday</option>
     </select>
+    <input type="date" id="dueDateInput" title="Due date (optional)">
     <button id="addTaskBtn">Add</button>
   </div>
   <div class="addHint" id="addHint"></div>
@@ -261,6 +262,7 @@ function migrateIfNeeded(parsed) {
       if (!t.priority) t.priority = 3;
       if (!t.project) t.project = GENERAL_PROJECT;
       if (!t.subtasks) t.subtasks = [];
+      if (t.due === undefined) t.due = null;
     });
     let projects = Array.isArray(parsed.projects) ? parsed.projects.slice() : DEFAULT_PROJECTS.slice();
     parsed.tasks.forEach(t => { if (t.project !== GENERAL_PROJECT && !projects.includes(t.project)) projects.push(t.project); });
@@ -564,7 +566,8 @@ function render() {
   const tasks = tasksForCurrentTab();
 
   const notDone = tasks.filter(t => !t.done).sort((a, b) => {
-    if (b.priority !== a.priority) return b.priority - a.priority;
+    const ap = effectivePriority(a), bp = effectivePriority(b);
+    if (bp !== ap) return bp - ap;
     return (a.created || "").localeCompare(b.created || "");
   });
   const done = tasks.filter(t => t.done).sort((a, b) => (b.created || "").localeCompare(a.created || ""));
@@ -579,11 +582,12 @@ function render() {
 
   let lastPriority = null;
   notDone.forEach(t => {
-    if (t.priority !== lastPriority) {
-      lastPriority = t.priority;
+    const ep = effectivePriority(t);
+    if (ep !== lastPriority) {
+      lastPriority = ep;
       const h = document.createElement("div");
       h.className = "priorityHeader";
-      h.textContent = priorityLabel(t.priority);
+      h.textContent = priorityLabel(ep);
       list.appendChild(h);
     }
     list.appendChild(taskRow(t));
@@ -598,6 +602,35 @@ function render() {
   }
 }
 
+function todayISO() {
+  const d = new Date();
+  return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+}
+
+function daysUntilDue(t) {
+  if (!t.due) return null;
+  const due = new Date(t.due + "T00:00:00");
+  const today = new Date(todayISO() + "T00:00:00");
+  return Math.round((due - today) / 86400000);
+}
+
+function effectivePriority(t) {
+  const d = daysUntilDue(t);
+  if (d === null) return t.priority;
+  let bump = null;
+  if (d <= 0) bump = 5;      // due today or overdue
+  else if (d === 1) bump = 4; // due tomorrow
+  if (bump === null) return t.priority;
+  return Math.max(t.priority, bump);
+}
+
+function fmtDue(iso) {
+  try {
+    const d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString(undefined, { day: "numeric", month: "short" });
+  } catch (e) { return iso; }
+}
+
 function priorityLabel(p) {
   return { 5: "5 — Today", 4: "4 — High", 3: "3 — Medium", 2: "2 — Low", 1: "1 — Someday" }[p] || (p + "");
 }
@@ -609,7 +642,8 @@ function taskRow(t) {
   const li = document.createElement("li");
   li.style.flexDirection = "column";
   li.style.alignItems = "stretch";
-  li.className = "task p" + t.priority + (t.done ? " done" : "");
+  const ep = effectivePriority(t);
+  li.className = "task p" + ep + (t.done ? " done" : "");
 
   const topRow = document.createElement("div");
   topRow.style.display = "flex";
@@ -644,6 +678,7 @@ function taskRow(t) {
 
   const prioSelect = document.createElement("select");
   prioSelect.className = "prioPick";
+  prioSelect.title = "Your set priority (due date may bump how it's grouped)";
   [5,4,3,2,1].forEach(p => {
     const opt = document.createElement("option");
     opt.value = p;
@@ -653,6 +688,20 @@ function taskRow(t) {
   });
   prioSelect.onchange = () => changePriority(t.id, parseInt(prioSelect.value, 10));
   meta.appendChild(prioSelect);
+
+  const dueDays = daysUntilDue(t);
+  const dueInput = document.createElement("input");
+  dueInput.type = "date";
+  dueInput.value = t.due || "";
+  dueInput.className = "duePick";
+  let dueColor = "#e2e4e9";
+  if (t.due) {
+    dueColor = (dueDays !== null && dueDays <= 0) ? "#b3454a" : (dueDays === 1) ? "#c97a3a" : "#e2e4e9";
+  }
+  dueInput.style.cssText = "font-size:11px; border:1px solid " + dueColor + "; border-radius:5px; padding:1px 3px; color:" + (t.due ? dueColor : "var(--muted)") + ";";
+  dueInput.title = t.due ? (dueDays !== null && dueDays < 0 ? "Overdue" : dueDays === 0 ? "Due today" : dueDays === 1 ? "Due tomorrow" : "Due date") : "Set a due date (optional)";
+  dueInput.onchange = () => changeDue(t.id, dueInput.value);
+  meta.appendChild(dueInput);
 
   const doneSubs = t.subtasks.filter(s => s.done).length;
   const subToggle = document.createElement("span");
@@ -797,13 +846,18 @@ function changePriority(id, p) {
   if (t) { t.priority = p; queueSave(); render(); }
 }
 
+function changeDue(id, val) {
+  const t = state.tasks.find(x => x.id === id);
+  if (t) { t.due = val || null; queueSave(); render(); }
+}
+
 function deleteTask(id) {
   state.tasks = state.tasks.filter(x => x.id !== id);
   queueSave();
   render();
 }
 
-function addTask(text, priority) {
+function addTask(text, priority, due) {
   if (!text.trim()) return;
   const project = currentTab === "Day to Day" ? GENERAL_PROJECT : currentTab;
   const t = {
@@ -812,7 +866,9 @@ function addTask(text, priority) {
     done: false,
     created: new Date().toISOString(),
     project: project,
-    priority: priority
+    priority: priority,
+    due: due || null,
+    subtasks: []
   };
   state.tasks.push(t);
   queueSave();
@@ -822,8 +878,10 @@ function addTask(text, priority) {
 document.getElementById("addTaskBtn").onclick = () => {
   const input = document.getElementById("newTaskInput");
   const prio = parseInt(document.getElementById("prioritySelect").value, 10);
-  addTask(input.value, prio);
+  const due = document.getElementById("dueDateInput").value;
+  addTask(input.value, prio, due);
   input.value = "";
+  document.getElementById("dueDateInput").value = "";
   input.focus();
 };
 document.getElementById("newTaskInput").addEventListener("keydown", e => {
