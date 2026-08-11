@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ORAA To Do</title>
+<title>Joe To Do</title>
 <link rel="manifest" href="manifest.json">
 <link rel="icon" href="icon-192.png">
 <link rel="apple-touch-icon" href="icon-192.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="ORAA To Do">
+<meta name="apple-mobile-web-app-title" content="Joe To Do">
 <meta name="theme-color" content="#1b2a4a">
 <style>
   :root {
@@ -187,7 +187,7 @@
 </div>
 
 <header>
-  <h1>ORAA To Do</h1>
+  <h1>Joe To Do</h1>
   <div style="display:flex; align-items:center; gap:10px;">
     <span class="status" id="statusText">Loading…</span>
     <button id="syncBtn" title="Sync now">Sync</button>
@@ -370,7 +370,7 @@ async function saveToGitHub(isInit) {
   setStatus("Saving…");
   try {
     const body = {
-      message: isInit ? "Initialize ORAA To Do data" : "Update tasks " + new Date().toISOString(),
+      message: isInit ? "Initialize Joe To Do data" : "Update tasks " + new Date().toISOString(),
       content: btoa(unescape(encodeURIComponent(JSON.stringify(state, null, 2))))
     };
     if (fileSha) body.sha = fileSha;
@@ -550,7 +550,7 @@ function openManageProjects() {
 }
 
 function taskShareText(t) {
-  let lines = ["ORAA To Do — " + t.project, priorityLabel(t.priority), "", t.text];
+  let lines = ["Joe To Do — " + t.project, priorityLabel(t.priority), "", t.text];
   if (t.subtasks && t.subtasks.length) {
     lines.push("");
     t.subtasks.forEach(s => lines.push((s.done ? "[x] " : "[ ] ") + s.text));
@@ -567,7 +567,7 @@ function listShareText() {
   });
   const done = tasks.filter(t => t.done);
 
-  let lines = ["ORAA To Do — " + currentTab, ""];
+  let lines = ["Joe To Do — " + currentTab, ""];
   let lastP = null;
   notDone.forEach(t => {
     const ep = effectivePriority(t);
@@ -593,7 +593,7 @@ async function shareList() {
   const text = listShareText();
   if (navigator.share) {
     try {
-      await navigator.share({ title: "ORAA To Do — " + currentTab, text: text });
+      await navigator.share({ title: "Joe To Do — " + currentTab, text: text });
       return;
     } catch (e) {
       if (e && e.name === "AbortError") return;
@@ -607,7 +607,7 @@ async function shareTask(t) {
   const text = taskShareText(t);
   if (navigator.share) {
     try {
-      await navigator.share({ title: "ORAA To Do", text: text });
+      await navigator.share({ title: "Joe To Do", text: text });
       return;
     } catch (e) {
       if (e && e.name === "AbortError") return;
@@ -655,7 +655,7 @@ function showShareFallback(text) {
 
   const mailBtn = document.createElement("a");
   mailBtn.textContent = "Email";
-  mailBtn.href = "mailto:?subject=" + encodeURIComponent("ORAA To Do task") + "&body=" + encodeURIComponent(text);
+  mailBtn.href = "mailto:?subject=" + encodeURIComponent("Joe To Do task") + "&body=" + encodeURIComponent(text);
   mailBtn.style.cssText = "flex:1;text-align:center;background:#5a7fa6;color:#fff;text-decoration:none;border-radius:8px;padding:10px;font-size:13px;";
   row.appendChild(mailBtn);
 
