@@ -344,7 +344,7 @@
         {
           "id": "msp40msijh88",
           "text": "Review the apt types for james",
-          "done": false,
+          "done": true,
           "priority": 5,
           "due": null
         },
