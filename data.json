@@ -483,6 +483,16 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "msr4ynw8w2z39",
+      "text": "Smith Con Tender",
+      "done": false,
+      "created": "2026-08-13T06:27:18.008Z",
+      "project": "Sorrento",
+      "priority": 3,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
