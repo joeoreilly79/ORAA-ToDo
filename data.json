@@ -669,7 +669,15 @@
       "project": "RTB",
       "priority": 3,
       "due": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "msr75epz8r3n",
+          "text": "review email from Europa Broker",
+          "done": false,
+          "priority": 4,
+          "due": "2026-08-14"
+        }
+      ]
     }
   ],
   "projects": [
