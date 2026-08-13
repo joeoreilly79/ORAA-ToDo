@@ -297,9 +297,10 @@
         {
           "id": "msr4rjcw4xnw",
           "text": "Need to go back to Eoin - holding",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-13T08:01:42.712Z"
         },
         {
           "id": "msr4sokppe3i",
