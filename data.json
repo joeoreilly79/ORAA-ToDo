@@ -403,6 +403,13 @@
           "done": false,
           "priority": 2,
           "due": null
+        },
+        {
+          "id": "msr3olc1r765",
+          "text": "Fan and move solar",
+          "done": false,
+          "priority": 2,
+          "due": null
         }
       ]
     }
