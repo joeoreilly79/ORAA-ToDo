@@ -483,6 +483,16 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "msr4zc3cwd02d",
+      "text": "Email to the Client",
+      "done": false,
+      "created": "2026-08-13T06:27:49.368Z",
+      "project": "Sorrento",
+      "priority": 4,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
