@@ -191,6 +191,13 @@
           "text": "Check in with Sarah - anything outstanding?",
           "done": true,
           "priority": 5
+        },
+        {
+          "id": "msrflxupi3uu",
+          "text": "Ask Lapithus re the appointments",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
