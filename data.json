@@ -177,8 +177,9 @@
         {
           "id": "msogbtp2rqwp",
           "text": "Have we a DCC Planning meeting date yet?",
-          "done": false,
-          "priority": 3
+          "done": true,
+          "priority": 3,
+          "completedAt": "2026-08-13T06:20:37.890Z"
         },
         {
           "id": "msogc6z9geen",
