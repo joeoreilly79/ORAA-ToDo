@@ -93,9 +93,10 @@
         {
           "id": "msor64zxxtfp",
           "text": "Start transfering cask to McCuddy 4 x 10K",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-13T07:52:24.374Z"
         },
         {
           "id": "msr5gdg9xm2m",
