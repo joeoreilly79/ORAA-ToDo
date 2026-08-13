@@ -1280,6 +1280,24 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("sw.js").catch(() => {});
   });
+
+  // Auto-reload once when a newer service worker takes over — this is what
+  // makes installed/pinned app windows pick up updates without the user
+  // having to manually clear cache each time.
+  let swRefreshing = false;
+  navigator.serviceWorker.addEventListener("controllerchange", () => {
+    if (swRefreshing || dirty) return; // don't yank the page from under an unsaved edit
+    swRefreshing = true;
+    window.location.reload();
+  });
+
+  // Ask the SW to check for an update every time the app is opened/focused.
+  navigator.serviceWorker.ready.then((reg) => { if (reg && reg.update) reg.update(); });
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "visible" && navigator.serviceWorker.controller) {
+      navigator.serviceWorker.getRegistration().then((reg) => { if (reg && reg.update) reg.update(); });
+    }
+  });
 }
 </script>
 </body>
