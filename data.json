@@ -122,8 +122,9 @@
         {
           "id": "msoa1wkdywcw",
           "text": "look at the numbers",
-          "done": false,
-          "priority": 1
+          "done": true,
+          "priority": 1,
+          "completedAt": "2026-08-13T09:19:40.755Z"
         },
         {
           "id": "msr5gr41j44s",
