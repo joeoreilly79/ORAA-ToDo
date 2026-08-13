@@ -410,6 +410,13 @@
           "done": false,
           "priority": 2,
           "due": null
+        },
+        {
+          "id": "msr3p48ajde8",
+          "text": "register tenant with RTB",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ]
     }
