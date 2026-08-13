@@ -120,6 +120,13 @@
           "text": "look at the numbers",
           "done": false,
           "priority": 1
+        },
+        {
+          "id": "msr5gr41j44s",
+          "text": "chat to Dave",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
