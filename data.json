@@ -273,6 +273,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "msr4sokppe3i",
+          "text": "Chat Lapithus or reminder email",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
