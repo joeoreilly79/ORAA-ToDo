@@ -436,6 +436,16 @@
       "priority": 5,
       "due": null,
       "subtasks": []
+    },
+    {
+      "id": "msr4miol78w4b",
+      "text": "Design Team fees",
+      "done": false,
+      "created": "2026-08-13T06:17:51.381Z",
+      "project": "Jamestown & Belgard",
+      "priority": 5,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
