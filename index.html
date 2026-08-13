@@ -995,68 +995,120 @@ function startEdit(id, txtEl, container) {
   input.addEventListener("blur", commit);
 }
 
+let showCompletedSubtasks = {};
+
+function isRecentlyCompleted(s) {
+  if (!s.completedAt) return false;
+  return (Date.now() - new Date(s.completedAt).getTime()) < 24 * 60 * 60 * 1000;
+}
+
+function fmtCompleted(iso) {
+  try {
+    const d = new Date(iso);
+    return d.toLocaleDateString(undefined, { day: "numeric", month: "short" }) + " " +
+      d.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+  } catch (e) { return ""; }
+}
+
+function subtaskRowEl(t, s) {
+  if (!s.priority) s.priority = 3;
+  const row = document.createElement("div");
+  row.className = "subRow" + (s.done ? " done" : "");
+
+  const chk = document.createElement("div");
+  chk.className = "subChk";
+  chk.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"><path d="M4 12l6 6L20 6"/></svg>';
+  chk.onclick = () => {
+    s.done = !s.done;
+    s.completedAt = s.done ? new Date().toISOString() : null;
+    queueSave();
+    render();
+  };
+
+  const txtCol = document.createElement("div");
+  txtCol.style.cssText = "flex:1; min-width:0;";
+  const txt = document.createElement("div");
+  txt.className = "subTxt";
+  txt.textContent = s.text;
+  txt.style.color = s.done ? "" : ({5:"var(--p5)",4:"var(--p4)",3:"var(--p3)",2:"var(--p2)",1:"var(--p1)"}[s.priority] || "");
+  txt.ondblclick = () => {
+    const input = document.createElement("input");
+    input.className = "editInput";
+    input.style.fontSize = "13px";
+    input.value = s.text;
+    txtCol.replaceChild(input, txt);
+    input.focus(); input.select();
+    const commit = () => { const v = input.value.trim(); if (v) s.text = v; queueSave(); render(); };
+    input.addEventListener("keydown", e => { if (e.key === "Enter") commit(); if (e.key === "Escape") render(); });
+    input.addEventListener("blur", commit);
+  };
+  txtCol.appendChild(txt);
+  if (s.done && s.completedAt) {
+    const doneDate = document.createElement("div");
+    doneDate.textContent = "Done " + fmtCompleted(s.completedAt);
+    doneDate.style.cssText = "font-size:10px; color:var(--muted); margin-top:1px;";
+    txtCol.appendChild(doneDate);
+  }
+
+  const subPrio = document.createElement("select");
+  subPrio.style.cssText = "font-size:11px; border:1px solid var(--border); border-radius:5px; padding:1px 3px;";
+  [5,4,3,2,1].forEach(p => {
+    const opt = document.createElement("option");
+    opt.value = p;
+    opt.textContent = "P" + p;
+    if (p === s.priority) opt.selected = true;
+    subPrio.appendChild(opt);
+  });
+  subPrio.onchange = () => { s.priority = parseInt(subPrio.value, 10); queueSave(); render(); };
+
+  const subDueDays = daysUntilDueFor(s.due);
+  const subDueColor = s.due ? ((subDueDays !== null && subDueDays <= 0) ? "#b3454a" : subDueDays === 1 ? "#c97a3a" : "#e2e4e9") : "#e2e4e9";
+  const subDue = document.createElement("input");
+  subDue.type = "date";
+  subDue.value = s.due || "";
+  subDue.style.cssText = "font-size:10.5px; border:1px solid " + subDueColor + "; border-radius:5px; padding:0px 2px; color:" + (s.due ? subDueColor : "var(--muted)") + ";";
+  subDue.title = s.due ? (subDueDays !== null && subDueDays < 0 ? "Overdue" : subDueDays === 0 ? "Due today" : subDueDays === 1 ? "Due tomorrow" : "Due date") : "Set a due date (optional)";
+  subDue.onchange = () => { s.due = subDue.value || null; queueSave(); render(); };
+
+  const del = document.createElement("button");
+  del.className = "subDel";
+  del.textContent = "✕";
+  del.onclick = () => { t.subtasks = t.subtasks.filter(x => x.id !== s.id); queueSave(); render(); };
+
+  row.appendChild(chk);
+  row.appendChild(txtCol);
+  row.appendChild(subPrio);
+  row.appendChild(subDue);
+  row.appendChild(del);
+  return row;
+}
+
 function subtaskSection(t) {
   const wrap = document.createElement("div");
   wrap.className = "subSection";
 
-  t.subtasks.forEach(s => {
-    if (!s.priority) s.priority = 3;
-    const row = document.createElement("div");
-    row.className = "subRow" + (s.done ? " done" : "");
+  const openSubs = t.subtasks.filter(s => !s.done);
+  const doneSubs = t.subtasks.filter(s => s.done);
+  const recentDone = doneSubs.filter(isRecentlyCompleted);
+  const olderDone = doneSubs.filter(s => !isRecentlyCompleted(s));
+  olderDone.sort((a, b) => (b.completedAt || "").localeCompare(a.completedAt || ""));
+  const showAll = !!showCompletedSubtasks[t.id];
 
-    const chk = document.createElement("div");
-    chk.className = "subChk";
-    chk.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"><path d="M4 12l6 6L20 6"/></svg>';
-    chk.onclick = () => { s.done = !s.done; queueSave(); render(); };
+  openSubs.forEach(s => wrap.appendChild(subtaskRowEl(t, s)));
+  recentDone.forEach(s => wrap.appendChild(subtaskRowEl(t, s)));
 
-    const txt = document.createElement("div");
-    txt.className = "subTxt";
-    txt.textContent = s.text;
-    txt.style.color = s.done ? "" : ({5:"var(--p5)",4:"var(--p4)",3:"var(--p3)",2:"var(--p2)",1:"var(--p1)"}[s.priority] || "");
-    txt.ondblclick = () => {
-      const input = document.createElement("input");
-      input.className = "editInput";
-      input.style.fontSize = "13px";
-      input.value = s.text;
-      row.replaceChild(input, txt);
-      input.focus(); input.select();
-      const commit = () => { const v = input.value.trim(); if (v) s.text = v; queueSave(); render(); };
-      input.addEventListener("keydown", e => { if (e.key === "Enter") commit(); if (e.key === "Escape") render(); });
-      input.addEventListener("blur", commit);
-    };
-
-    const subPrio = document.createElement("select");
-    subPrio.style.cssText = "font-size:11px; border:1px solid var(--border); border-radius:5px; padding:1px 3px;";
-    [5,4,3,2,1].forEach(p => {
-      const opt = document.createElement("option");
-      opt.value = p;
-      opt.textContent = "P" + p;
-      if (p === s.priority) opt.selected = true;
-      subPrio.appendChild(opt);
-    });
-    subPrio.onchange = () => { s.priority = parseInt(subPrio.value, 10); queueSave(); render(); };
-
-    const subDueDays = daysUntilDueFor(s.due);
-    const subDueColor = s.due ? ((subDueDays !== null && subDueDays <= 0) ? "#b3454a" : subDueDays === 1 ? "#c97a3a" : "#e2e4e9") : "#e2e4e9";
-    const subDue = document.createElement("input");
-    subDue.type = "date";
-    subDue.value = s.due || "";
-    subDue.style.cssText = "font-size:10.5px; border:1px solid " + subDueColor + "; border-radius:5px; padding:0px 2px; color:" + (s.due ? subDueColor : "var(--muted)") + ";";
-    subDue.title = s.due ? (subDueDays !== null && subDueDays < 0 ? "Overdue" : subDueDays === 0 ? "Due today" : subDueDays === 1 ? "Due tomorrow" : "Due date") : "Set a due date (optional)";
-    subDue.onchange = () => { s.due = subDue.value || null; queueSave(); render(); };
-
-    const del = document.createElement("button");
-    del.className = "subDel";
-    del.textContent = "✕";
-    del.onclick = () => { t.subtasks = t.subtasks.filter(x => x.id !== s.id); queueSave(); render(); };
-
-    row.appendChild(chk);
-    row.appendChild(txt);
-    row.appendChild(subPrio);
-    row.appendChild(subDue);
-    row.appendChild(del);
-    wrap.appendChild(row);
-  });
+  if (olderDone.length) {
+    if (showAll) {
+      olderDone.forEach(s => wrap.appendChild(subtaskRowEl(t, s)));
+    }
+    const toggle = document.createElement("div");
+    toggle.textContent = showAll
+      ? "Hide older completed subtasks"
+      : "Show completed subtasks (" + olderDone.length + " hidden)";
+    toggle.style.cssText = "font-size:11.5px; color:var(--muted); cursor:pointer; padding:6px 0 2px 8px; text-decoration:underline;";
+    toggle.onclick = () => { showCompletedSubtasks[t.id] = !showAll; render(); };
+    wrap.appendChild(toggle);
+  }
 
   const addRow = document.createElement("div");
   addRow.className = "subAddRow";
