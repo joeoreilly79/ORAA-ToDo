@@ -750,10 +750,13 @@ function tasksForCurrentTab() {
 function render() {
   renderTabs();
 
+  const addRowWrap = document.getElementById("addRowWrap");
   const hint = document.getElementById("addHint");
   if (currentTab === "Day to Day") {
-    hint.textContent = "Adding here files the task under 'General' — it'll show in Day to Day only.";
+    addRowWrap.style.display = "none";
+    hint.textContent = "This is your overview across every project — tick tasks off here, but add new ones from within a project tab.";
   } else {
+    addRowWrap.style.display = "";
     hint.textContent = "Adding here also shows the task in Day to Day, sorted by priority.";
   }
 
