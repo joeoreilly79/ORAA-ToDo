@@ -352,6 +352,13 @@
           "done": false,
           "priority": 4,
           "due": "2026-08-14"
+        },
+        {
+          "id": "msr5fhqfju5h",
+          "text": "chat pierce re costs",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
