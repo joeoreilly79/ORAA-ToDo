@@ -482,6 +482,13 @@
           "done": false,
           "priority": 4,
           "due": null
+        },
+        {
+          "id": "msr6h4amlta2",
+          "text": "Get onto DID Electrical",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ]
     },
