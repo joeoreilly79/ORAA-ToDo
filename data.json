@@ -593,12 +593,13 @@
     {
       "id": "msr52h8we8px3",
       "text": "GB to meet HJL - next Wed send email",
-      "done": false,
+      "done": true,
       "created": "2026-08-13T06:30:16.016Z",
       "project": "RTB",
       "priority": 5,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "completedAt": "2026-08-13T21:56:59.809Z"
     },
     {
       "id": "msr5320svsqdf",
