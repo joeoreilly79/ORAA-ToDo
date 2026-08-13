@@ -128,9 +128,10 @@
         {
           "id": "msr5gr41j44s",
           "text": "chat to Dave",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-13T09:19:38.708Z"
         }
       ]
     },
