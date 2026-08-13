@@ -795,6 +795,10 @@ function render() {
     return;
   }
 
+  if (currentTab === "Day to Day") {
+    list.appendChild(prioritySummaryStrip(notDone));
+  }
+
   let lastPriority = null;
   let lastProject = null;
   notDone.forEach(t => {
@@ -938,6 +942,32 @@ function compactDateControl(initialValue, onChange, idForHiddenInput) {
 
 function priorityLabel(p) {
   return { 5: "5 — Today", 4: "4 — High", 3: "3 — Medium", 2: "2 — Low", 1: "1 — Someday" }[p] || (p + "");
+}
+
+function prioritySummaryStrip(notDoneTasks) {
+  const counts = { 5: 0, 4: 0, 3: 0, 2: 0, 1: 0 };
+  notDoneTasks.forEach(t => { counts[effectivePriority(t)] = (counts[effectivePriority(t)] || 0) + 1; });
+  const colors = { 5: "var(--p5)", 4: "var(--p4)", 3: "var(--p3)", 2: "var(--p2)", 1: "var(--p1)" };
+  const labels = { 5: "Today", 4: "High", 3: "Medium", 2: "Low", 1: "Someday" };
+
+  const strip = document.createElement("div");
+  strip.style.cssText = "display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px;";
+
+  [5,4,3,2,1].forEach(p => {
+    const chip = document.createElement("div");
+    chip.style.cssText = "flex:1; min-width:64px; text-align:center; border:1px solid " + colors[p] + "; border-radius:8px; padding:8px 4px; background:#fff;";
+    const num = document.createElement("div");
+    num.textContent = counts[p];
+    num.style.cssText = "font-size:20px; font-weight:700; color:" + colors[p] + ";";
+    const lab = document.createElement("div");
+    lab.textContent = "P" + p + " " + labels[p];
+    lab.style.cssText = "font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.3px; margin-top:2px;";
+    chip.appendChild(num);
+    chip.appendChild(lab);
+    strip.appendChild(chip);
+  });
+
+  return strip;
 }
 
 let expandedTasks = {};
