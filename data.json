@@ -101,9 +101,10 @@
         {
           "id": "msr5gdg9xm2m",
           "text": "get details to clare re insurance",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-13T07:55:29.331Z"
         }
       ]
     },
