@@ -232,7 +232,8 @@
     <span id="dueDateInputWrap"></span>
     <button id="addTaskBtn">Add</button>
   </div>
-  <div style="display:flex; justify-content:flex-end; align-items:center; margin-bottom:16px;">
+  <div style="display:flex; justify-content:flex-end; align-items:center; gap:8px; margin-bottom:16px;">
+    <button id="showCompletedBtn" style="background:none;border:1px solid var(--border);border-radius:7px;padding:5px 10px;font-size:12px;color:var(--navy);cursor:pointer;white-space:nowrap;">Show completed</button>
     <button id="shareListBtn" style="background:none;border:1px solid var(--border);border-radius:7px;padding:5px 10px;font-size:12px;color:var(--navy);cursor:pointer;white-space:nowrap;">↥ Share list</button>
   </div>
   <div class="addHint" id="addHint" style="margin-bottom:16px;margin-top:-10px;"></div>
@@ -637,6 +638,10 @@ async function shareList() {
   showShareFallback(text);
 }
 document.getElementById("shareListBtn").onclick = shareList;
+document.getElementById("showCompletedBtn").onclick = () => {
+  showCompletedTasks[currentTab] = !showCompletedTasks[currentTab];
+  render();
+};
 document.getElementById("toggleSubtasksBtn").onclick = () => {
   const tasksWithSubs = tasksForCurrentTab().filter(t => t.subtasks && t.subtasks.length);
   const anyCollapsed = tasksWithSubs.some(t => expandedTasks[t.id] === false);
@@ -767,7 +772,17 @@ function render() {
   }
 
   const notDone = tasks.filter(t => !t.done).sort(taskSortCompare);
-  const done = tasks.filter(t => t.done).sort((a, b) => (b.created || "").localeCompare(a.created || ""));
+  const doneAll = tasks.filter(t => t.done);
+  const recentDone = doneAll.filter(isRecentlyCompleted).sort((a, b) => (b.completedAt || "").localeCompare(a.completedAt || ""));
+  const olderDone = doneAll.filter(t => !isRecentlyCompleted(t)).sort((a, b) => (b.completedAt || "").localeCompare(a.completedAt || ""));
+  const showCompletedBtn = document.getElementById("showCompletedBtn");
+  const showAllDone = !!showCompletedTasks[currentTab];
+  if (olderDone.length === 0) {
+    showCompletedBtn.style.display = "none";
+  } else {
+    showCompletedBtn.style.display = "";
+    showCompletedBtn.textContent = showAllDone ? "Hide older completed" : "Show completed (" + olderDone.length + " hidden)";
+  }
 
   if (tasks.length === 0) {
     const div = document.createElement("div");
@@ -799,12 +814,13 @@ function render() {
     list.appendChild(taskRow(t));
   });
 
-  if (done.length) {
+  const doneToShow = showAllDone ? recentDone.concat(olderDone) : recentDone;
+  if (doneToShow.length) {
     const h = document.createElement("div");
     h.className = "priorityHeader";
     h.textContent = "Done";
     list.appendChild(h);
-    done.forEach(t => list.appendChild(taskRow(t)));
+    doneToShow.forEach(t => list.appendChild(taskRow(t)));
   }
 
   updateStickyOffsets();
@@ -980,6 +996,12 @@ function taskRow(t) {
   meta.appendChild(subToggle);
 
   txtWrap.appendChild(txt);
+  if (t.done && t.completedAt) {
+    const doneDate = document.createElement("div");
+    doneDate.textContent = "Done " + fmtCompleted(t.completedAt);
+    doneDate.style.cssText = "font-size:10.5px; color:var(--muted); margin-top:1px;";
+    txtWrap.appendChild(doneDate);
+  }
   txtWrap.appendChild(meta);
 
   const actions = document.createElement("div");
@@ -1042,6 +1064,7 @@ function startEdit(id, txtEl, container) {
 }
 
 let showCompletedSubtasks = {};
+let showCompletedTasks = {};
 
 function isRecentlyCompleted(s) {
   if (!s.completedAt) return false;
@@ -1197,7 +1220,12 @@ function subtaskSection(t) {
 
 function toggleTask(id) {
   const t = state.tasks.find(x => x.id === id);
-  if (t) { t.done = !t.done; queueSave(); render(); }
+  if (t) {
+    t.done = !t.done;
+    t.completedAt = t.done ? new Date().toISOString() : null;
+    queueSave();
+    render();
+  }
 }
 
 function changePriority(id, p) {
