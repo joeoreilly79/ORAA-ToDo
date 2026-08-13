@@ -492,7 +492,15 @@
       "project": "Sorrento",
       "priority": 4,
       "due": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "msr50c140ek2",
+          "text": "Prepare a draft for the client",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
