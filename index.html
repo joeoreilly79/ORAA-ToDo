@@ -1126,7 +1126,8 @@ function subtaskSection(t) {
   const wrap = document.createElement("div");
   wrap.className = "subSection";
 
-  const openSubs = t.subtasks.filter(s => !s.done);
+  const openSubs = t.subtasks.filter(s => !s.done)
+    .sort((a, b) => escalatedPriority(b.priority || 3, b.due) - escalatedPriority(a.priority || 3, a.due));
   const doneSubs = t.subtasks.filter(s => s.done);
   const recentDone = doneSubs.filter(isRecentlyCompleted);
   const olderDone = doneSubs.filter(s => !isRecentlyCompleted(s));
