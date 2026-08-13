@@ -426,6 +426,16 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "msr4ln0slmjtj",
+      "text": "Daylight sunlight for Belgard - make the call",
+      "done": false,
+      "created": "2026-08-13T06:17:10.348Z",
+      "project": "Jamestown & Belgard",
+      "priority": 5,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
