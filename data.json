@@ -571,6 +571,16 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "msr58hmmmyy9f",
+      "text": "Footpath ownership issue",
+      "done": false,
+      "created": "2026-08-13T06:34:56.446Z",
+      "project": "Ballsbridge",
+      "priority": 4,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
