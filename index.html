@@ -82,6 +82,18 @@
     background: var(--navy); color: #fff; border: none; border-radius: 8px;
     padding: 0 16px; font-size: 14px; cursor: pointer;
   }
+
+  @media (max-width: 480px) {
+    .addRow input[type=text]#newTaskInput {
+      flex: 1 1 100%;
+      min-width: 0;
+      font-size: 15px;
+      padding: 12px 12px;
+    }
+    .addRow select#prioritySelect { flex: 1 1 auto; min-width: 0; height: 38px; }
+    .addRow input#dueDateInput { flex: 0 0 auto; width: 118px; height: 38px; }
+    .addRow button#addTaskBtn { flex: 0 0 auto; height: 38px; }
+  }
   .addRow button:active { opacity: 0.85; }
   .addHint { font-size: 11.5px; color: var(--muted); margin-bottom: 16px; }
 
