@@ -57,9 +57,10 @@
         {
           "id": "msr5cni33r4u",
           "text": "send Enabling tender report to DE",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-13T21:56:35.262Z"
         }
       ],
       "due": null
