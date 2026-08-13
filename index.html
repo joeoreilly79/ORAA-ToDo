@@ -74,7 +74,7 @@
     flex: 1; min-width: 160px; padding: 11px 12px; border: 1px solid var(--border);
     border-radius: 8px; font-size: 14px; background: var(--card);
   }
-  .addRow select#prioritySelect, .addRow input#dueDateInput {
+  .addRow select#prioritySelect {
     padding: 0 10px; border: 1px solid var(--border); border-radius: 8px; font-size: 14px;
     background: var(--card);
   }
@@ -91,7 +91,7 @@
       padding: 12px 12px;
     }
     .addRow select#prioritySelect { flex: 1 1 auto; min-width: 0; height: 38px; }
-    .addRow input#dueDateInput { flex: 0 0 auto; width: 118px; height: 38px; }
+    .addRow #dueDateInputWrap { flex: 0 0 auto; }
     .addRow button#addTaskBtn { flex: 0 0 auto; height: 38px; }
   }
   .addRow button:active { opacity: 0.85; }
@@ -229,7 +229,7 @@
       <option value="2">2 — Low</option>
       <option value="1">1 — Someday</option>
     </select>
-    <input type="date" id="dueDateInput" title="Due date (optional)">
+    <span id="dueDateInputWrap"></span>
     <button id="addTaskBtn">Add</button>
   </div>
   <div style="display:flex; justify-content:flex-end; align-items:center; margin-bottom:16px;">
@@ -871,6 +871,52 @@ function fmtDue(iso) {
   } catch (e) { return iso; }
 }
 
+// A compact tappable "date pill" that hides the bulky native date field
+// until tapped, so it doesn't eat horizontal space on mobile.
+function compactDateControl(initialValue, onChange, idForHiddenInput) {
+  const wrap = document.createElement("span");
+  wrap.style.cssText = "position:relative; display:inline-flex; align-items:center;";
+
+  const hidden = document.createElement("input");
+  hidden.type = "date";
+  hidden.value = initialValue || "";
+  if (idForHiddenInput) hidden.id = idForHiddenInput;
+  hidden.style.cssText = "position:absolute; opacity:0; width:1px; height:1px; padding:0; margin:0; border:none; pointer-events:none;";
+
+  const pill = document.createElement("button");
+  pill.type = "button";
+
+  function updatePill() {
+    const days = daysUntilDueFor(hidden.value);
+    let borderColor = "#e2e4e9", textColor = "var(--muted)";
+    if (hidden.value) {
+      if (days !== null && days <= 0) { borderColor = "#b3454a"; textColor = "#b3454a"; }
+      else if (days === 1) { borderColor = "#c97a3a"; textColor = "#c97a3a"; }
+      else { borderColor = "#c8ccd3"; textColor = "var(--text)"; }
+    }
+    pill.textContent = hidden.value ? ("📅 " + fmtDue(hidden.value)) : "📅";
+    pill.title = hidden.value ? "Change due date" : "Set a due date (optional)";
+    pill.style.cssText = "font-size:11px; border:1px solid " + borderColor + "; border-radius:6px; padding:2px 6px; background:#fff; color:" + textColor + "; cursor:pointer; white-space:nowrap;";
+  }
+
+  pill.onclick = (e) => {
+    e.stopPropagation();
+    if (hidden.showPicker) { try { hidden.showPicker(); return; } catch (err) {} }
+    hidden.style.pointerEvents = "auto";
+    hidden.style.opacity = "1";
+    hidden.focus();
+    hidden.click();
+  };
+  hidden.onchange = () => { onChange(hidden.value); updatePill(); };
+  hidden.onblur = () => { hidden.style.pointerEvents = "none"; hidden.style.opacity = "0"; };
+
+  updatePill();
+  wrap.appendChild(hidden);
+  wrap.appendChild(pill);
+  wrap.getInputEl = () => hidden;
+  return wrap;
+}
+
 function priorityLabel(p) {
   return { 5: "5 — Today", 4: "4 — High", 3: "3 — Medium", 2: "2 — Low", 1: "1 — Someday" }[p] || (p + "");
 }
@@ -923,19 +969,7 @@ function taskRow(t) {
   prioSelect.onchange = () => changePriority(t.id, parseInt(prioSelect.value, 10));
   meta.appendChild(prioSelect);
 
-  const dueDays = daysUntilDue(t);
-  const dueInput = document.createElement("input");
-  dueInput.type = "date";
-  dueInput.value = t.due || "";
-  dueInput.className = "duePick";
-  let dueColor = "#e2e4e9";
-  if (t.due) {
-    dueColor = (dueDays !== null && dueDays <= 0) ? "#b3454a" : (dueDays === 1) ? "#c97a3a" : "#e2e4e9";
-  }
-  dueInput.style.cssText = "font-size:11px; border:1px solid " + dueColor + "; border-radius:5px; padding:1px 3px; color:" + (t.due ? dueColor : "var(--muted)") + ";";
-  dueInput.title = t.due ? (dueDays !== null && dueDays < 0 ? "Overdue" : dueDays === 0 ? "Due today" : dueDays === 1 ? "Due tomorrow" : "Due date") : "Set a due date (optional)";
-  dueInput.onchange = () => changeDue(t.id, dueInput.value);
-  meta.appendChild(dueInput);
+  meta.appendChild(compactDateControl(t.due, (val) => changeDue(t.id, val)));
 
   const doneSubs = t.subtasks.filter(s => s.done).length;
   const subToggle = document.createElement("span");
@@ -1073,14 +1107,7 @@ function subtaskRowEl(t, s) {
   });
   subPrio.onchange = () => { s.priority = parseInt(subPrio.value, 10); queueSave(); render(); };
 
-  const subDueDays = daysUntilDueFor(s.due);
-  const subDueColor = s.due ? ((subDueDays !== null && subDueDays <= 0) ? "#b3454a" : subDueDays === 1 ? "#c97a3a" : "#e2e4e9") : "#e2e4e9";
-  const subDue = document.createElement("input");
-  subDue.type = "date";
-  subDue.value = s.due || "";
-  subDue.style.cssText = "font-size:10.5px; border:1px solid " + subDueColor + "; border-radius:5px; padding:0px 2px; color:" + (s.due ? subDueColor : "var(--muted)") + ";";
-  subDue.title = s.due ? (subDueDays !== null && subDueDays < 0 ? "Overdue" : subDueDays === 0 ? "Due today" : subDueDays === 1 ? "Due tomorrow" : "Due date") : "Set a due date (optional)";
-  subDue.onchange = () => { s.due = subDue.value || null; queueSave(); render(); };
+  const subDue = compactDateControl(s.due, (val) => { s.due = val || null; queueSave(); render(); });
 
   const del = document.createElement("button");
   del.className = "subDel";
@@ -1136,10 +1163,8 @@ function subtaskSection(t) {
     if (p === 3) opt.selected = true;
     subPrioSelect.appendChild(opt);
   });
-  const subDueSelect = document.createElement("input");
-  subDueSelect.type = "date";
-  subDueSelect.title = "Due date (optional)";
-  subDueSelect.style.cssText = "font-size:12px; border:1px solid var(--border); border-radius:6px; padding:1px 4px;";
+  const subDueControl = compactDateControl(null, () => {});
+  const subDueSelect = subDueControl.getInputEl();
   const addBtn = document.createElement("button");
   addBtn.textContent = "Add";
   const doAdd = () => {
@@ -1154,6 +1179,7 @@ function subtaskSection(t) {
     });
     input.value = "";
     subDueSelect.value = "";
+    subDueSelect.dispatchEvent(new Event("change"));
     queueSave();
     render();
   };
@@ -1161,7 +1187,7 @@ function subtaskSection(t) {
   input.addEventListener("keydown", e => { if (e.key === "Enter") doAdd(); });
   addRow.appendChild(input);
   addRow.appendChild(subPrioSelect);
-  addRow.appendChild(subDueSelect);
+  addRow.appendChild(subDueControl);
   addRow.appendChild(addBtn);
   wrap.appendChild(addRow);
 
@@ -1210,10 +1236,12 @@ function addTask(text, priority, due) {
 document.getElementById("addTaskBtn").onclick = () => {
   const input = document.getElementById("newTaskInput");
   const prio = parseInt(document.getElementById("prioritySelect").value, 10);
-  const due = document.getElementById("dueDateInput").value;
+  const dueEl = document.getElementById("dueDateInput");
+  const due = dueEl.value;
   addTask(input.value, prio, due);
   input.value = "";
-  document.getElementById("dueDateInput").value = "";
+  dueEl.value = "";
+  dueEl.dispatchEvent(new Event("change"));
   input.focus();
 };
 document.getElementById("newTaskInput").addEventListener("keydown", e => {
@@ -1232,6 +1260,8 @@ document.getElementById("saveTokenBtn").onclick = async () => {
   document.getElementById("setupOverlay").style.display = "none";
   await loadFromGitHub();
 };
+
+document.getElementById("dueDateInputWrap").appendChild(compactDateControl(null, () => {}, "dueDateInput"));
 
 if (token) {
   document.getElementById("setupOverlay").style.display = "none";
