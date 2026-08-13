@@ -213,6 +213,13 @@
           "text": "Chat Tom in KSN - where is he at today?",
           "done": true,
           "priority": 5
+        },
+        {
+          "id": "msr4qroivusq",
+          "text": "Check in with KSN",
+          "done": false,
+          "priority": 3,
+          "due": "2026-08-19"
         }
       ]
     },
