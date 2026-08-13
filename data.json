@@ -80,8 +80,9 @@
         {
           "id": "mso9z4bc7qii",
           "text": "sort insurance",
-          "done": false,
-          "priority": 5
+          "done": true,
+          "priority": 5,
+          "completedAt": "2026-08-13T06:40:46.710Z"
         },
         {
           "id": "mso9zdcckbyu",
