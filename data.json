@@ -25,9 +25,10 @@
         {
           "id": "msr4kqaom6pj",
           "text": "chat Aimee on this - what will we offer 10%",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-13T07:58:51.287Z"
         }
       ],
       "due": null
