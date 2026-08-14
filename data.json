@@ -458,9 +458,10 @@
         {
           "id": "msp40zlr2cft",
           "text": "Get Belgard Apt types",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T06:26:48.313Z"
         },
         {
           "id": "msskducb72h6",
