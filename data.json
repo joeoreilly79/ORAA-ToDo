@@ -196,9 +196,10 @@
         {
           "id": "msrflxupi3uu",
           "text": "Ask Lapithus re the appointments",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T06:24:37.128Z"
         },
         {
           "id": "msrfrlelme6m",
@@ -218,9 +219,10 @@
         {
           "id": "mssk3sz3rhbc",
           "text": "let Sarah know about the tracker for Lapithus",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T06:24:36.328Z"
         }
       ]
     },
