@@ -466,16 +466,18 @@
         {
           "id": "msskducb72h6",
           "text": "Review what Paddy sent over last night",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T11:05:23.423Z"
         },
         {
           "id": "mssker2gkeo4",
           "text": "Give Dave Hicky a nudge on Kev Carroll to review",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T11:05:22.338Z"
         }
       ]
     },
