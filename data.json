@@ -339,9 +339,10 @@
         {
           "id": "msr4sokppe3i",
           "text": "Chat Lapithus or reminder email",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T06:24:48.889Z"
         }
       ]
     },
