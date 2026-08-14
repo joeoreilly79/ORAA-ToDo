@@ -204,9 +204,10 @@
         {
           "id": "msrfrlelme6m",
           "text": "Cashflow Belgard design team",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T06:25:02.508Z"
         },
         {
           "id": "mssk2zw6wqtm",
