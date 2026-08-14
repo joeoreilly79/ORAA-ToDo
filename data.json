@@ -730,16 +730,6 @@
           "due": "2026-08-14"
         }
       ]
-    },
-    {
-      "id": "msskczco4i350",
-      "text": "TAM Model for Lapithus",
-      "done": false,
-      "created": "2026-08-14T06:26:06.456Z",
-      "project": "Jamestown & Belgard",
-      "priority": 3,
-      "due": null,
-      "subtasks": []
     }
   ],
   "projects": [
