@@ -606,9 +606,10 @@
         {
           "id": "msr50c140ek2",
           "text": "Prepare a draft for the client",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T11:05:29.555Z"
         },
         {
           "id": "msr5128jrnr0",
