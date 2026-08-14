@@ -210,9 +210,10 @@
         {
           "id": "mssk2zw6wqtm",
           "text": "Chase OCSC",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-14T06:21:42.397Z"
         },
         {
           "id": "mssk3sz3rhbc",
