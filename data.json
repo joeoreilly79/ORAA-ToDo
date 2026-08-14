@@ -597,7 +597,7 @@
     {
       "id": "msr4zc3cwd02d",
       "text": "Email to the Client re tender and planning",
-      "done": false,
+      "done": true,
       "created": "2026-08-13T06:27:49.368Z",
       "project": "Sorrento",
       "priority": 4,
@@ -626,7 +626,8 @@
           "priority": 5,
           "due": null
         }
-      ]
+      ],
+      "completedAt": "2026-08-14T16:22:09.104Z"
     },
     {
       "id": "msr52h8we8px3",
