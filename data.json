@@ -406,16 +406,18 @@
         {
           "id": "msr5ee30afai",
           "text": "DE needs a budget",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": "2026-08-14"
+          "due": "2026-08-14",
+          "completedAt": "2026-08-16T06:51:08.033Z"
         },
         {
           "id": "msr5fhqfju5h",
           "text": "chat pierce re costs",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-16T06:51:07.252Z"
         }
       ]
     },
