@@ -787,7 +787,15 @@
       "project": "Sorrento",
       "priority": 4,
       "due": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "msvzir3hz9s0",
+          "text": "Set up meeting with Smithcon and MMP  for Tue",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
