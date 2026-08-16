@@ -142,6 +142,23 @@
 
   .empty { text-align: center; color: var(--muted); font-size: 13.5px; padding: 30px 10px; }
 
+  .prioSummaryStrip { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+  .prioChip {
+    flex: 1; min-width: 64px; text-align: center; border: 1px solid var(--border);
+    border-radius: 8px; padding: 8px 4px; background: #fff;
+  }
+  .prioNum { font-size: 20px; font-weight: 700; }
+  .prioChipLabel { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.3px; margin-top: 2px; }
+
+  @media (max-width: 480px) {
+    .prioSummaryStrip { flex-wrap: wrap; }
+    .prioChip-5 { flex: 1 1 100%; padding: 16px 4px; order: -1; }
+    .prioChip-5 .prioNum { font-size: 34px; }
+    .prioChip-5 .prioChipLabel { font-size: 11.5px; }
+    .prioChip-4, .prioChip-3, .prioChip-2, .prioChip-1 { flex: 1 1 21%; min-width: 0; padding: 6px 2px; }
+    .prioChip-4 .prioNum, .prioChip-3 .prioNum, .prioChip-2 .prioNum, .prioChip-1 .prioNum { font-size: 17px; }
+  }
+
   #setupOverlay {
     position: fixed; inset: 0; background: rgba(20,25,45,0.55); display: flex;
     align-items: center; justify-content: center; padding: 20px; z-index: 100;
@@ -951,17 +968,19 @@ function prioritySummaryStrip(notDoneTasks) {
   const labels = { 5: "Today", 4: "High", 3: "Medium", 2: "Low", 1: "Someday" };
 
   const strip = document.createElement("div");
-  strip.style.cssText = "display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px;";
+  strip.className = "prioSummaryStrip";
 
   [5,4,3,2,1].forEach(p => {
     const chip = document.createElement("div");
-    chip.style.cssText = "flex:1; min-width:64px; text-align:center; border:1px solid " + colors[p] + "; border-radius:8px; padding:8px 4px; background:#fff;";
+    chip.className = "prioChip prioChip-" + p;
+    chip.style.borderColor = colors[p];
     const num = document.createElement("div");
+    num.className = "prioNum";
     num.textContent = counts[p];
-    num.style.cssText = "font-size:20px; font-weight:700; color:" + colors[p] + ";";
+    num.style.color = colors[p];
     const lab = document.createElement("div");
+    lab.className = "prioChipLabel";
     lab.textContent = "P" + p + " " + labels[p];
-    lab.style.cssText = "font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:0.3px; margin-top:2px;";
     chip.appendChild(num);
     chip.appendChild(lab);
     strip.appendChild(chip);
