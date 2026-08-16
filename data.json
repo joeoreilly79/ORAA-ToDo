@@ -31,7 +31,9 @@
           "completedAt": "2026-08-13T07:58:51.287Z"
         }
       ],
-      "due": null
+      "due": null,
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "mso9368s5pek5",
@@ -64,7 +66,8 @@
         }
       ],
       "due": null,
-      "completedAt": "2026-08-16T15:52:58.635Z"
+      "completedAt": "2026-08-16T15:52:58.635Z",
+      "recurrence": null
     },
     {
       "id": "mso9vj1ksw75z",
@@ -91,8 +94,9 @@
         {
           "id": "mso9zdcckbyu",
           "text": "road tax",
-          "done": false,
-          "priority": 5
+          "done": true,
+          "priority": 5,
+          "completedAt": "2026-08-16T21:26:45.901Z"
         },
         {
           "id": "msor64zxxtfp",
@@ -117,7 +121,9 @@
           "priority": 3,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoa1c5ysgrqc",
@@ -143,7 +149,9 @@
           "due": null,
           "completedAt": "2026-08-13T09:19:38.708Z"
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msog4ocj40mhc",
@@ -161,7 +169,9 @@
           "priority": 5,
           "completedAt": "2026-08-13T07:49:15.702Z"
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msog72bl2moke",
@@ -178,7 +188,9 @@
           "done": false,
           "priority": 4
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msog9fys08jse",
@@ -233,7 +245,9 @@
           "due": null,
           "completedAt": "2026-08-14T06:24:36.328Z"
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msogbgda03s8a",
@@ -257,7 +271,9 @@
           "done": false,
           "priority": 3
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msogcs1rr8zfz",
@@ -267,7 +283,9 @@
       "project": "Jamestown & Belgard",
       "priority": 2,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msogde5mqeo3c",
@@ -291,7 +309,9 @@
           "priority": 3,
           "due": "2026-08-19"
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msogtapc5zvo4",
@@ -320,7 +340,9 @@
           "done": false,
           "priority": 4
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoh5vz33ahhy",
@@ -353,7 +375,9 @@
           "due": null,
           "completedAt": "2026-08-14T06:24:48.889Z"
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoiw0x2wzx8w",
@@ -363,7 +387,9 @@
       "project": "RTB",
       "priority": 5,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoqs3l8ha60z",
@@ -373,7 +399,9 @@
       "project": "Curlews",
       "priority": 3,
       "due": "2026-08-14",
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoqszqrppamm",
@@ -383,7 +411,9 @@
       "project": "Curlews",
       "priority": 5,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoqtqw2wf3gp",
@@ -393,7 +423,9 @@
       "project": "Curlews",
       "priority": 5,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoqu4ojrzrfc",
@@ -427,7 +459,9 @@
           "due": null,
           "completedAt": "2026-08-16T06:51:07.252Z"
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoqve08myhoa",
@@ -437,7 +471,9 @@
       "project": "TH Projects",
       "priority": 2,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msoqvuefp91qu",
@@ -447,7 +483,9 @@
       "project": "TH Projects",
       "priority": 1,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msp3zzgx228h6",
@@ -489,7 +527,9 @@
           "due": null,
           "completedAt": "2026-08-14T11:05:22.338Z"
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msp6r25trhijx",
@@ -508,7 +548,8 @@
           "due": null
         }
       ],
-      "completedAt": null
+      "completedAt": null,
+      "recurrence": null
     },
     {
       "id": "msr3hln5v306x",
@@ -575,7 +616,9 @@
           "priority": 3,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msr4ln0slmjtj",
@@ -586,7 +629,8 @@
       "priority": 5,
       "due": null,
       "subtasks": [],
-      "completedAt": "2026-08-14T06:24:54.394Z"
+      "completedAt": "2026-08-14T06:24:54.394Z",
+      "recurrence": null
     },
     {
       "id": "msr4miol78w4b",
@@ -611,7 +655,9 @@
           "priority": 4,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msr4zc3cwd02d",
@@ -646,7 +692,8 @@
           "due": null
         }
       ],
-      "completedAt": "2026-08-14T16:22:09.104Z"
+      "completedAt": "2026-08-14T16:22:09.104Z",
+      "recurrence": null
     },
     {
       "id": "msr52h8we8px3",
@@ -657,7 +704,8 @@
       "priority": 5,
       "due": null,
       "subtasks": [],
-      "completedAt": "2026-08-13T21:56:59.809Z"
+      "completedAt": "2026-08-13T21:56:59.809Z",
+      "recurrence": null
     },
     {
       "id": "msr5320svsqdf",
@@ -667,7 +715,9 @@
       "project": "RTB",
       "priority": 5,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msr53forqf5k5",
@@ -685,7 +735,9 @@
           "priority": 5,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msr542xfo3pgt",
@@ -703,7 +755,9 @@
           "priority": 5,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msr58hmmmyy9f",
@@ -721,7 +775,9 @@
           "priority": 5,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msr59r3uy93an",
@@ -739,7 +795,9 @@
           "priority": 5,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msr5dc9n1uwqv",
@@ -749,7 +807,9 @@
       "project": "Curlews",
       "priority": 5,
       "due": null,
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msr74to1oyho9",
@@ -767,7 +827,9 @@
           "priority": 4,
           "due": "2026-08-14"
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "mst3vx5vxriua",
@@ -777,7 +839,9 @@
       "project": "RTB",
       "priority": 4,
       "due": "2026-08-17",
-      "subtasks": []
+      "subtasks": [],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msvzhzcxkumfu",
@@ -795,7 +859,9 @@
           "priority": 5,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     }
   ],
   "projects": [
