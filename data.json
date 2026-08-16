@@ -489,7 +489,15 @@
       "project": "Personal",
       "priority": 4,
       "due": "2026-08-15",
-      "subtasks": [],
+      "subtasks": [
+        {
+          "id": "msvg3xdtuzmo",
+          "text": "Give invoice to mam",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ],
       "completedAt": "2026-08-16T06:49:32.844Z"
     },
     {
