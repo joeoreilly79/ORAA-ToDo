@@ -747,9 +747,10 @@
         {
           "id": "msr5776yd7ji",
           "text": "Intro GB to building manager",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-17T09:51:57.803Z"
         }
       ],
       "recurrence": null,
