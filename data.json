@@ -893,7 +893,15 @@
       "project": "Sorrento",
       "priority": 3,
       "due": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mswywnxtnggm",
+          "text": "Get onto P Greene - we need a workshop with TC",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
