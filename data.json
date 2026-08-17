@@ -626,9 +626,10 @@
         {
           "id": "mswu72ob5g8g",
           "text": "order a dryer for downstairs",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-17T06:42:23.265Z"
         }
       ],
       "recurrence": null,
