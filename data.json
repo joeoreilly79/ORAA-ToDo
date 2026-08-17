@@ -819,14 +819,14 @@
     {
       "id": "msr5dc9n1uwqv",
       "text": "Call Charles and get an update",
-      "done": false,
+      "done": true,
       "created": "2026-08-13T06:38:42.779Z",
       "project": "Curlews",
       "priority": 5,
       "due": null,
       "subtasks": [],
       "recurrence": null,
-      "completedAt": null
+      "completedAt": "2026-08-17T09:20:30.844Z"
     },
     {
       "id": "msr74to1oyho9",
