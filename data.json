@@ -907,6 +907,16 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "msxb04wgzryk4",
+      "text": "lighting designer question",
+      "done": false,
+      "created": "2026-08-17T14:03:01.456Z",
+      "project": "Sorrento",
+      "priority": 3,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
