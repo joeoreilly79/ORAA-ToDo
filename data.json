@@ -884,6 +884,16 @@
       ],
       "recurrence": null,
       "completedAt": null
+    },
+    {
+      "id": "mswyw8hcprml4",
+      "text": "Techrete - next steps",
+      "done": false,
+      "created": "2026-08-17T08:24:04.080Z",
+      "project": "Sorrento",
+      "priority": 3,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
