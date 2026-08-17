@@ -903,9 +903,10 @@
         {
           "id": "mswywnxtnggm",
           "text": "Get onto P Greene - we need a workshop with TC",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-17T17:24:26.688Z"
         }
       ],
       "recurrence": null,
