@@ -787,9 +787,10 @@
         {
           "id": "msr590ms5yje",
           "text": "chat marcus - what happened after i left the call",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-17T08:57:54.266Z"
         }
       ],
       "recurrence": null,
