@@ -877,9 +877,10 @@
         {
           "id": "mswyrtc866uk",
           "text": "give darrell & john the heads up",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-17T08:43:00.170Z"
         }
       ],
       "recurrence": null,
