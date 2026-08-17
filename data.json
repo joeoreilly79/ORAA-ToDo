@@ -870,9 +870,10 @@
         {
           "id": "msvzir3hz9s0",
           "text": "Set up meeting with Smithcon and MMP  for Tue",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-17T08:55:03.257Z"
         },
         {
           "id": "mswyrtc866uk",
