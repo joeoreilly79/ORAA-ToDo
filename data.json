@@ -346,7 +346,7 @@
           "id": "msoguyjavrmc",
           "text": "Get the consultant invoices over for payment",
           "done": false,
-          "priority": 4
+          "priority": 5
         }
       ],
       "recurrence": null,
