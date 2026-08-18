@@ -586,7 +586,7 @@
     {
       "id": "msp6r25trhijx",
       "text": "Nursing home receipts for tax",
-      "done": false,
+      "done": true,
       "created": "2026-08-11T21:41:50.130Z",
       "project": "Personal",
       "priority": 4,
@@ -601,7 +601,7 @@
           "completedAt": "2026-08-18T14:21:15.846Z"
         }
       ],
-      "completedAt": null,
+      "completedAt": "2026-08-18T14:21:21.645Z",
       "recurrence": null
     },
     {
