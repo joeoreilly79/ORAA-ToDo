@@ -960,6 +960,16 @@
       ],
       "recurrence": null,
       "completedAt": null
+    },
+    {
+      "id": "msy90mzlcnkeo",
+      "text": "Planning pre commencment conditions",
+      "done": false,
+      "created": "2026-08-18T05:55:11.841Z",
+      "project": "Sorrento",
+      "priority": 4,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
