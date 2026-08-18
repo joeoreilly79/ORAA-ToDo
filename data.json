@@ -33,9 +33,10 @@
         {
           "id": "msy8x1iv2q8t",
           "text": "chase Aimee for updated report",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-18T14:24:57.182Z"
         }
       ],
       "due": null,
