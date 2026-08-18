@@ -193,8 +193,9 @@
         {
           "id": "msog7qex8aah",
           "text": "Follow up with Garldine in Cavan HSE",
-          "done": false,
-          "priority": 4
+          "done": true,
+          "priority": 4,
+          "completedAt": "2026-08-18T05:47:32.300Z"
         }
       ],
       "recurrence": null,
