@@ -503,6 +503,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-16T06:51:07.252Z"
+        },
+        {
+          "id": "msy9g1mmiwd3",
+          "text": "Check in with Barry - when is he on site Wed/Thur",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
