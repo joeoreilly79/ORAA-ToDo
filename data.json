@@ -535,7 +535,7 @@
     {
       "id": "msp3zzgx228h6",
       "text": "TAM development model",
-      "done": false,
+      "done": true,
       "created": "2026-08-11T20:24:47.697Z",
       "project": "Jamestown & Belgard",
       "priority": 3,
@@ -574,7 +574,7 @@
         }
       ],
       "recurrence": null,
-      "completedAt": null
+      "completedAt": "2026-08-18T05:53:44.576Z"
     },
     {
       "id": "msp6r25trhijx",
