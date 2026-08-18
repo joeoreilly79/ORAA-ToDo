@@ -653,9 +653,10 @@
         {
           "id": "msr3p48ajde8",
           "text": "register tenant with RTB",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-18T20:40:12.423Z"
         },
         {
           "id": "msr8pe5c4x6p",
