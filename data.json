@@ -595,9 +595,10 @@
         {
           "id": "msvg3xdtuzmo",
           "text": "Give invoice to mam",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-18T14:21:15.846Z"
         }
       ],
       "completedAt": null,
@@ -1006,7 +1007,9 @@
           "priority": 4,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msy9h18jqlnp8",
@@ -1031,7 +1034,9 @@
           "priority": 4,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     },
     {
       "id": "msyfj7z9w264u",
@@ -1049,7 +1054,9 @@
           "priority": 4,
           "due": null
         }
-      ]
+      ],
+      "recurrence": null,
+      "completedAt": null
     }
   ],
   "projects": [
