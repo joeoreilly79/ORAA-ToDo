@@ -1025,6 +1025,16 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "msyfj7z9w264u",
+      "text": "Vico Terrace Cliff - next steps",
+      "done": false,
+      "created": "2026-08-18T08:57:36.549Z",
+      "project": "Sorrento",
+      "priority": 3,
+      "due": null,
+      "subtasks": []
     }
   ],
   "projects": [
