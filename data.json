@@ -951,6 +951,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-17T17:24:26.688Z"
+        },
+        {
+          "id": "msyhke7fz0t9",
+          "text": "WE need a workshop on costs and details with TC",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
