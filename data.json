@@ -412,6 +412,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-14T06:24:48.889Z"
+        },
+        {
+          "id": "msy8ynupag85",
+          "text": "Give Lapithus a nudge",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
