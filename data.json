@@ -798,9 +798,10 @@
         {
           "id": "msr57psm16f0",
           "text": "get costs email and send around?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-18T06:03:53.874Z"
         }
       ],
       "recurrence": null,
