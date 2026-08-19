@@ -1080,13 +1080,6 @@
           "done": false,
           "priority": 4,
           "due": null
-        },
-        {
-          "id": "mt01i8vaiky6",
-          "text": "set up th eworkshop design Team and Smithcon",
-          "done": false,
-          "priority": 5,
-          "due": null
         }
       ],
       "recurrence": null,
