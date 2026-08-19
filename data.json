@@ -988,9 +988,10 @@
         {
           "id": "msxb3ejdnzcn",
           "text": "need to text M on this - start the ball rolling",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-19T12:03:31.173Z"
         }
       ],
       "recurrence": null,
