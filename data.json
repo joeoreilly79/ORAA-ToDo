@@ -1145,6 +1145,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "msznpi1odni61",
+      "text": "Get new Omega Contract signed",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-19T05:34:12.636Z",
+      "project": "Personal",
+      "priority": 3,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
