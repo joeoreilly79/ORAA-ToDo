@@ -323,6 +323,13 @@
           "done": false,
           "priority": 4,
           "due": null
+        },
+        {
+          "id": "mt0492xdl0pj",
+          "text": "Get an agenda and time fo rth eDCC meeting",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
