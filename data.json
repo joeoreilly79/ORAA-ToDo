@@ -1019,6 +1019,13 @@
           "done": false,
           "priority": 4,
           "due": null
+        },
+        {
+          "id": "mszm8jh69cq1",
+          "text": "Update the tracker to show 2023 conditions already closed",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
