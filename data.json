@@ -1096,7 +1096,15 @@
       "priority": 4,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mszm2d4mkprg",
+          "text": "Chat RO re getting in there next Wed",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
