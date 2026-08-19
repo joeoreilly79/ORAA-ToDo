@@ -1175,7 +1175,15 @@
       "priority": 3,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mt01htnkj1br",
+          "text": "set up call with Charles re th elighting",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
