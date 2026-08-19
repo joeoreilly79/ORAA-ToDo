@@ -859,9 +859,10 @@
         {
           "id": "msy9ca96n68q",
           "text": "Talk to Tomas today",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-19T04:49:59.385Z"
         }
       ],
       "recurrence": null,
