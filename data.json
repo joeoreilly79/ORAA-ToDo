@@ -1073,6 +1073,18 @@
       "due": "2026-08-22",
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mszlyiyb2mwfp",
+      "text": "Monthly Invoicing",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-19T04:45:14.483Z",
+      "project": "ORAA Housekeeping",
+      "priority": 4,
+      "due": "2026-09-07",
+      "recurrence": "monthly",
+      "subtasks": []
     }
   ],
   "projects": [
