@@ -1008,9 +1008,10 @@
         {
           "id": "msy924jryqha",
           "text": "Put together a full pre commencment tracker old & new",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-19T04:51:33.025Z"
         }
       ],
       "recurrence": null,
