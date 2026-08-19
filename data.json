@@ -1164,6 +1164,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mt01hf2rjknih",
+      "text": "CLient & Smithcon Call",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-19T11:59:50.163Z",
+      "project": "Sorrento",
+      "priority": 3,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
