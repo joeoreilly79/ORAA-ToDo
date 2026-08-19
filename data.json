@@ -160,9 +160,10 @@
         {
           "id": "msy8t8bf3nbq",
           "text": "sign and return docs to Dave",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-19T04:41:25.465Z"
         }
       ],
       "recurrence": null,
