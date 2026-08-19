@@ -1012,6 +1012,13 @@
           "priority": 4,
           "due": null,
           "completedAt": "2026-08-19T04:51:33.025Z"
+        },
+        {
+          "id": "mszm7t5v4rh7",
+          "text": "Condition 5 - get price from Ecologist",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
