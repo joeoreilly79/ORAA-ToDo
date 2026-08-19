@@ -1061,6 +1061,18 @@
       ],
       "recurrence": null,
       "completedAt": null
+    },
+    {
+      "id": "mszlwmpl9dr3l",
+      "text": "2025 Travel & House Expenses",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-19T04:43:46.041Z",
+      "project": "Personal",
+      "priority": 4,
+      "due": "2026-08-22",
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
