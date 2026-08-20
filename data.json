@@ -1022,9 +1022,10 @@
         {
           "id": "mt01mozh2uh7",
           "text": "Set up a meeting with Charles & M for Monday afternoon",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T14:44:16.456Z"
         }
       ],
       "recurrence": null,
