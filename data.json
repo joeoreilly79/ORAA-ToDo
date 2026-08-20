@@ -1301,7 +1301,15 @@
       "priority": 4,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mt13u2ya6z0k",
+          "text": "Issue notes from the meeting 19th Aug",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
