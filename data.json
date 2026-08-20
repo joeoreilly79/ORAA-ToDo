@@ -374,9 +374,10 @@
         {
           "id": "msr4qroivusq",
           "text": "Check in with KSN",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": "2026-08-19"
+          "due": "2026-08-19",
+          "completedAt": "2026-08-20T14:38:24.060Z"
         }
       ],
       "recurrence": null,
