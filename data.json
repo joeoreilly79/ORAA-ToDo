@@ -1038,9 +1038,10 @@
         {
           "id": "msy91cqprvth",
           "text": "Chat to Sadbh and Hugo - do we need to submit a full new suite of pre commencment compliance",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T05:49:39.759Z"
         },
         {
           "id": "msy924jryqha",
