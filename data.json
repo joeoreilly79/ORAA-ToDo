@@ -1171,7 +1171,15 @@
       "priority": 4,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mt13v232ssd4",
+          "text": "Issue notes from the Design Team meeting 18th Aug",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     },
     {
       "id": "mszmvuacsa0l0",
