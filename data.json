@@ -347,9 +347,10 @@
         {
           "id": "mt138kg3bd7h",
           "text": "Email re the Model",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T14:38:20.864Z"
         }
       ],
       "recurrence": null,
