@@ -1162,9 +1162,10 @@
         {
           "id": "mszm2d4mkprg",
           "text": "Chat RO re getting in there next Wed",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T17:11:18.193Z"
         }
       ]
     },
