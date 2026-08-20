@@ -881,9 +881,10 @@
         {
           "id": "msr5aazh1z1d",
           "text": "Thur 13th - where are we at - actions needed?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T05:52:53.347Z"
         },
         {
           "id": "msy9ca96n68q",
