@@ -1268,9 +1268,10 @@
         {
           "id": "mt01nhvybfsi",
           "text": "Get project referrances from Dave Smith",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T16:58:26.113Z"
         }
       ]
     },
