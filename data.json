@@ -1223,9 +1223,10 @@
         {
           "id": "mt01it53544u",
           "text": "Set up workshop session",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T14:44:21.679Z"
         },
         {
           "id": "mt01j7cqiqhb",
