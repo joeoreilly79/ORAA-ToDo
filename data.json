@@ -1290,6 +1290,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "mt13tmlifdgis",
+      "text": "Ballsbridge Planning Meetings",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-20T05:53:05.190Z",
+      "project": "Ballsbridge",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
