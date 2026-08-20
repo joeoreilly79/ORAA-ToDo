@@ -740,9 +740,10 @@
         {
           "id": "msr4p3hmu83d",
           "text": "A 2 month pause for WM, KSN, OCSC",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T14:44:12.503Z"
         }
       ],
       "recurrence": null,
