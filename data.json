@@ -797,14 +797,14 @@
     {
       "id": "msr5320svsqdf",
       "text": "chat Mark Hopkins on the plant",
-      "done": false,
+      "done": true,
       "created": "2026-08-13T06:30:42.940Z",
       "project": "RTB",
       "priority": 5,
       "due": null,
       "subtasks": [],
       "recurrence": null,
-      "completedAt": null
+      "completedAt": "2026-08-20T05:51:40.822Z"
     },
     {
       "id": "msr53forqf5k5",
