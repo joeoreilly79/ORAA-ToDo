@@ -542,9 +542,10 @@
         {
           "id": "msy9g1mmiwd3",
           "text": "Check in with Barry - when is he on site Wed/Thur",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-20T17:11:14.525Z"
         }
       ],
       "recurrence": null,
