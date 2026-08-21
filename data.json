@@ -705,9 +705,10 @@
         {
           "id": "msr3jm2st5nk",
           "text": "Chat Mark Hanlon on the front light",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-21T13:32:51.766Z"
         },
         {
           "id": "msr3o30pcl94",
