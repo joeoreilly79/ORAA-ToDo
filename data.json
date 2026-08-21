@@ -955,7 +955,7 @@
     {
       "id": "msr74to1oyho9",
       "text": "RTB Insurance",
-      "done": false,
+      "done": true,
       "created": "2026-08-13T07:28:04.657Z",
       "project": "RTB",
       "priority": 5,
@@ -971,7 +971,7 @@
         }
       ],
       "recurrence": null,
-      "completedAt": null
+      "completedAt": "2026-08-21T13:20:57.056Z"
     },
     {
       "id": "mst3vx5vxriua",
