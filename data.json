@@ -431,9 +431,10 @@
         {
           "id": "mt2jdute8iv8",
           "text": "Look at new design - MJT to quick update",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-21T13:25:27.775Z"
         },
         {
           "id": "mt2jee6oylzt",
