@@ -203,9 +203,10 @@
         {
           "id": "msy8u84k24ct",
           "text": "follow up with simon - he has to re-issue the form 10",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-21T21:43:06.343Z"
         }
       ],
       "recurrence": null,
