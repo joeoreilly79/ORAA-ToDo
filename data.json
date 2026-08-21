@@ -287,16 +287,18 @@
         {
           "id": "msy8y45wxiot",
           "text": "did OCSC reply?",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-21T05:23:11.627Z"
         },
         {
           "id": "mszpg3ddu5bh",
           "text": "WD fees for Demo report",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-21T05:23:17.995Z"
         }
       ],
       "recurrence": null,
