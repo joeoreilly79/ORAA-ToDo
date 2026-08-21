@@ -488,9 +488,10 @@
         {
           "id": "mt2i8qehbybz",
           "text": "New to review Lapithus comments on car bar commercials",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-21T13:22:59.949Z"
         }
       ],
       "recurrence": null,
