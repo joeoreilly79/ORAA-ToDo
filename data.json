@@ -964,9 +964,10 @@
         {
           "id": "msr75epz8r3n",
           "text": "review email from Europa Broker",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": "2026-08-14"
+          "due": "2026-08-14",
+          "completedAt": "2026-08-21T13:20:55.355Z"
         }
       ],
       "recurrence": null,
