@@ -1046,9 +1046,10 @@
         {
           "id": "mt2ib3zft5qo",
           "text": "Chase Paul Greene",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-21T21:43:12.695Z"
         }
       ],
       "recurrence": null,
