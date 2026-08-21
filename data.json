@@ -1232,9 +1232,10 @@
         {
           "id": "mt2jc9ynni4a",
           "text": "Red line issue - get MON to call it",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-21T13:40:59.834Z"
         }
       ]
     },
