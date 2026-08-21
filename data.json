@@ -37,6 +37,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-18T14:24:57.182Z"
+        },
+        {
+          "id": "mt2i81zb1jg9",
+          "text": "Review report and issue to DCC",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "due": null,
@@ -456,6 +463,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-18T14:24:38.829Z"
+        },
+        {
+          "id": "mt2i8qehbybz",
+          "text": "New to review Lapithus comments on car bar commercials",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
@@ -738,7 +752,7 @@
           "id": "msr4n4lq476e",
           "text": "need to review timings",
           "done": false,
-          "priority": 4,
+          "priority": 3,
           "due": null
         },
         {
