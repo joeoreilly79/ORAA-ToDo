@@ -306,6 +306,13 @@
           "priority": 4,
           "due": null,
           "completedAt": "2026-08-21T05:23:17.995Z"
+        },
+        {
+          "id": "mt2jaf2xq31t",
+          "text": "Appointment tracker received from AC - review and send to Lapithus",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
@@ -420,6 +427,13 @@
           "done": true,
           "priority": 5,
           "completedAt": "2026-08-20T17:11:08.610Z"
+        },
+        {
+          "id": "mt2jdute8iv8",
+          "text": "Look at new design - MJT to quick update",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
@@ -1204,8 +1218,8 @@
       "recurrence": null,
       "subtasks": [
         {
-          "id": "mt13v232ssd4",
-          "text": "Issue notes from the Design Team meeting 18th Aug",
+          "id": "mt2jc9ynni4a",
+          "text": "Red line issue - get MON to call it",
           "done": false,
           "priority": 5,
           "due": null
