@@ -1191,8 +1191,8 @@
     {
       "id": "mszlyzfnewiaw",
       "text": "2025 Accounts - Travel Expenses",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-08-22T10:00:22.104Z",
       "created": "2026-08-19T04:45:35.843Z",
       "project": "ORAA Housekeeping",
       "priority": 4,
