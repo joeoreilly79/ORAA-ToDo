@@ -132,9 +132,10 @@
         {
           "id": "msvg5o0v10ut",
           "text": "Book NCT",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-23T09:57:50.419Z"
         }
       ],
       "recurrence": null,
