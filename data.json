@@ -1503,7 +1503,15 @@
       "priority": 4,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mt7a52q1udtg",
+          "text": "check out Demientia Iremald re sponsorship",
+          "done": false,
+          "priority": 4,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
