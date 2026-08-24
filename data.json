@@ -1444,6 +1444,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mt6zdu2quwub6",
+      "text": "M&E Link up",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-24T08:35:26.978Z",
+      "project": "Sorrento",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
