@@ -1432,6 +1432,18 @@
           "completedAt": "2026-08-21T13:00:57.653Z"
         }
       ]
+    },
+    {
+      "id": "mt6w7l580b47l",
+      "text": "Switch Elec provider",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-24T07:06:36.620Z",
+      "project": "Personal",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
