@@ -223,7 +223,7 @@
     {
       "id": "msog72bl2moke",
       "text": "The Island Sale - Fair Deal",
-      "done": false,
+      "done": true,
       "created": "2026-08-11T09:18:27.201Z",
       "project": "Personal",
       "priority": 4,
@@ -239,13 +239,14 @@
         {
           "id": "mt13mylpw0s4",
           "text": "have a chat with Gearldine Brady",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-24T07:02:50.565Z"
         }
       ],
       "recurrence": null,
-      "completedAt": null
+      "completedAt": "2026-08-24T07:02:51.670Z"
     },
     {
       "id": "msog9fys08jse",
