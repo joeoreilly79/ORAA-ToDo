@@ -1492,6 +1492,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "mt7a4kbpydgv5",
+      "text": "D-Kube",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-24T13:36:10.213Z",
+      "project": "Personal",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
