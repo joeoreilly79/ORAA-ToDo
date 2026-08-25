@@ -1254,8 +1254,8 @@
     {
       "id": "mszm4e0t14l2j",
       "text": "Planning Meeting Actions",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-08-25T06:15:53.783Z",
       "created": "2026-08-19T04:49:48.029Z",
       "project": "Curlews",
       "priority": 4,
