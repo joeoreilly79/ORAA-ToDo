@@ -1457,8 +1457,8 @@
     {
       "id": "mt6w7l580b47l",
       "text": "Switch Elec provider",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-08-25T06:13:11.743Z",
       "created": "2026-08-24T07:06:36.620Z",
       "project": "Personal",
       "priority": 4,
