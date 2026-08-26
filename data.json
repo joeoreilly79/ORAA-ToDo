@@ -354,9 +354,10 @@
         {
           "id": "mt0492xdl0pj",
           "text": "Get an agenda and time fo rth eDCC meeting",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-26T11:22:51.618Z"
         },
         {
           "id": "mta020p26kg9",
