@@ -1205,9 +1205,10 @@
         {
           "id": "msy9k0e40uw1",
           "text": "Chat Damien McA re DH's flat",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-26T06:07:44.395Z"
         }
       ],
       "recurrence": null,
