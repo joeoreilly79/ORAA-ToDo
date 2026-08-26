@@ -1470,9 +1470,10 @@
         {
           "id": "mt155mp52f9w",
           "text": "Look at the FI Submission",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-26T06:07:39.348Z"
         }
       ]
     },
