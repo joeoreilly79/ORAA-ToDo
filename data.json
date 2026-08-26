@@ -1219,9 +1219,10 @@
         {
           "id": "mt8asok45p2i",
           "text": "Meeting on site Tue 25, follow up on Thursday",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-26T06:01:48.805Z"
         }
       ],
       "recurrence": null,
