@@ -1451,9 +1451,10 @@
         {
           "id": "mt13u2ya6z0k",
           "text": "Issue notes from the meeting 19th Aug",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-26T06:08:22.646Z"
         }
       ]
     },
