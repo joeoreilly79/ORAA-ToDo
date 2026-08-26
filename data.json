@@ -41,9 +41,10 @@
         {
           "id": "mt2i81zb1jg9",
           "text": "Review report and issue to DCC",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-26T09:19:14.193Z"
         }
       ],
       "due": null,
