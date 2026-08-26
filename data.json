@@ -1569,8 +1569,8 @@
     {
       "id": "mt89txuahk0bd",
       "text": "Review planning tracker and actions - call, follow up as needed",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-08-26T06:10:30.299Z",
       "created": "2026-08-25T06:15:40.690Z",
       "project": "Ballsbridge",
       "priority": 5,
