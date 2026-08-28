@@ -1080,6 +1080,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-21T21:43:12.695Z"
+        },
+        {
+          "id": "mtcq3ywxzl6j",
+          "text": "Send a note to Smithcon re engaging with them and subbies",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
