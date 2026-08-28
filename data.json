@@ -1493,16 +1493,18 @@
         {
           "id": "mt9p454ybfsz",
           "text": "where is the tracker at - TPA",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T05:50:06.169Z"
         },
         {
           "id": "mt9p5kf1isql",
           "text": "Chenck in on the Topo",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T05:50:07.069Z"
         }
       ]
     },
