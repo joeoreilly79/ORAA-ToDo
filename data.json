@@ -1559,9 +1559,10 @@
         {
           "id": "mt6zg2ggvvtq",
           "text": "Link Willie in with CEL",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T09:01:11.785Z"
         },
         {
           "id": "mt6zgj8gop90",
