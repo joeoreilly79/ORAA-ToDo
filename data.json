@@ -1647,8 +1647,8 @@
     {
       "id": "mt9otf7cc9ajj",
       "text": "M&E Tender Review",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-08-28T09:01:52.639Z",
       "created": "2026-08-26T06:02:56.952Z",
       "project": "Sorrento",
       "priority": 5,
