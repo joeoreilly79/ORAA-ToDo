@@ -1715,7 +1715,15 @@
       "priority": 3,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mtck84zgee97",
+          "text": "follow up with Marcus",
+          "done": false,
+          "priority": 3,
+          "due": null
+        }
+      ]
     },
     {
       "id": "mtck7q2eoi294",
