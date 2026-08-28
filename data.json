@@ -1643,9 +1643,10 @@
         {
           "id": "mtcjahm8v2j5",
           "text": "Give Tom a nudge",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T21:59:36.658Z"
         }
       ]
     },
