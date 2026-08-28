@@ -321,9 +321,10 @@
         {
           "id": "mt2jaf2xq31t",
           "text": "Appointment tracker received from AC - review and send to Lapithus",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T08:20:12.304Z"
         }
       ],
       "recurrence": null,
