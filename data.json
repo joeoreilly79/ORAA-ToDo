@@ -1671,8 +1671,8 @@
     {
       "id": "mt9sy1jwjaqca",
       "text": "link OCSC in with GB",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-08-28T05:49:15.236Z",
       "created": "2026-08-26T07:58:31.004Z",
       "project": "RTB",
       "priority": 4,
