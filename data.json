@@ -1689,8 +1689,8 @@
     {
       "id": "mta69dgs14ur1",
       "text": "Fire Cert - do we need if we move the door",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-08-28T22:00:48.229Z",
       "created": "2026-08-26T14:11:14.668Z",
       "project": "RTB",
       "priority": 4,
