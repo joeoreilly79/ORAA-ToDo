@@ -1229,9 +1229,10 @@
         {
           "id": "mtcj5gsc5psq",
           "text": "Has John responded to Cliff Eng?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T13:10:28.192Z"
         }
       ],
       "recurrence": null,
