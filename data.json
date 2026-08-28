@@ -646,9 +646,10 @@
         {
           "id": "mt9owceonfyx",
           "text": "call barry",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T06:00:42.944Z"
         },
         {
           "id": "mt9owmyaclon",
