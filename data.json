@@ -1152,9 +1152,10 @@
         {
           "id": "mt8at465qc0x",
           "text": "Call Willie",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T05:46:33.444Z"
         }
       ],
       "recurrence": null,
