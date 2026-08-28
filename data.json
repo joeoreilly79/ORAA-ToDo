@@ -1735,7 +1735,15 @@
       "priority": 3,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mtck8ltakt2b",
+          "text": "Intro GB to Building Team - whats happening",
+          "done": false,
+          "priority": 3,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
