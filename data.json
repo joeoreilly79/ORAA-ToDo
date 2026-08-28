@@ -1574,9 +1574,10 @@
         {
           "id": "mt6zgj8gop90",
           "text": "Link CEL in with Chriss Walls's guy",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T09:11:37.505Z"
         },
         {
           "id": "mt8arfw87x3e",
