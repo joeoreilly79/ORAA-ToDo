@@ -1726,6 +1726,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "mtck6fdyiquyg",
+      "text": "Rise Coffee",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-28T06:16:24.166Z",
+      "project": "Clerys Jobs",
+      "priority": 3,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
