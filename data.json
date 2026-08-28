@@ -362,9 +362,10 @@
         {
           "id": "mta020p26kg9",
           "text": "Get Karen in SoSim to chat to Ray Yates",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T05:45:29.190Z"
         },
         {
           "id": "mta3zhxd75j6",
