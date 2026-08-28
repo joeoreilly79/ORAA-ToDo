@@ -145,7 +145,7 @@
     {
       "id": "msoa1c5ysgrqc",
       "text": "Life Cover",
-      "done": false,
+      "done": true,
       "created": "2026-08-11T06:26:02.326Z",
       "project": "Personal",
       "priority": 3,
@@ -176,7 +176,7 @@
         }
       ],
       "recurrence": null,
-      "completedAt": null
+      "completedAt": "2026-08-28T22:01:03.222Z"
     },
     {
       "id": "msog4ocj40mhc",
