@@ -924,27 +924,6 @@
       "completedAt": "2026-08-20T05:51:40.822Z"
     },
     {
-      "id": "msr542xfo3pgt",
-      "text": "Bubbles in Glass",
-      "done": false,
-      "created": "2026-08-13T06:31:30.771Z",
-      "project": "RTB",
-      "priority": 3,
-      "due": null,
-      "subtasks": [
-        {
-          "id": "msr57psm16f0",
-          "text": "get costs email and send around?",
-          "done": true,
-          "priority": 5,
-          "due": null,
-          "completedAt": "2026-08-18T06:03:53.874Z"
-        }
-      ],
-      "recurrence": null,
-      "completedAt": null
-    },
-    {
       "id": "msr58hmmmyy9f",
       "text": "Footpath ownership issue",
       "done": false,
