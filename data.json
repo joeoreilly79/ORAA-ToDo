@@ -1535,9 +1535,10 @@
         {
           "id": "mtcj3rawxh5e",
           "text": "Dayling & Sunlight - chat Brian",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T13:12:03.381Z"
         }
       ]
     },
