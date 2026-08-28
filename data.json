@@ -1652,7 +1652,15 @@
       "priority": 5,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mtcjahm8v2j5",
+          "text": "Give Tom a nudge",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     },
     {
       "id": "mt9orqu668zid",
