@@ -1009,13 +1009,6 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-19T04:49:59.385Z"
-        },
-        {
-          "id": "mtcj9bphmstn",
-          "text": "Chase GB for their Procurement Programme",
-          "done": false,
-          "priority": 5,
-          "due": null
         }
       ],
       "recurrence": null,
