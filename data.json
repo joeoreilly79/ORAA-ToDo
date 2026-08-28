@@ -1690,7 +1690,15 @@
       "priority": 4,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mtcj81rpw49v",
+          "text": "Has Finighin spoken to Mick?",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
