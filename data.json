@@ -1485,9 +1485,10 @@
         {
           "id": "mt9p3rb8zsom",
           "text": "follow up with Larry",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-28T05:50:01.077Z"
         },
         {
           "id": "mt9p454ybfsz",
