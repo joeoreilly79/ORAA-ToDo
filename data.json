@@ -675,6 +675,13 @@
           "done": false,
           "priority": 4,
           "due": null
+        },
+        {
+          "id": "mtgt19ec0e3u",
+          "text": "Chat Bary re bill rate",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
