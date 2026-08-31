@@ -664,9 +664,10 @@
         {
           "id": "mt9owmyaclon",
           "text": "do up the notes for the meeting",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-31T05:34:56.036Z"
         }
       ],
       "recurrence": null,
