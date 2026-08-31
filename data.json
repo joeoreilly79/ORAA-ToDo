@@ -835,6 +835,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mtgsn4y6m24n",
+          "text": "fire exteng & blank for up and down",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
