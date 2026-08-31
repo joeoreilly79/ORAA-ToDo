@@ -213,9 +213,10 @@
         {
           "id": "mt6w1wj0k54q",
           "text": "get letter signed",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-31T05:22:00.152Z"
         }
       ],
       "recurrence": null,
