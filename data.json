@@ -1859,6 +1859,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mtgt201bl87p0",
+      "text": "San Remo",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-31T05:35:58.895Z",
+      "project": "TH Projects",
+      "priority": 2,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
