@@ -1129,9 +1129,10 @@
         {
           "id": "mtcq3ywxzl6j",
           "text": "Send a note to Smithcon re engaging with them and subbies",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-31T11:52:54.495Z"
         }
       ],
       "recurrence": null,
