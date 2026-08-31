@@ -1811,6 +1811,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mtgsmioijs6oa",
+      "text": "order smoke alarm for house",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-08-31T05:23:56.562Z",
+      "project": "Personal",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
