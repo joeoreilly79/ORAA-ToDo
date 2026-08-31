@@ -260,7 +260,7 @@
     {
       "id": "msog9fys08jse",
       "text": "Design Team appointments",
-      "done": true,
+      "done": false,
       "created": "2026-08-11T09:20:18.196Z",
       "project": "Jamestown & Belgard",
       "priority": 3,
@@ -336,7 +336,7 @@
         }
       ],
       "recurrence": null,
-      "completedAt": "2026-08-31T05:27:02.641Z"
+      "completedAt": null
     },
     {
       "id": "msogbgda03s8a",
