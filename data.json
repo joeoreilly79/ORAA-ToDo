@@ -1859,8 +1859,8 @@
     {
       "id": "mtgsmioijs6oa",
       "text": "order smoke alarm for house",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-08-31T06:35:07.243Z",
       "created": "2026-08-31T05:23:56.562Z",
       "project": "Personal",
       "priority": 5,
