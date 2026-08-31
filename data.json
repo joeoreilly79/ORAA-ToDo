@@ -513,9 +513,10 @@
         {
           "id": "mtgtc3f0ru03",
           "text": "Caht to TC re Glenbrier",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-31T13:21:23.971Z"
         }
       ],
       "recurrence": null,
