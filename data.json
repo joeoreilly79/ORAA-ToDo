@@ -1874,9 +1874,10 @@
         {
           "id": "mtgt2i6v0bif",
           "text": "Chat Miki - need to be thinking of travelling",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-08-31T05:43:28.527Z"
         }
       ]
     }
