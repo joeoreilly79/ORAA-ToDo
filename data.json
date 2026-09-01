@@ -1977,7 +1977,7 @@
       "project": "ORAA Housekeeping",
       "priority": 5,
       "due": null,
-      "recurrence": null,
+      "recurrence": "monthly",
       "subtasks": []
     }
   ],
