@@ -1602,6 +1602,13 @@
           "priority": 4,
           "due": null,
           "completedAt": "2026-09-01T05:33:17.615Z"
+        },
+        {
+          "id": "mti8fb8i123q",
+          "text": "Check in with Tiarna & Roisin on progress",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
