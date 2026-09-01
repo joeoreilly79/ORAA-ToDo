@@ -221,9 +221,10 @@
         {
           "id": "mtgski8rrang",
           "text": "Make arrangements to meet Simon",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-01T08:44:31.698Z"
         }
       ],
       "recurrence": null,
