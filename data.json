@@ -1998,9 +1998,10 @@
         {
           "id": "mtipey4mkzla",
           "text": "Call S Walsh",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-01T13:29:48.140Z"
         },
         {
           "id": "mtipf5bcoy8p",
