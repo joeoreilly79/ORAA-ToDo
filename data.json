@@ -1622,9 +1622,10 @@
         {
           "id": "mti8fb8i123q",
           "text": "Check in with Tiarna & Roisin on progress",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-01T09:57:28.374Z"
         }
       ]
     },
