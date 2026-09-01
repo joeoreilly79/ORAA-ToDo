@@ -1292,9 +1292,10 @@
         {
           "id": "mtgswwe5j0bw",
           "text": "Send a note to the Client updating - report and budgtes due this week",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-01T09:54:25.302Z"
         }
       ],
       "recurrence": null,
