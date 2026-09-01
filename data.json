@@ -1943,9 +1943,10 @@
         {
           "id": "mti87z0qm6oy",
           "text": "Get onto Shane about getting it serviced",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-01T09:53:52.510Z"
         }
       ]
     },
