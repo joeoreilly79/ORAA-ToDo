@@ -1976,7 +1976,7 @@
       "created": "2026-09-01T05:46:01.087Z",
       "project": "ORAA Housekeeping",
       "priority": 5,
-      "due": null,
+      "due": "2026-09-07",
       "recurrence": "monthly",
       "subtasks": []
     }
