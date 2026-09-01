@@ -1369,9 +1369,10 @@
         {
           "id": "mtcjncg4v2h2",
           "text": "Note to Marcus re the deasign layout - HJL need to get to site ASAP",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-01T20:40:35.986Z"
         }
       ]
     },
