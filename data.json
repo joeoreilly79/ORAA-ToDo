@@ -1911,8 +1911,8 @@
     {
       "id": "mtdi0mwfigkgp",
       "text": "Myles 18 Birthday - order hifi",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-02T07:42:11.130Z",
       "created": "2026-08-28T22:03:40.911Z",
       "project": "Personal",
       "priority": 5,
