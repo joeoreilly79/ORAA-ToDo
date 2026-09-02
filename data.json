@@ -2034,6 +2034,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "mtk583bhp3peb",
+      "text": "Cancel VPM",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-02T13:39:57.005Z",
+      "project": "Personal",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
