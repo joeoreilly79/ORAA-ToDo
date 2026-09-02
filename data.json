@@ -1895,9 +1895,10 @@
         {
           "id": "mti8lnlfste0",
           "text": "Get MMP to confirm with SC on the Windows",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-02T07:42:19.995Z"
         },
         {
           "id": "mti8m3nl6v2t",
