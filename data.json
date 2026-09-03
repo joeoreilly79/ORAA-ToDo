@@ -403,9 +403,10 @@
         {
           "id": "mtl46udn8nnx",
           "text": "Send note to Lapithus - re meeting with DCC yesterday",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T06:26:03.235Z"
         }
       ],
       "recurrence": null,
