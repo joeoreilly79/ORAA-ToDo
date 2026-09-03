@@ -399,6 +399,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-20T14:38:20.864Z"
+        },
+        {
+          "id": "mtl46udn8nnx",
+          "text": "Send note to Lapithus - re meeting with DCC yesterday",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
