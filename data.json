@@ -1871,9 +1871,10 @@
         {
           "id": "mtck6u2gjdkq",
           "text": "Call their fire & dac guy",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T06:15:19.458Z"
         }
       ]
     },
