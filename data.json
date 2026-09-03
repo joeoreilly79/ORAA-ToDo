@@ -1608,9 +1608,10 @@
         {
           "id": "mtcjbsqjkbwd",
           "text": "We need someone for Dayling/Sunlight",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T06:05:52.804Z"
         }
       ]
     },
