@@ -1934,8 +1934,8 @@
     {
       "id": "mtco8gral2aiz",
       "text": "Actions for Smithcon meeting 28.08",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-03T11:32:19.957Z",
       "created": "2026-08-28T08:09:57.718Z",
       "project": "Sorrento",
       "priority": 5,
