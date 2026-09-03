@@ -623,7 +623,15 @@
       "project": "Curlews",
       "priority": 3,
       "due": "2026-08-21",
-      "subtasks": [],
+      "subtasks": [
+        {
+          "id": "mtl4glq3su3x",
+          "text": "Check in with Colin",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ],
       "recurrence": null,
       "completedAt": null
     },
