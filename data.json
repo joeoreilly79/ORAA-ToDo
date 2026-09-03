@@ -2140,9 +2140,10 @@
         {
           "id": "mtlg41div8ik",
           "text": "Set up meeting",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T11:39:01.297Z"
         },
         {
           "id": "mtlgcdtwfj7i",
