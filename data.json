@@ -2085,8 +2085,8 @@
     {
       "id": "mtipeoeeswhu3",
       "text": "Call with K Fay re programme",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-03T13:06:36.973Z",
       "created": "2026-09-01T13:29:24.230Z",
       "project": "RTB",
       "priority": 5,
@@ -2104,9 +2104,10 @@
         {
           "id": "mtipf5bcoy8p",
           "text": "Call R Brennan",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T13:06:35.945Z"
         }
       ]
     },
