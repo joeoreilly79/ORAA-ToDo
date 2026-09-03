@@ -2052,8 +2052,8 @@
     {
       "id": "mti8nezd9yjr6",
       "text": "Review GB's Programme",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-03T13:06:30.236Z",
       "created": "2026-09-01T05:40:18.457Z",
       "project": "RTB",
       "priority": 5,
