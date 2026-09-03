@@ -530,9 +530,10 @@
         {
           "id": "mti8u48dduqy",
           "text": "Pop a call into Damien McArdle re Stage 1",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T06:08:00.065Z"
         },
         {
           "id": "mtiqfls3n2zn",
