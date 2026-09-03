@@ -374,9 +374,10 @@
         {
           "id": "mta3zhxd75j6",
           "text": "Chat Emma in Cairn",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T05:57:32.864Z"
         }
       ],
       "recurrence": null,
