@@ -546,9 +546,10 @@
         {
           "id": "mtiqhx2pjekx",
           "text": "Chat Michael re th e111 beds in the NH",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T06:10:03.759Z"
         },
         {
           "id": "mtl4l2km6j7k",
