@@ -1938,8 +1938,8 @@
     {
       "id": "mtckqxty3jdq3",
       "text": "Insurance - questionnaire",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-03T16:14:26.597Z",
       "created": "2026-08-28T06:32:21.190Z",
       "project": "RTB",
       "priority": 5,
