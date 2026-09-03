@@ -1513,9 +1513,10 @@
         {
           "id": "mt01kq3ooe4e",
           "text": "Flash flooding protection - John Casey",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-03T11:38:27.279Z"
         },
         {
           "id": "mt01ldwo3rx7",
