@@ -425,9 +425,10 @@
         {
           "id": "mtligz73q9cj",
           "text": "Update the programmes",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-04T10:16:22.430Z"
         }
       ],
       "recurrence": null,
