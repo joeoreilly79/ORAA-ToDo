@@ -2198,6 +2198,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mtmj3otzq4z46",
+      "text": "Invoices - check various consultant invoices",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-04T05:43:58.584Z",
+      "project": "Sorrento",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
