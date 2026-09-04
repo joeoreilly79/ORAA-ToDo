@@ -562,9 +562,10 @@
         {
           "id": "mtl4l2km6j7k",
           "text": "Call Peter Turley",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-04T05:41:54.771Z"
         }
       ],
       "recurrence": null,
