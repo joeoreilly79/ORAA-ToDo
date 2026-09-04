@@ -385,6 +385,13 @@
           "done": false,
           "priority": 4,
           "due": null
+        },
+        {
+          "id": "mtmq9owutsxt",
+          "text": "Get JC up and running with the acoustic stuff from Brennans",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
