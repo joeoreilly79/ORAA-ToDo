@@ -1371,9 +1371,10 @@
         {
           "id": "mtl4ba4ejkjy",
           "text": "Send report to Client",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-05T05:55:05.521Z"
         }
       ],
       "recurrence": null,
