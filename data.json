@@ -2204,9 +2204,10 @@
         {
           "id": "mtlgcdtwfj7i",
           "text": "Send the agenda (Fri)",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": "2026-09-04"
+          "due": "2026-09-04",
+          "completedAt": "2026-09-05T06:07:05.912Z"
         }
       ]
     },
