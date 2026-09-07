@@ -1298,9 +1298,10 @@
         {
           "id": "mszm7t5v4rh7",
           "text": "Condition 5 - get price from Ecologist",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-07T05:14:31.470Z"
         },
         {
           "id": "mszm8jh69cq1",
