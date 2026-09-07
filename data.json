@@ -1479,9 +1479,10 @@
         {
           "id": "mtj4tl86ryib",
           "text": "Get timeline on the testing and scope",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-07T05:23:45.948Z"
         },
         {
           "id": "mtlgg37nu3if",
