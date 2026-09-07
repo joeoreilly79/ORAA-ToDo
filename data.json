@@ -2235,35 +2235,6 @@
       ]
     },
     {
-      "id": "mtlg3p42aeg88",
-      "text": "Weekly Team call DT & Smithcon",
-      "done": false,
-      "completedAt": null,
-      "created": "2026-09-03T11:32:13.922Z",
-      "project": "Sorrento",
-      "priority": 3,
-      "due": null,
-      "recurrence": null,
-      "subtasks": [
-        {
-          "id": "mtlg41div8ik",
-          "text": "Set up meeting",
-          "done": true,
-          "priority": 5,
-          "due": null,
-          "completedAt": "2026-09-03T11:39:01.297Z"
-        },
-        {
-          "id": "mtlgcdtwfj7i",
-          "text": "Send the agenda (Fri)",
-          "done": true,
-          "priority": 5,
-          "due": "2026-09-04",
-          "completedAt": "2026-09-05T06:07:05.912Z"
-        }
-      ]
-    },
-    {
       "id": "mtmic5wdlm11c",
       "text": "Larry Phelins report - share with team",
       "done": true,
