@@ -2318,6 +2318,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mtqsf3z0au0ob",
+      "text": "Design Team & Smithcon Monday Call actions",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-07T05:15:52.668Z",
+      "project": "Sorrento",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
