@@ -2371,6 +2371,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mttplaobhegw",
+          "text": "Prepare account summary incl fees",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ]
     }
