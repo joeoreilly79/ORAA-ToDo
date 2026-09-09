@@ -1661,9 +1661,10 @@
         {
           "id": "mtl4fe0q14mo",
           "text": "Minutes from Meeting on Wed 2nd need to go out",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-09T06:13:38.667Z"
         },
         {
           "id": "mtmi74lafrof",
