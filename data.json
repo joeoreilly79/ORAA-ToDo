@@ -2166,6 +2166,13 @@
           "priority": 4,
           "due": "2026-09-05",
           "completedAt": "2026-09-07T05:09:24.450Z"
+        },
+        {
+          "id": "mttosirwrebw",
+          "text": "check in with Shane - Clare first",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ]
     },
