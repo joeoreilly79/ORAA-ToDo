@@ -382,9 +382,10 @@
         {
           "id": "mtmq95gkpc4f",
           "text": "ehat items were missing from th e32B submission that we need to get going for teh final submission - chat Linda",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-09T06:32:40.725Z"
         },
         {
           "id": "mtmq9owutsxt",
