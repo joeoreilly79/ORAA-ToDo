@@ -2370,9 +2370,10 @@
         {
           "id": "mttpkt5w1l08",
           "text": "Share account notificatio with Rog & Dave",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-09T19:28:29.796Z"
         },
         {
           "id": "mttplaobhegw",
