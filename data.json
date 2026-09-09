@@ -2391,7 +2391,15 @@
       "priority": 3,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mttpm9jcla3r",
+          "text": "Chase Chris D re fee",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
