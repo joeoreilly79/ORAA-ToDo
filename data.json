@@ -2435,9 +2435,10 @@
         {
           "id": "mttpm9jcla3r",
           "text": "Chase Chris D re fee",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T05:45:00.072Z"
         }
       ]
     },
