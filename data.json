@@ -549,16 +549,18 @@
         {
           "id": "mt716spyhs4x",
           "text": "Asbestos rates especially the floor tiles",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T13:47:13.168Z"
         },
         {
           "id": "mt72abogmwdi",
           "text": "soil stacks - do we match?",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T13:47:12.321Z"
         },
         {
           "id": "mt8p8sfr9pas",
