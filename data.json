@@ -390,9 +390,10 @@
         {
           "id": "mtmq9owutsxt",
           "text": "Get JC up and running with the acoustic stuff from Brennans",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T06:11:25.150Z"
         },
         {
           "id": "mto15wl2kw6c",
