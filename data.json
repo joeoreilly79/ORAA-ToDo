@@ -619,9 +619,10 @@
         {
           "id": "mtv3pq9clpel",
           "text": "Review latest MJT costs",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T13:47:17.278Z"
         },
         {
           "id": "mtvl04obdggd",
