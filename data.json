@@ -933,9 +933,10 @@
         {
           "id": "msr3imn7lfsa",
           "text": "Clare furniture",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T17:59:07.841Z"
         },
         {
           "id": "msr3j9m0gcd3",
