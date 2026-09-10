@@ -1868,6 +1868,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mtv4s610tf3u",
+          "text": "Get the Part V pack over to SDCC",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
