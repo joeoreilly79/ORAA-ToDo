@@ -666,9 +666,10 @@
         {
           "id": "mto2202sri3w",
           "text": "Chaeck in with Eoin",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T05:57:02.875Z"
         }
       ],
       "recurrence": null,
@@ -1027,9 +1028,10 @@
         {
           "id": "mtl46605g04x",
           "text": "August DD",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T05:57:03.035Z"
         }
       ],
       "recurrence": null,
