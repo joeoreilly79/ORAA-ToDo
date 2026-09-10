@@ -2430,7 +2430,15 @@
       "priority": 3,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mtv3il1o8n48",
+          "text": "Elliotts on the case - chat Dave to see if Kev be ok with this",
+          "done": false,
+          "priority": 4,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
