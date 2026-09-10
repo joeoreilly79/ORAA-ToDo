@@ -1818,9 +1818,10 @@
         {
           "id": "mto21n0smijl",
           "text": "Read the 3DDB note on Belgard",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T05:34:36.486Z"
         },
         {
           "id": "mto22g93wk8c",
