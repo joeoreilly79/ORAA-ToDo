@@ -1850,9 +1850,10 @@
         {
           "id": "mto22g93wk8c",
           "text": "Download the HJL pack to dropbox",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-10T06:19:48.454Z"
         },
         {
           "id": "mtqs9jijzx8u",
