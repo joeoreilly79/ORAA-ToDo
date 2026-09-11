@@ -1479,8 +1479,8 @@
     {
       "id": "mszlyiyb2mwfp",
       "text": "Monthly Invoicing",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-11T05:58:43.639Z",
       "created": "2026-08-19T04:45:14.483Z",
       "project": "ORAA Housekeeping",
       "priority": 4,
@@ -2544,6 +2544,18 @@
       "priority": 4,
       "due": null,
       "recurrence": null,
+      "subtasks": []
+    },
+    {
+      "id": "mtwjpmeval4yr",
+      "text": "Monthly Invoicing",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-11T05:58:43.639Z",
+      "project": "ORAA Housekeeping",
+      "priority": 4,
+      "due": "2026-10-07",
+      "recurrence": "monthly",
       "subtasks": []
     }
   ],
