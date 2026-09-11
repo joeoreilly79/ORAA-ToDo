@@ -2531,6 +2531,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mtwjncjqtt39x",
+      "text": "Budget estimate for DE",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-11T05:56:57.542Z",
+      "project": "Curlews",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
