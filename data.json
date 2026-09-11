@@ -2376,8 +2376,8 @@
     {
       "id": "mtmj3otzq4z46",
       "text": "Invoices - check various consultant invoices",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-11T05:54:00.650Z",
       "created": "2026-09-04T05:43:58.584Z",
       "project": "Sorrento",
       "priority": 5,
