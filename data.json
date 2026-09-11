@@ -1554,9 +1554,10 @@
         {
           "id": "mtsvsrn66snt",
           "text": "access for tom on the 21st",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": "2026-09-15"
+          "due": "2026-09-15",
+          "completedAt": "2026-09-11T05:58:14.186Z"
         }
       ]
     },
