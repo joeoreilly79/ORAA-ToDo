@@ -2461,9 +2461,10 @@
         {
           "id": "mttplaobhegw",
           "text": "Prepare account summary incl fees",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-11T05:57:40.427Z"
         }
       ]
     },
