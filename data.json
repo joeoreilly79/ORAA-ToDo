@@ -2441,16 +2441,18 @@
         {
           "id": "mtwk5fjxnfzz",
           "text": "Set up dropbox folder",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-11T06:33:29.851Z"
         },
         {
           "id": "mtwk5swy6i3c",
           "text": "link in smithcon with insurance broker",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-11T06:33:29.073Z"
         }
       ]
     },
