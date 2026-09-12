@@ -1723,9 +1723,10 @@
         {
           "id": "mtmi74lafrof",
           "text": "Review Franks procurement tracker",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-12T07:30:39.334Z"
         },
         {
           "id": "mtmi7krsaty5",
