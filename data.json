@@ -413,9 +413,10 @@
         {
           "id": "mtvjjub3hnhj",
           "text": "get road in yellow of HJL",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-12T06:58:23.895Z"
         }
       ],
       "recurrence": null,
