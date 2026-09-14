@@ -2258,9 +2258,10 @@
         {
           "id": "mttosirwrebw",
           "text": "check in with Shane - Clare first",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-14T07:10:22.795Z"
         },
         {
           "id": "mtwj2j1hruze",
