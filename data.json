@@ -1175,9 +1175,10 @@
         {
           "id": "mtv3o3wf35rn",
           "text": "Send note to TPA and Marcus on progress",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-15T09:36:55.732Z"
         }
       ],
       "recurrence": null,
