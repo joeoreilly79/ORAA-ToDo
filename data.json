@@ -1418,9 +1418,10 @@
         {
           "id": "mtqsp04hybka",
           "text": "Review minutes and download McArdel programme info inadvance of meeting on soite tomorrow",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-15T10:36:58.147Z"
         }
       ],
       "recurrence": null,
