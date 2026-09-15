@@ -1739,9 +1739,10 @@
         {
           "id": "mtmi7krsaty5",
           "text": "Chat Marcus re the procurement strategy",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-15T09:36:44.033Z"
         },
         {
           "id": "mto268wj3ka7",
