@@ -636,9 +636,10 @@
         {
           "id": "mtvl04obdggd",
           "text": "drop the 5% contigency",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-16T05:49:49.595Z"
         }
       ],
       "recurrence": null,
