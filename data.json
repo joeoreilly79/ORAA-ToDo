@@ -2558,8 +2558,8 @@
     {
       "id": "mtwiz7q5pjefo",
       "text": "Call Gary Byrne",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-16T05:36:34.878Z",
       "created": "2026-09-11T05:38:11.549Z",
       "project": "Personal",
       "priority": 4,
