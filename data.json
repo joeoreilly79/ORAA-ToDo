@@ -1061,6 +1061,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-09-10T05:57:03.035Z"
+        },
+        {
+          "id": "mu3oct0rkpfj",
+          "text": "Have chat with D Foley re fees",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
