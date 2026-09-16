@@ -2591,7 +2591,15 @@
       "priority": 4,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mu44ydhtc6kb",
+          "text": "Send Stefan the invoices",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     },
     {
       "id": "mtwiz7q5pjefo",
