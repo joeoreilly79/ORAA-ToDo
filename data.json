@@ -659,9 +659,10 @@
         {
           "id": "mu3osohd0b9u",
           "text": "Review MJT Numbers and chat Xinjia - need me to format anything?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-17T13:26:05.190Z"
         }
       ],
       "recurrence": null,
