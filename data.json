@@ -2505,9 +2505,10 @@
         {
           "id": "mu3o9tp44goh",
           "text": "Send notes from Mon 14th call",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-17T07:18:12.786Z"
         },
         {
           "id": "mu576w75ht2t",
