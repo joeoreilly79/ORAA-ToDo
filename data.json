@@ -1050,9 +1050,10 @@
         {
           "id": "msr4n4lq476e",
           "text": "need to review timings",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-17T07:18:27.377Z"
         },
         {
           "id": "msr4p3hmu83d",
