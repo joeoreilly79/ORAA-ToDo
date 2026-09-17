@@ -613,9 +613,10 @@
         {
           "id": "mtiqfls3n2zn",
           "text": "do up a programme",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-17T13:26:11.509Z"
         },
         {
           "id": "mtiqhx2pjekx",
