@@ -2584,8 +2584,8 @@
     {
       "id": "mtvumv0uf5zty",
       "text": "Call Stefan",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-17T07:03:23.873Z",
       "created": "2026-09-10T18:16:44.430Z",
       "project": "Personal",
       "priority": 4,
