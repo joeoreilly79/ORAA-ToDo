@@ -421,9 +421,10 @@
         {
           "id": "mu58qkfs8g2c",
           "text": "Look at Linda's tracker",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-17T09:49:05.251Z"
         },
         {
           "id": "mu5ajbvwvaxr",
