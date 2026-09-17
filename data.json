@@ -2595,9 +2595,10 @@
         {
           "id": "mu44ydhtc6kb",
           "text": "Send Stefan the invoices",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-17T07:03:14.936Z"
         }
       ]
     },
