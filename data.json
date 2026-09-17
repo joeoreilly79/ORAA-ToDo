@@ -1413,9 +1413,10 @@
         {
           "id": "mtqsdwohy4xu",
           "text": "Give Ecology green light after final grant",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-17T10:39:51.419Z"
         }
       ],
       "recurrence": null,
