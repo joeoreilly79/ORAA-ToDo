@@ -1427,9 +1427,10 @@
         {
           "id": "mu6s2ijl0z8g",
           "text": "Chat to DLR re the contributions",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-18T10:29:14.350Z"
         }
       ],
       "recurrence": null,
