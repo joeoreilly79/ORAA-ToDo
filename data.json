@@ -843,9 +843,10 @@
         {
           "id": "mtgt0zgepq98",
           "text": "Programme - Chat to Pierce",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-18T09:47:22.490Z"
         },
         {
           "id": "mtgt19ec0e3u",
