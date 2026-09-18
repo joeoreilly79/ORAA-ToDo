@@ -859,9 +859,10 @@
         {
           "id": "mttpge2iqq2n",
           "text": "Send note following meeting yesterday with Barry",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-18T09:47:23.807Z"
         }
       ],
       "recurrence": null,
