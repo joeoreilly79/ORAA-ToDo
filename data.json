@@ -637,9 +637,10 @@
         {
           "id": "mtr1dsqzojgb",
           "text": "Get MFA to do a facade drawing",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-18T09:47:33.910Z"
         },
         {
           "id": "mtv3pq9clpel",
