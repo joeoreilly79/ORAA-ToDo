@@ -2657,9 +2657,10 @@
         {
           "id": "mu6tn1cewfn9",
           "text": "Chat C McNulty re the door to teh terrace",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-21T05:52:38.528Z"
         }
       ]
     },
