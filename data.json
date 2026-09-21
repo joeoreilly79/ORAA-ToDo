@@ -2911,6 +2911,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "muauew73p1g5p",
+      "text": "Broadband - get onto Open Eir",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-21T06:07:05.343Z",
+      "project": "Personal",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
