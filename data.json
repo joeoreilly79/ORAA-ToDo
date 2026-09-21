@@ -2930,7 +2930,15 @@
       "priority": 5,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "muazsd9t2aua",
+          "text": "send email to open air",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
