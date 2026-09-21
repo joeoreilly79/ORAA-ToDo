@@ -2899,6 +2899,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "muau3zrr2cx2l",
+      "text": "vodafone phone contract",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-21T05:58:36.759Z",
+      "project": "Personal",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
