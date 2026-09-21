@@ -2340,9 +2340,10 @@
         {
           "id": "mtck84zgee97",
           "text": "follow up with Marcus",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-21T06:15:03.569Z"
         }
       ]
     },
