@@ -2934,9 +2934,10 @@
         {
           "id": "muazsd9t2aua",
           "text": "send email to open air",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-21T08:37:39.244Z"
         }
       ]
     }
