@@ -665,6 +665,20 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-09-17T13:26:05.190Z"
+        },
+        {
+          "id": "muatk9vtoleg",
+          "text": "Chat TC re planning meeting - do we need a run through",
+          "done": false,
+          "priority": 5,
+          "due": null
+        },
+        {
+          "id": "muatkxywixl2",
+          "text": "Cancel the Jamestown call - get RS to host",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
