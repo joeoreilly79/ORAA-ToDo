@@ -885,6 +885,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mub0vscfc9lq",
+          "text": "Ask Pierce for invoices from the various subbies",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
