@@ -2958,6 +2958,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mub0tnbvat43",
+          "text": "Get LOI for Smithcon - RDJ",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     }
