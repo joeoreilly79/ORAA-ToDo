@@ -436,9 +436,10 @@
         {
           "id": "muc98yqi11tt",
           "text": "CANCEL/CHANGE meeting tomorrow - chat to Ronan",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T11:14:14.681Z"
         }
       ],
       "recurrence": null,
