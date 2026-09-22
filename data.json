@@ -676,9 +676,10 @@
         {
           "id": "muatk9vtoleg",
           "text": "Chat TC re planning meeting - do we need a run through",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T10:02:20.747Z"
         },
         {
           "id": "muatkxywixl2",
