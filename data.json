@@ -2274,9 +2274,10 @@
         {
           "id": "mud66fgw3q8d",
           "text": "Shaune Doody",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T21:12:00.824Z"
         }
       ]
     },
