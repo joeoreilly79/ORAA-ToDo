@@ -2264,9 +2264,10 @@
         {
           "id": "mucxpkiaihwd",
           "text": "Tom Callahan Metlab",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T17:14:57.476Z"
         }
       ]
     },
