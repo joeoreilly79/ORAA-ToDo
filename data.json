@@ -2143,9 +2143,10 @@
         {
           "id": "mu835py2gyls",
           "text": "damien mcardle",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T17:20:24.676Z"
         },
         {
           "id": "mu835xgw9igm",
