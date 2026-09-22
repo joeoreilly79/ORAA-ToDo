@@ -2035,9 +2035,10 @@
         {
           "id": "muc9friafxsj",
           "text": "Let P Hotgan know about teh \\SDCC meeting",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T06:01:22.724Z"
         }
       ]
     },
