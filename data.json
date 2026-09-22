@@ -2249,9 +2249,10 @@
         {
           "id": "mu83rlstha55",
           "text": "paul truley",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T17:16:34.476Z"
         },
         {
           "id": "mub10mb3jtjc",
