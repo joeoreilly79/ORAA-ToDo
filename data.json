@@ -2157,9 +2157,10 @@
         {
           "id": "mu837ac07tir",
           "text": "richard osbourn",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T17:14:42.130Z"
         },
         {
           "id": "mu83986675wv",
