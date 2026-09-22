@@ -2135,9 +2135,10 @@
         {
           "id": "mu835iezxbjk",
           "text": "peter reilly",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-22T17:14:34.888Z"
         },
         {
           "id": "mu835py2gyls",
