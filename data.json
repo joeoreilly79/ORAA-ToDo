@@ -3096,6 +3096,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "muds7lmgfw3fn",
+      "text": "BER Upgrade",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-23T07:28:44.344Z",
+      "project": "Clerys Jobs",
+      "priority": 3,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
