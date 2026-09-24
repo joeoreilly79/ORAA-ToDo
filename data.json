@@ -685,9 +685,10 @@
         {
           "id": "muatkxywixl2",
           "text": "Cancel the Jamestown call - get RS to host",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T10:48:59.483Z"
         }
       ],
       "recurrence": null,
