@@ -2205,9 +2205,10 @@
         {
           "id": "mu839jx9nzm2",
           "text": "Chris Deery",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T14:54:25.639Z"
         },
         {
           "id": "mu83d0atocag",
