@@ -751,9 +751,10 @@
         {
           "id": "muc9fcqnvfrx",
           "text": "Get OMC from KSN and send onto SDCC",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T06:40:19.812Z"
         }
       ],
       "recurrence": null,
