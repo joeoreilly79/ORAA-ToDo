@@ -3146,9 +3146,10 @@
         {
           "id": "muds826is9pk",
           "text": "Chenck in with Mark Hopkins in BER design",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T07:28:29.076Z"
         }
       ]
     },
