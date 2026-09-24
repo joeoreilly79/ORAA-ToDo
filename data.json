@@ -917,9 +917,10 @@
         {
           "id": "mub0vg4ussf1",
           "text": "Barry's invoice - review and approve",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T14:07:06.124Z"
         },
         {
           "id": "mub0vscfc9lq",
