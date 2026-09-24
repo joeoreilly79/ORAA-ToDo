@@ -2241,9 +2241,10 @@
         {
           "id": "mu83h29q2kbl",
           "text": "peter turley",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T14:54:29.983Z"
         },
         {
           "id": "mu83hjmhnb90",
