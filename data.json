@@ -2633,8 +2633,8 @@
     {
       "id": "mti8urcvyw9j5",
       "text": "Monthly expenses - toll/parking",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-24T14:07:19.407Z",
       "created": "2026-09-01T05:46:01.087Z",
       "project": "ORAA Housekeeping",
       "priority": 5,
@@ -3171,6 +3171,18 @@
       "priority": 5,
       "due": null,
       "recurrence": null,
+      "subtasks": []
+    },
+    {
+      "id": "muflw19r7pmoq",
+      "text": "Monthly expenses - toll/parking",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-24T14:07:19.407Z",
+      "project": "ORAA Housekeeping",
+      "priority": 5,
+      "due": "2026-10-07",
+      "recurrence": "monthly",
       "subtasks": []
     }
   ],
