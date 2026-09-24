@@ -3158,8 +3158,8 @@
     {
       "id": "muf74wmrtu77d",
       "text": "Get WM to review design",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-24T10:48:49.974Z",
       "created": "2026-09-24T07:14:19.059Z",
       "project": "RTB",
       "priority": 5,
