@@ -3105,9 +3105,10 @@
         {
           "id": "muci6wtx424n",
           "text": "DMC to issue PC - chat Barry",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T07:18:54.404Z"
         }
       ]
     },
