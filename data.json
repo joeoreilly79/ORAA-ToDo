@@ -798,9 +798,10 @@
         {
           "id": "mtl4glq3su3x",
           "text": "Check in with Colin",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T07:18:42.239Z"
         }
       ],
       "recurrence": null,
