@@ -1536,9 +1536,10 @@
         {
           "id": "muatsvbt71yn",
           "text": "Chat Noel G re variations",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T14:07:00.934Z"
         }
       ],
       "recurrence": null,
