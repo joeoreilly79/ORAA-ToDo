@@ -759,9 +759,10 @@
         {
           "id": "muf6o3ko9mzk",
           "text": "chat P Reilly re slab thickness",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T07:28:48.338Z"
         },
         {
           "id": "muf6of6olkrh",
