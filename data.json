@@ -768,9 +768,10 @@
         {
           "id": "muf6of6olkrh",
           "text": "give OCSC a rattle",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T12:04:31.034Z"
         }
       ],
       "recurrence": null,
