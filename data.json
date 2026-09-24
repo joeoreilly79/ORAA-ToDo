@@ -2865,9 +2865,10 @@
         {
           "id": "mtv3il1o8n48",
           "text": "Elliotts on the case - chat Dave to see if Kev be ok with this",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T07:00:57.117Z"
         }
       ]
     },
