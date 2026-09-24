@@ -796,7 +796,7 @@
       "created": "2026-08-11T14:14:44.780Z",
       "project": "Curlews",
       "priority": 3,
-      "due": "2026-08-21",
+      "due": null,
       "subtasks": [
         {
           "id": "mtl4glq3su3x",
