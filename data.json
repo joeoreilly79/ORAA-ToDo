@@ -2942,9 +2942,10 @@
         {
           "id": "muc9km5fiq63",
           "text": "check in with James - what next here",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T07:00:46.663Z"
         }
       ]
     },
