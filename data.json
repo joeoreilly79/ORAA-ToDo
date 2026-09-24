@@ -1600,9 +1600,10 @@
         {
           "id": "mu74c1f1fiqa",
           "text": "Meeting with James Foy needed",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T07:12:55.912Z"
         },
         {
           "id": "muf72zt07oj9",
