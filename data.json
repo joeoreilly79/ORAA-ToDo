@@ -2046,9 +2046,10 @@
         {
           "id": "mucl2do5cwh1",
           "text": "District Heating -need to chat to P Field on this",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-24T07:00:41.765Z"
         }
       ]
     },
