@@ -2318,16 +2318,18 @@
         {
           "id": "muha679czn01",
           "text": "Stephen Barrett",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-25T18:15:01.059Z"
         },
         {
           "id": "muha6dv08j7w",
           "text": "Rachel McKenna",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-25T18:15:02.222Z"
         }
       ]
     },
