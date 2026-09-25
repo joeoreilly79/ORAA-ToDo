@@ -925,9 +925,10 @@
         {
           "id": "mub0vscfc9lq",
           "text": "Ask Pierce for invoices from the various subbies",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-25T09:45:08.246Z"
         }
       ],
       "recurrence": null,
