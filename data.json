@@ -3100,9 +3100,10 @@
         {
           "id": "mub0t92e3hvb",
           "text": "Breffni Contract was not signed - ask them to sign it",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-26T05:00:57.150Z"
         },
         {
           "id": "mub0tnbvat43",
