@@ -3129,9 +3129,10 @@
         {
           "id": "mub0tnbvat43",
           "text": "Get LOI for Smithcon - RDJ",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-28T08:25:50.762Z"
         },
         {
           "id": "mub0ujdn6dfj",
