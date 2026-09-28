@@ -3239,8 +3239,8 @@
     {
       "id": "mulb5wj7ktwfi",
       "text": "C Class B2 service",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-09-28T15:02:34.482Z",
       "created": "2026-09-28T13:53:41.107Z",
       "project": "Personal",
       "priority": 5,
