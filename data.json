@@ -2882,9 +2882,10 @@
         {
           "id": "mukzeh84shz4",
           "text": "Need to make a call on Techrete",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-29T07:55:10.791Z"
         }
       ]
     },
