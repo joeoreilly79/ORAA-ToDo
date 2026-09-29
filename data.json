@@ -3247,6 +3247,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mumdrzeo79k8b",
+      "text": "Smithcon domestic subbies",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-09-29T07:54:36.672Z",
+      "project": "Sorrento",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
