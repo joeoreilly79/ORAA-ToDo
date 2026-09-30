@@ -429,9 +429,10 @@
         {
           "id": "mu5ajbvwvaxr",
           "text": "Chat Shaun re the site investigation",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-09-30T04:52:23.057Z"
         },
         {
           "id": "muc98yqi11tt",
