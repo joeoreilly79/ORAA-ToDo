@@ -533,9 +533,10 @@
         {
           "id": "munmq6341lkt",
           "text": "Car Barn numbers need to go to SDCC today",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-01T08:26:41.118Z"
         },
         {
           "id": "munmsmelo6wv",
