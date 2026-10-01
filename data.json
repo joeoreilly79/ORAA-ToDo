@@ -1404,9 +1404,10 @@
         {
           "id": "msyhke7fz0t9",
           "text": "WE need a workshop on costs and details with TC",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-01T08:27:36.168Z"
         },
         {
           "id": "mt2ib3zft5qo",
