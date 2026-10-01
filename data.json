@@ -445,9 +445,10 @@
         {
           "id": "muo5imx9122o",
           "text": "**Get the team to review and have ready to rock for next**",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-01T08:26:37.458Z"
         }
       ],
       "recurrence": null,
