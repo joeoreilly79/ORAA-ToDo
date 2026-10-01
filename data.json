@@ -1465,9 +1465,10 @@
         {
           "id": "mukzbkoo8izb",
           "text": "Need a chat with Willie D",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-01T08:27:39.293Z"
         }
       ],
       "recurrence": null,
