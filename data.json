@@ -2988,9 +2988,10 @@
         {
           "id": "munms9qzvprl",
           "text": "Give Fergal a rattle",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-02T05:58:38.943Z"
         }
       ]
     },
