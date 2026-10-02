@@ -2964,6 +2964,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-10-02T05:58:38.943Z"
+        },
+        {
+          "id": "muqkeivohiz3",
+          "text": "Review Costs from MMD",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
