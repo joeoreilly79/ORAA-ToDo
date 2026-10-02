@@ -3092,9 +3092,10 @@
         {
           "id": "mu41rk1323uu",
           "text": "Reach out to DCC and have a chat re the old contributions",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-02T06:34:00.038Z"
         },
         {
           "id": "muql7twjpz74",
