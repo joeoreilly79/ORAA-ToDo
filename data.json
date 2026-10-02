@@ -541,9 +541,10 @@
         {
           "id": "munmsmelo6wv",
           "text": "Chat P Reilly re full cost plan",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-02T05:58:37.114Z"
         }
       ],
       "recurrence": null,
