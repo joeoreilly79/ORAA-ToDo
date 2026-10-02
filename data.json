@@ -2239,13 +2239,6 @@
           "completedAt": "2026-09-22T17:14:42.130Z"
         },
         {
-          "id": "mu83986675wv",
-          "text": "Brian Conlon",
-          "done": false,
-          "priority": 3,
-          "due": null
-        },
-        {
           "id": "mu839jx9nzm2",
           "text": "Chris Deery",
           "done": true,
