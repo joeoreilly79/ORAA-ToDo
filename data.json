@@ -3180,9 +3180,10 @@
         {
           "id": "mumdt9pu7x9v",
           "text": "Smithcon domestic - chat Georgina",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-02T06:16:15.133Z"
         },
         {
           "id": "muqkie5qa5en",
