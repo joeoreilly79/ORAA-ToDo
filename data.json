@@ -2263,9 +2263,10 @@
         {
           "id": "mu83d6b6l72o",
           "text": "kieran fay",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-04T07:07:15.836Z"
         },
         {
           "id": "mu83ei8qt5t9",
