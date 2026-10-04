@@ -2293,9 +2293,10 @@
         {
           "id": "mu83jjclrp44",
           "text": "mick o driscol",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-04T07:07:17.841Z"
         },
         {
           "id": "mu83jq0nm8vi",
