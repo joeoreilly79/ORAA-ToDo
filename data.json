@@ -449,6 +449,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-10-01T08:26:37.458Z"
+        },
+        {
+          "id": "muuuo4l5d32w",
+          "text": "Detailed programme",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
