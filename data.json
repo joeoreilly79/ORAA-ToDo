@@ -1876,9 +1876,10 @@
         {
           "id": "mul07ek5qlc9",
           "text": "need to do an update email to client & d enright",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-05T06:15:21.358Z"
         }
       ]
     },
