@@ -968,6 +968,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-09-25T09:45:08.246Z"
+        },
+        {
+          "id": "muuv5qhbs2wp",
+          "text": "Look at invoices and approve",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
