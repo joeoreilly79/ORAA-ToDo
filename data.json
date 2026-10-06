@@ -3377,6 +3377,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "muwjk2bitippm",
+      "text": "Flues, get Charles and Darrell to link in",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-10-06T10:34:06.654Z",
+      "project": "Sorrento",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
