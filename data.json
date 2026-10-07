@@ -3349,8 +3349,8 @@
     {
       "id": "munmmlh9kqk3d",
       "text": "Note to Alan Clancy",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-10-07T09:34:20.479Z",
       "created": "2026-09-30T04:50:08.061Z",
       "project": "Personal",
       "priority": 5,
