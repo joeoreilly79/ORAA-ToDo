@@ -2386,9 +2386,10 @@
         {
           "id": "muqk1eb39l83",
           "text": "do up D Mac's costs",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T05:19:51.836Z"
         },
         {
           "id": "mv4syydy7bpk",
