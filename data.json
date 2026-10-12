@@ -460,9 +460,10 @@
         {
           "id": "muuup34xqzp5",
           "text": "DD11 for Sept",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T06:26:12.331Z"
         },
         {
           "id": "muym5x062i95",
