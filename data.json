@@ -1611,6 +1611,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-09-24T14:07:00.934Z"
+        },
+        {
+          "id": "mv4t342n5lvr",
+          "text": "NGS variations - chat Chris - get consultants on the case",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
