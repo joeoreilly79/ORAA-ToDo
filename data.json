@@ -3291,9 +3291,10 @@
         {
           "id": "muqklnpaeto3",
           "text": "Nominated subbies - chat S Walsh - get him to push it with E Derby",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T05:26:01.984Z"
         }
       ]
     },
