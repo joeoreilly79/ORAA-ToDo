@@ -2691,9 +2691,10 @@
         {
           "id": "mtwj2j1hruze",
           "text": "Book car in for valet and clean",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T05:20:45.131Z"
         }
       ]
     },
