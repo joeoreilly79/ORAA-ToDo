@@ -3052,9 +3052,10 @@
         {
           "id": "muqkeivohiz3",
           "text": "Review Costs from MMD",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T05:24:50.777Z"
         }
       ]
     },
