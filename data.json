@@ -3190,8 +3190,8 @@
     {
       "id": "mu41qthp605sc",
       "text": "Planning Contributions",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-10-12T05:32:21.200Z",
       "created": "2026-09-16T11:57:55.789Z",
       "project": "Ballsbridge",
       "priority": 3,
