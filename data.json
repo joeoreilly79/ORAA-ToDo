@@ -2001,9 +2001,10 @@
         {
           "id": "muql78fe92ev",
           "text": "Meeting notes from 30th Sept",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T05:30:17.792Z"
         }
       ]
     },
