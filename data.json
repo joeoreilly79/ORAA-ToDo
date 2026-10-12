@@ -2237,9 +2237,10 @@
         {
           "id": "mtrb3ftfssyu",
           "text": "Gym equipment - chase Kevin",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T05:19:32.501Z"
         },
         {
           "id": "mu835d25gz5i",
