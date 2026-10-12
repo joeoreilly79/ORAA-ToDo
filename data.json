@@ -3437,9 +3437,10 @@
         {
           "id": "muuv0k8cka8g",
           "text": "Chat S Walsh re the GB tender",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T05:30:20.337Z"
         }
       ]
     },
