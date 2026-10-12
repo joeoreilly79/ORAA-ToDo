@@ -1709,9 +1709,10 @@
         {
           "id": "mv4t8pto4xk1",
           "text": "Get approval from DE for go ahead on Tue",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T12:44:48.399Z"
         }
       ],
       "recurrence": null,
