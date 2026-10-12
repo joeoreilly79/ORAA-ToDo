@@ -988,9 +988,10 @@
         {
           "id": "muuv5qhbs2wp",
           "text": "Look at invoices and approve",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-12T06:26:25.148Z"
         }
       ],
       "recurrence": null,
