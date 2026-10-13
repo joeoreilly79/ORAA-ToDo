@@ -3471,9 +3471,10 @@
         {
           "id": "mv4td407vmyn",
           "text": "Chat SW trhis morning - where are we at?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-13T05:58:35.221Z"
         }
       ]
     },
