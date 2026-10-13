@@ -2022,8 +2022,8 @@
     {
       "id": "mt13tmlifdgis",
       "text": "Ballsbridge Planning Meetings",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-10-13T06:05:57.834Z",
       "created": "2026-08-20T05:53:05.190Z",
       "project": "Ballsbridge",
       "priority": 4,
