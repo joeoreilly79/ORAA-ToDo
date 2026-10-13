@@ -824,9 +824,10 @@
         {
           "id": "mv4t5u8wg7d8",
           "text": "Give Eoin & Stephen a chaser",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-13T06:19:14.504Z"
         }
       ],
       "recurrence": null,
