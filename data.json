@@ -1625,9 +1625,10 @@
         {
           "id": "mv4t342n5lvr",
           "text": "NGS variations - chat Chris - get consultants on the case",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-13T05:59:02.515Z"
         }
       ],
       "recurrence": null,
