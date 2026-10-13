@@ -2420,9 +2420,10 @@
         {
           "id": "mv4szpwskd1m",
           "text": "Stephen line marking",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-13T05:57:24.696Z"
         },
         {
           "id": "mv4t038ntapy",
