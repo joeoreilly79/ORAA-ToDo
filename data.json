@@ -477,9 +477,10 @@
         {
           "id": "mv85lh7w0e5g",
           "text": "Cairn MSA - Swal now in our lands",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-15T10:20:10.798Z"
         },
         {
           "id": "mv85sqjp0s14",
