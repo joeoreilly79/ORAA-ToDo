@@ -2763,9 +2763,10 @@
         {
           "id": "mv4t0ha8rhat",
           "text": "Order fuel tank shield",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-15T06:20:36.586Z"
         }
       ]
     },
