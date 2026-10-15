@@ -491,9 +491,10 @@
         {
           "id": "mv95twqzqolz",
           "text": "Get Fergal to issue the Health Check for the current Jamestown",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-15T10:20:05.209Z"
         }
       ],
       "recurrence": null,
