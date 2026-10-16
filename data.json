@@ -768,6 +768,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-09-24T10:48:59.483Z"
+        },
+        {
+          "id": "mvakrxwqt4sw",
+          "text": "MFA Fees",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ],
       "recurrence": null,
