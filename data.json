@@ -3607,6 +3607,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "mvaxf4prwn04s",
+      "text": "Design Team Invoices",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-10-16T12:10:57.567Z",
+      "project": "Sorrento",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
