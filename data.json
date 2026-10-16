@@ -2142,9 +2142,10 @@
         {
           "id": "mv4t4dyk9gw0",
           "text": "Chat Keith re the next steps",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-16T06:16:48.605Z"
         }
       ]
     },
