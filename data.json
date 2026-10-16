@@ -503,6 +503,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mvaro225zb43",
+          "text": "Look at CCA stuff and put a plan in place with Karen",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
