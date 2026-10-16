@@ -1665,9 +1665,10 @@
         {
           "id": "mv69tom6nol3",
           "text": "OCSC - next steps - call today at 12.00",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-16T06:16:45.191Z"
         }
       ],
       "recurrence": null,
