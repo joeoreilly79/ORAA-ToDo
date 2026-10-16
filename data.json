@@ -772,9 +772,10 @@
         {
           "id": "mvakrxwqt4sw",
           "text": "MFA Fees",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-16T06:29:00.178Z"
         }
       ],
       "recurrence": null,
