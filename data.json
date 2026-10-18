@@ -2499,9 +2499,10 @@
         {
           "id": "mv4t038ntapy",
           "text": "chase non-responders",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-18T19:05:05.247Z"
         }
       ]
     },
