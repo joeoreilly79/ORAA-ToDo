@@ -1046,13 +1046,6 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-10-12T06:26:25.148Z"
-        },
-        {
-          "id": "mvetiyj5asu6",
-          "text": "SEnd note to Colin an dlink in RO - get drawings",
-          "done": false,
-          "priority": 4,
-          "due": null
         }
       ],
       "recurrence": null,
