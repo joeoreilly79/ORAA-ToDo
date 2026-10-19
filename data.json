@@ -3635,6 +3635,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-10-19T05:32:21.333Z"
+        },
+        {
+          "id": "mvetjjgp3asa",
+          "text": "Get RO to draft a note and outline the scope",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ]
     },
