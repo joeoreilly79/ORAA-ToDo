@@ -2503,6 +2503,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-10-18T19:05:05.247Z"
+        },
+        {
+          "id": "mvesxny60qqu",
+          "text": "Line Marker sponsorship",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
