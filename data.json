@@ -3381,8 +3381,8 @@
     {
       "id": "muau3zrr2cx2l",
       "text": "vodafone phone contract",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-10-19T12:56:07.564Z",
       "created": "2026-09-21T05:58:36.759Z",
       "project": "Personal",
       "priority": 5,
