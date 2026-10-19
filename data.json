@@ -3624,9 +3624,10 @@
         {
           "id": "mv6a3lmb74nw",
           "text": "RO inspection on 14th - confirm RO is availiable",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-19T05:32:21.333Z"
         }
       ]
     },
