@@ -1075,9 +1075,10 @@
         {
           "id": "mvetkcu871ji",
           "text": "Sent Colin a note and get RO drawings",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-19T11:48:01.381Z"
         }
       ],
       "recurrence": null,
