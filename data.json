@@ -3679,6 +3679,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mvf4rq8914z9h",
+      "text": "Pool upgrade",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-10-19T10:47:47.337Z",
+      "project": "TH Projects",
+      "priority": 3,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
