@@ -2538,9 +2538,10 @@
         {
           "id": "mvesxny60qqu",
           "text": "Line Marker sponsorship",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-19T12:57:03.185Z"
         },
         {
           "id": "mvetqtxo1d3u",
