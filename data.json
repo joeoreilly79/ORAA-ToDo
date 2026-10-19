@@ -3695,9 +3695,10 @@
         {
           "id": "mvf6xjn5o4ek",
           "text": "Chase the pool guy.",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-19T11:48:19.741Z"
         }
       ]
     }
