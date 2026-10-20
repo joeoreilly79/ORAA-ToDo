@@ -1650,9 +1650,10 @@
         {
           "id": "mveuma1scsoz",
           "text": "Call Andy Worsnop re the Tree Bond",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-20T05:58:35.300Z"
         }
       ],
       "recurrence": null,
