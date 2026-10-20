@@ -3504,9 +3504,10 @@
         {
           "id": "muqkie5qa5en",
           "text": "Give Green F ac the green light but note full appointment is required",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-20T10:01:21.713Z"
         },
         {
           "id": "muqklnpaeto3",
