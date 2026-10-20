@@ -1672,9 +1672,10 @@
         {
           "id": "mvg9vxoeyx9u",
           "text": "Cann Danny - Bond man",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-20T09:58:51.475Z"
         }
       ],
       "recurrence": null,
