@@ -500,9 +500,10 @@
         {
           "id": "mvakgwnpr8uh",
           "text": "Chat to Darragh Elliott",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-20T10:27:43.785Z"
         },
         {
           "id": "mvaro225zb43",
