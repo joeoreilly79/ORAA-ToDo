@@ -3488,9 +3488,10 @@
         {
           "id": "mub0ujdn6dfj",
           "text": "Norm appointment - was never signed",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-20T10:01:19.826Z"
         },
         {
           "id": "mumdt9pu7x9v",
