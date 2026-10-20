@@ -3762,6 +3762,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mvgapf9n4abjz",
+      "text": "VAT Return",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-10-20T06:21:43.691Z",
+      "project": "ORAA Housekeeping",
+      "priority": 5,
+      "due": "2026-10-15",
+      "recurrence": "monthly",
+      "subtasks": []
     }
   ],
   "projects": [
