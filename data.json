@@ -3717,6 +3717,18 @@
           "completedAt": "2026-10-19T11:48:19.741Z"
         }
       ]
+    },
+    {
+      "id": "mvgae9ene3c29",
+      "text": "Check in with Paul",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-10-20T06:13:02.879Z",
+      "project": "Curlews",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
