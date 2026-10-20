@@ -613,6 +613,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-10-02T05:58:37.114Z"
+        },
+        {
+          "id": "mvg9tzk5mgfp",
+          "text": "Look at the car parking costs - analysis needed for Lapithus",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
