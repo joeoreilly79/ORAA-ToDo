@@ -3090,9 +3090,10 @@
         {
           "id": "mv4tdjrbc9wl",
           "text": "Review email from BHSM",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-22T07:20:21.474Z"
         },
         {
           "id": "mv4terl1vlbp",
