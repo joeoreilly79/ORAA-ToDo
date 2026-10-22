@@ -2592,9 +2592,10 @@
         {
           "id": "mvetqtxo1d3u",
           "text": "Feedback from players",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-22T07:09:48.142Z"
         }
       ]
     },
