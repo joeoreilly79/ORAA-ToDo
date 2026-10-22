@@ -3775,8 +3775,8 @@
     {
       "id": "mvgaj2o0dt0t0",
       "text": "Check the time of car service",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-10-22T07:19:54.576Z",
       "created": "2026-10-20T06:16:47.424Z",
       "project": "Personal",
       "priority": 5,
