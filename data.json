@@ -3098,9 +3098,10 @@
         {
           "id": "mv4terl1vlbp",
           "text": "Contract for GB?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-22T07:20:22.890Z"
         },
         {
           "id": "mv8aduc9tcyx",
@@ -3112,9 +3113,10 @@
         {
           "id": "mv99xx12u19p",
           "text": "design fees budget - update?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-22T07:20:33.303Z"
         }
       ]
     },
