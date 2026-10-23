@@ -2907,9 +2907,10 @@
         {
           "id": "mvet9tnbvczg",
           "text": "Book Car in with Shane",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-23T05:58:54.318Z"
         }
       ]
     },
