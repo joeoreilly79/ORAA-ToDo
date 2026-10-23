@@ -516,9 +516,10 @@
         {
           "id": "mvarojf6gh9x",
           "text": "Weekly call on alternative Wed",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-23T05:59:08.237Z"
         },
         {
           "id": "mvhshiknw4b4",
