@@ -1605,9 +1605,10 @@
         {
           "id": "mvgagklmol18",
           "text": "Call Charles",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-23T05:58:32.606Z"
         }
       ],
       "recurrence": null,
