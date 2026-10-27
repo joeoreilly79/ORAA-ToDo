@@ -2919,6 +2919,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-10-23T05:58:54.318Z"
+        },
+        {
+          "id": "mvqb5yh8cgyd",
+          "text": "Check in with Shane",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ]
     },
