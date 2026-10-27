@@ -3778,8 +3778,8 @@
     {
       "id": "mvaxf4prwn04s",
       "text": "Design Team Invoices",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-10-27T09:05:02.776Z",
       "created": "2026-10-16T12:10:57.567Z",
       "project": "Sorrento",
       "priority": 5,
