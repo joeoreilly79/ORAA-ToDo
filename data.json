@@ -2496,13 +2496,6 @@
           "completedAt": "2026-10-04T07:07:15.836Z"
         },
         {
-          "id": "mu83ei8qt5t9",
-          "text": "Rory Flynn",
-          "done": false,
-          "priority": 3,
-          "due": null
-        },
-        {
           "id": "mu83h29q2kbl",
           "text": "peter turley",
           "done": true,
