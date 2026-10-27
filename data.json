@@ -3872,9 +3872,10 @@
         {
           "id": "mvqcj2xqzpdi",
           "text": "Make arrangements for Thursday",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-27T11:17:05.727Z"
         }
       ]
     }
