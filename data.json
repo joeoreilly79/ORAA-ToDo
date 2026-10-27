@@ -3577,7 +3577,7 @@
       "completedAt": null,
       "created": "2026-09-22T10:00:01.782Z",
       "project": "Nursing Homes",
-      "priority": 3,
+      "priority": 1,
       "due": null,
       "recurrence": null,
       "subtasks": [
