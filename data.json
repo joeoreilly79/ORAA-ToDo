@@ -3827,6 +3827,18 @@
       "due": "2026-11-07",
       "recurrence": "monthly",
       "subtasks": []
+    },
+    {
+      "id": "mvqbthawn5dg6",
+      "text": "Chat Dave Smith re the Contract",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-10-27T06:50:34.328Z",
+      "project": "Sorrento",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
