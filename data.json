@@ -3859,7 +3859,15 @@
       "priority": 5,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mvqcj2xqzpdi",
+          "text": "Make arrangements for Thursday",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
