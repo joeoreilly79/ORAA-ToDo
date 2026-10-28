@@ -564,6 +564,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mvs8t62849d0",
+          "text": "acoustic stuff - where arewe at",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
