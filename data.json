@@ -548,6 +548,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mvrtdxbh06n0",
+          "text": "3DDB fee for including Cairn lands?",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
