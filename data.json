@@ -509,9 +509,10 @@
         {
           "id": "mvaro225zb43",
           "text": "Look at CCA stuff and put a plan in place with Karen",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-28T11:14:12.872Z"
         },
         {
           "id": "mvarojf6gh9x",
