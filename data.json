@@ -454,9 +454,10 @@
         {
           "id": "muuuo4l5d32w",
           "text": "Detailed programme",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-28T11:43:33.656Z"
         },
         {
           "id": "muuup34xqzp5",
