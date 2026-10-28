@@ -555,6 +555,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mvrtg5mt7jnj",
+          "text": "Review the DT fee schedule - how are we looking?",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
