@@ -3924,6 +3924,18 @@
           "completedAt": "2026-10-27T11:17:05.727Z"
         }
       ]
+    },
+    {
+      "id": "mvtcelurk7r8t",
+      "text": "Call Burnside management company re drainage",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-10-29T09:30:18.535Z",
+      "project": "Personal",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
@@ -3947,11 +3959,6 @@
     "Raheny"
   ],
   "inbox": [
-    {
-      "id": "mvsezc1ikpmy",
-      "text": "Call Burnside management company re drainage",
-      "created": "2026-10-28T17:54:38.646Z"
-    },
     {
       "id": "mvs4tfe8vq2u",
       "text": "Just a little test task 1 2 3 add to home projects",
