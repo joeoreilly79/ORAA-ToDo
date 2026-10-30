@@ -2975,9 +2975,10 @@
         {
           "id": "mvqb5yh8cgyd",
           "text": "Check in with Shane",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-10-30T09:54:05.354Z"
         }
       ]
     },
