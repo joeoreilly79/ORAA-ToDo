@@ -533,16 +533,18 @@
         {
           "id": "mvhshsourjuv",
           "text": "SI review",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-02T06:50:49.894Z"
         },
         {
           "id": "mvqb3ec4y2qf",
           "text": "Notes for Last weeks meeting",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-02T06:50:49.939Z"
         },
         {
           "id": "mvqno38j1htb",
