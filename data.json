@@ -2671,6 +2671,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mvywfn7a8nja",
+          "text": "CC slots - chat to teh coaches and cancel the slots",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
