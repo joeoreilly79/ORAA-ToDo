@@ -3169,9 +3169,10 @@
         {
           "id": "mvqldeqoqzrk",
           "text": "Send into to David Molloy",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-02T07:00:37.968Z"
         }
       ]
     },
