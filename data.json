@@ -3161,9 +3161,10 @@
         {
           "id": "mvqld24zb2mu",
           "text": "get CMP off Smithcon",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-02T07:00:28.752Z"
         },
         {
           "id": "mvqldeqoqzrk",
