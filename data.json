@@ -1812,9 +1812,10 @@
         {
           "id": "mvetfzx54ypu",
           "text": "Chat Noel G",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-02T07:23:33.185Z"
         },
         {
           "id": "mvqc10n5lwbg",
