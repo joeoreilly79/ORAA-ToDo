@@ -3976,9 +3976,10 @@
         {
           "id": "mvumpwhkl8l3",
           "text": "Speak to Georgina - Smithcon Red lines",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-03T12:42:09.973Z"
         }
       ]
     },
