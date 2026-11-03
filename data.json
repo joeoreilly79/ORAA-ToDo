@@ -3813,9 +3813,10 @@
         {
           "id": "mvyx8etsrlyh",
           "text": "Chat GB re the Tea rooms for canteen",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-03T07:23:29.978Z"
         }
       ]
     },
