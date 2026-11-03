@@ -4007,8 +4007,8 @@
     {
       "id": "mvywziac8w0dj",
       "text": "email to Edge re the glazing",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-03T07:18:18.393Z",
       "created": "2026-11-02T07:05:16.884Z",
       "project": "Sorrento",
       "priority": 5,
