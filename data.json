@@ -2685,9 +2685,10 @@
         {
           "id": "mvywfn7a8nja",
           "text": "CC slots - chat to teh coaches and cancel the slots",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-03T12:41:38.917Z"
         }
       ]
     },
