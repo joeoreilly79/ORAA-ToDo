@@ -4015,6 +4015,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mw0cwfzegdraw",
+      "text": "Client update email",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-11-03T07:18:33.962Z",
+      "project": "Sorrento",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
