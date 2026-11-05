@@ -526,9 +526,10 @@
         {
           "id": "mvhshiknw4b4",
           "text": "Part 5 - next steps??",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-05T14:25:07.485Z"
         },
         {
           "id": "mvhshsourjuv",
