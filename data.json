@@ -683,9 +683,10 @@
         {
           "id": "mvg9tzk5mgfp",
           "text": "Look at the car parking costs - analysis needed for Lapithus",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-05T14:29:43.845Z"
         }
       ],
       "recurrence": null,
