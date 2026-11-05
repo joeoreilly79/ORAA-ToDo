@@ -622,9 +622,10 @@
         {
           "id": "mvywic98puad",
           "text": "Updated models - chat to Alex",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-05T07:17:15.055Z"
         }
       ],
       "recurrence": null,
