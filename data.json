@@ -557,9 +557,10 @@
         {
           "id": "mvrtdxbh06n0",
           "text": "3DDB fee for including Cairn lands?",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-05T14:29:32.777Z"
         },
         {
           "id": "mvrtg5mt7jnj",
