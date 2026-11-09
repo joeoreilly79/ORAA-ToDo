@@ -3176,8 +3176,8 @@
     {
       "id": "mtnyxrzyd9ito",
       "text": "OCIP Insurance",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-09T06:55:39.072Z",
       "created": "2026-09-05T05:55:02.782Z",
       "project": "Sorrento",
       "priority": 4,
