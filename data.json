@@ -1824,9 +1824,10 @@
         {
           "id": "mvqc10n5lwbg",
           "text": "Chris - we need the costs on a single spreadsheet",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-09T06:33:04.206Z"
         }
       ],
       "recurrence": null,
