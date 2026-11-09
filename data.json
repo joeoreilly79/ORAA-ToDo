@@ -1828,6 +1828,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-11-09T06:33:04.206Z"
+        },
+        {
+          "id": "mw8vxlrzvd2o",
+          "text": "Call with FF & Xinjia re the funding",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
