@@ -1171,9 +1171,10 @@
         {
           "id": "mvgaf3ye5qqm",
           "text": "Follow up with Colin - get drawings",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-09T07:14:39.761Z"
         }
       ],
       "recurrence": null,
