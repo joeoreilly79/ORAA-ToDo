@@ -2345,9 +2345,10 @@
         {
           "id": "mvqc1o5ful2x",
           "text": "Keith to speak to insuresrs re the Tree Bond",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-09T06:57:43.708Z"
         }
       ]
     },
