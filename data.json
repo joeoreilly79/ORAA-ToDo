@@ -4126,7 +4126,7 @@
       "completedAt": null,
       "created": "2026-11-09T06:54:52.250Z",
       "project": "ORAA Housekeeping",
-      "priority": 5,
+      "priority": 4,
       "due": "2026-12-15",
       "recurrence": "monthly",
       "subtasks": []
