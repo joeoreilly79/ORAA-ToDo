@@ -4128,9 +4128,10 @@
         {
           "id": "mw941zfz4e0f",
           "text": "Check in with Cavan",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-09T10:20:53.520Z"
         }
       ]
     },
