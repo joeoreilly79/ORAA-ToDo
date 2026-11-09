@@ -4068,6 +4068,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mw8wbtkq3i732",
+      "text": "Fair Deal - updated rate - check with cavan",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-11-09T06:44:33.530Z",
+      "project": "Personal",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
