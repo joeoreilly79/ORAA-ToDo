@@ -3446,9 +3446,10 @@
         {
           "id": "mv4tos1m6gig",
           "text": "Check in with Keith",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-09T07:14:25.870Z"
         }
       ]
     },
