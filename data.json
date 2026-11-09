@@ -3973,8 +3973,8 @@
     {
       "id": "mvgapf9n4abjz",
       "text": "VAT Return",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-09T06:54:45.371Z",
       "created": "2026-10-20T06:21:43.691Z",
       "project": "ORAA Housekeeping",
       "priority": 5,
@@ -4105,6 +4105,18 @@
       "priority": 5,
       "due": null,
       "recurrence": null,
+      "subtasks": []
+    },
+    {
+      "id": "mw8woxogofmft",
+      "text": "VAT Return",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-11-09T06:54:45.376Z",
+      "project": "ORAA Housekeeping",
+      "priority": 5,
+      "due": "2026-11-15",
+      "recurrence": "monthly",
       "subtasks": []
     }
   ],
