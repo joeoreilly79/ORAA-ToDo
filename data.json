@@ -4020,6 +4020,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-11-03T12:42:09.973Z"
+        },
+        {
+          "id": "mw8wqi5gjokd",
+          "text": "Send out updated LOI",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
