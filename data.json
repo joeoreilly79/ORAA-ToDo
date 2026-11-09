@@ -1628,6 +1628,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-08-31T11:52:54.495Z"
+        },
+        {
+          "id": "mw8ws1koevtx",
+          "text": "Follow up with Darren re the Team appointment and advance payment bond",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
