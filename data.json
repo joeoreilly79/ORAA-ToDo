@@ -4005,8 +4005,8 @@
     {
       "id": "mvtcelurk7r8t",
       "text": "Call Burnside management company re drainage",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-09T06:40:06.492Z",
       "created": "2026-10-29T09:30:18.535Z",
       "project": "Personal",
       "priority": 4,
