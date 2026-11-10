@@ -4162,8 +4162,8 @@
     {
       "id": "mw8wff99yq64w",
       "text": "Chat Shane McCuddy re Clare's car",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-10T14:15:46.254Z",
       "created": "2026-11-09T06:47:21.597Z",
       "project": "Personal",
       "priority": 5,
