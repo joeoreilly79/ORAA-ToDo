@@ -641,9 +641,10 @@
         {
           "id": "mw8wg5jrvmjq",
           "text": "DD for Sept",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-10T14:15:51.336Z"
         }
       ],
       "recurrence": null,
