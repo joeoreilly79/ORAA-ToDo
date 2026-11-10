@@ -572,9 +572,10 @@
         {
           "id": "mvs8t62849d0",
           "text": "acoustic stuff - where arewe at",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-10T06:50:17.280Z"
         }
       ],
       "recurrence": null,
