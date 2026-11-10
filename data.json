@@ -565,9 +565,10 @@
         {
           "id": "mvrtg5mt7jnj",
           "text": "Review the DT fee schedule - how are we looking?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-10T06:50:19.993Z"
         },
         {
           "id": "mvs8t62849d0",
