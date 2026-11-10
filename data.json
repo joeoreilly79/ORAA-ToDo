@@ -708,9 +708,10 @@
         {
           "id": "mw8wgs87m6fj",
           "text": "Chat P Reilly - how do we comapir",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-10T14:16:01.250Z"
         }
       ],
       "recurrence": null,
