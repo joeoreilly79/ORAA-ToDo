@@ -2363,9 +2363,10 @@
         {
           "id": "mw8wt8n4v50s",
           "text": "Chat TC - FF talking about selling Cedar not developing it",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-10T07:16:57.462Z"
         }
       ]
     },
