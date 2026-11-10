@@ -2747,9 +2747,10 @@
         {
           "id": "mw8w5ys5zje3",
           "text": "Minor Polo tops - chase the lads and do up a spreadsheet",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-10T14:16:25.972Z"
         },
         {
           "id": "mw8xf404waz8",
