@@ -4134,6 +4134,13 @@
           "priority": 5,
           "due": null,
           "completedAt": "2026-11-09T10:20:53.520Z"
+        },
+        {
+          "id": "mwac2pn3wf3l",
+          "text": "Decision making process - get Claude to review - can we do it ourselves",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
