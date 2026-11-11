@@ -4197,6 +4197,18 @@
       "due": "2026-12-15",
       "recurrence": "monthly",
       "subtasks": []
+    },
+    {
+      "id": "mwcnhpy4ndg7l",
+      "text": "Personal note check pension policies",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-11-11T21:48:16.924Z",
+      "project": "Personal",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
@@ -4220,11 +4232,6 @@
     "Raheny"
   ],
   "inbox": [
-    {
-      "id": "mwcnh03sm7f1",
-      "text": "Personal note check pension policies",
-      "created": "2026-11-11T21:47:43.432Z"
-    },
     {
       "id": "mwc7uhy0qxab",
       "text": "On Jamestown find out from Irish water how big the lorry is",
