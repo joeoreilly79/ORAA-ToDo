@@ -4209,6 +4209,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mwcnht9n53z00",
+      "text": "On Jamestown find out from Irish water how big the lorry is",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-11-11T21:48:21.228Z",
+      "project": "Jamestown & Belgard",
+      "priority": 3,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
@@ -4231,11 +4243,5 @@
     "Lapitus",
     "Raheny"
   ],
-  "inbox": [
-    {
-      "id": "mwc7uhy0qxab",
-      "text": "On Jamestown find out from Irish water how big the lorry is",
-      "created": "2026-11-11T14:30:19.224Z"
-    }
-  ]
+  "inbox": []
 }
