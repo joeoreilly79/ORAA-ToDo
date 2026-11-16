@@ -4069,9 +4069,10 @@
         {
           "id": "mw8wqi5gjokd",
           "text": "Send out updated LOI",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-16T15:55:07.697Z"
         }
       ]
     },
