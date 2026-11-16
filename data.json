@@ -2053,9 +2053,10 @@
         {
           "id": "mvetkuakn1w4",
           "text": "RO to issue his summary",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-16T15:55:58.606Z"
         }
       ]
     },
