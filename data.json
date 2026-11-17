@@ -2458,9 +2458,10 @@
         {
           "id": "mtv3g0t7xhgp",
           "text": "Actions from Meeting - GET THE TRACKER UP AND RUNNING AGAIN",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-17T15:14:26.562Z"
         },
         {
           "id": "mtv4s610tf3u",
