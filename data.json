@@ -4260,6 +4260,18 @@
       "due": null,
       "recurrence": null,
       "subtasks": []
+    },
+    {
+      "id": "mwkd8gcu5bofi",
+      "text": "Norm hours, invoices, appointment",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-11-17T07:23:17.838Z",
+      "project": "Sorrento",
+      "priority": 5,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
