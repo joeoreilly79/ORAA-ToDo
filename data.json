@@ -4094,8 +4094,8 @@
     {
       "id": "mvw2gk5qmxfsd",
       "text": "Burnside RTB registration",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-17T07:04:19.183Z",
       "created": "2026-10-31T07:15:12.014Z",
       "project": "Personal",
       "priority": 4,
