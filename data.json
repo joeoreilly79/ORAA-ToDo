@@ -4242,8 +4242,8 @@
     {
       "id": "mwcnht9n53z00",
       "text": "On Jamestown find out from Irish water how big the lorry is",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-17T15:26:54.961Z",
       "created": "2026-11-11T21:48:21.228Z",
       "project": "Jamestown & Belgard",
       "priority": 5,
