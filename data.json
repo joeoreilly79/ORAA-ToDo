@@ -2711,9 +2711,10 @@
         {
           "id": "mv4syydy7bpk",
           "text": "Gym Equipment chat Pamela re the grant",
-          "done": false,
+          "done": true,
           "priority": 4,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-18T08:03:09.354Z"
         },
         {
           "id": "mv4szpwskd1m",
