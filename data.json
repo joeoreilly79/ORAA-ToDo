@@ -584,6 +584,13 @@
           "done": false,
           "priority": 5,
           "due": null
+        },
+        {
+          "id": "mwn5rlqg39in",
+          "text": "ask UE to make contact again with DCC planning",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ],
       "recurrence": null,
