@@ -4019,6 +4019,13 @@
           "done": false,
           "priority": 4,
           "due": null
+        },
+        {
+          "id": "mwn5xd3oh59o",
+          "text": "Ceiling height",
+          "done": false,
+          "priority": 5,
+          "due": null
         }
       ]
     },
