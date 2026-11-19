@@ -3066,6 +3066,13 @@
           "priority": 4,
           "due": null,
           "completedAt": "2026-08-31T05:43:28.527Z"
+        },
+        {
+          "id": "mwn66bxrbzkf",
+          "text": "Pull various emails and reports into Clanus and get a report in advance of travelling",
+          "done": false,
+          "priority": 4,
+          "due": null
         }
       ]
     },
