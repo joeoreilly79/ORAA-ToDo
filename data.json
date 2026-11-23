@@ -3413,8 +3413,8 @@
     {
       "id": "mtqsf3z0au0ob",
       "text": "Design Team & Smithcon Monday Call actions",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-23T06:55:15.329Z",
       "created": "2026-09-07T05:15:52.668Z",
       "project": "Sorrento",
       "priority": 4,
