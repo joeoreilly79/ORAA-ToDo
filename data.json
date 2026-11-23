@@ -695,9 +695,10 @@
         {
           "id": "mwswo30nwbii",
           "text": "Model review - one more Lugus pass - shoulkd we discuss with Kev",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-23T18:21:22.547Z"
         }
       ],
       "recurrence": null,
