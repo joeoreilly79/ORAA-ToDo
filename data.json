@@ -4456,6 +4456,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "mwsy37ayrqsp9",
+      "text": "KCC - re-price",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-11-23T07:29:14.170Z",
+      "project": "Sorrento",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
