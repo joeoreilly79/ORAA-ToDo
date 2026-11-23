@@ -4151,8 +4151,8 @@
     {
       "id": "mvqbthawn5dg6",
       "text": "Chat Dave Smith re the Contract",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-23T06:55:10.966Z",
       "created": "2026-10-27T06:50:34.328Z",
       "project": "Sorrento",
       "priority": 4,
