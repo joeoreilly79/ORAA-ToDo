@@ -602,9 +602,10 @@
         {
           "id": "mwn5uxgko349",
           "text": "Chat Brian McM re his time lines",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-23T06:48:34.432Z"
         },
         {
           "id": "mwn5vg5ixs13",
@@ -617,9 +618,10 @@
         {
           "id": "mwswmonbxjbo",
           "text": "SI - let the tenants know",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-23T06:48:34.488Z"
         }
       ],
       "recurrence": null,
