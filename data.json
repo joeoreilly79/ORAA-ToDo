@@ -2343,9 +2343,10 @@
         {
           "id": "mwsx2hti02u7",
           "text": "Confirm meeting for site meeting - Wed afternoon",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-23T12:36:05.555Z"
         }
       ]
     },
