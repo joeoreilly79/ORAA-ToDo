@@ -4429,6 +4429,18 @@
           "due": null
         }
       ]
+    },
+    {
+      "id": "mwsxlzd505oci",
+      "text": "Contract & LOI",
+      "done": false,
+      "completedAt": null,
+      "created": "2026-11-23T07:15:50.729Z",
+      "project": "RTB",
+      "priority": 4,
+      "due": null,
+      "recurrence": null,
+      "subtasks": []
     }
   ],
   "projects": [
