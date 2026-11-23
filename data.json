@@ -4440,7 +4440,15 @@
       "priority": 4,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mwsxmenwuq5n",
+          "text": "Get the LOI over the line today",
+          "done": false,
+          "priority": 5,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
