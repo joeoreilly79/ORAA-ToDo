@@ -4453,9 +4453,10 @@
         {
           "id": "mwsxn5jo0lpn",
           "text": "Keep the OCIP moving",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-23T14:42:54.282Z"
         }
       ]
     },
