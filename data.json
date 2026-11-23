@@ -4422,7 +4422,8 @@
           "text": "Send on soil reports",
           "done": false,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": null
         },
         {
           "id": "mwsx05k3edl5",
