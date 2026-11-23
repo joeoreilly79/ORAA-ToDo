@@ -609,9 +609,10 @@
         {
           "id": "mwn5vg5ixs13",
           "text": "Look at NRB scope - who is designing the road build-ups",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-23T06:48:30.089Z"
         },
         {
           "id": "mwswmonbxjbo",
