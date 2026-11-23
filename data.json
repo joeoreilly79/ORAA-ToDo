@@ -4363,8 +4363,8 @@
     {
       "id": "mwkd8gcu5bofi",
       "text": "Norm hours, invoices, appointment",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-23T10:43:15.749Z",
       "created": "2026-11-17T07:23:17.838Z",
       "project": "Sorrento",
       "priority": 5,
