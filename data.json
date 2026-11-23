@@ -4420,10 +4420,10 @@
         {
           "id": "mwswzxdpag7z",
           "text": "Send on soil reports",
-          "done": false,
+          "done": true,
           "priority": 5,
           "due": null,
-          "completedAt": null
+          "completedAt": "2026-11-23T18:21:34.190Z"
         },
         {
           "id": "mwsx05k3edl5",
