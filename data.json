@@ -4354,8 +4354,8 @@
     {
       "id": "mwjkjeed05uof",
       "text": "Invoices for Oct ober",
-      "done": false,
-      "completedAt": null,
+      "done": true,
+      "completedAt": "2026-11-24T07:19:01.918Z",
       "created": "2026-11-16T17:59:59.653Z",
       "project": "Sorrento",
       "priority": 5,
