@@ -4421,9 +4421,10 @@
         {
           "id": "mwswwmruos4b",
           "text": "Get lift pit dimensions off Giles",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-26T12:00:00.730Z"
         },
         {
           "id": "mwswzxdpag7z",
