@@ -3026,9 +3026,10 @@
         {
           "id": "mtck8ltakt2b",
           "text": "Intro GB to Building Team - whats happening",
-          "done": false,
+          "done": true,
           "priority": 3,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-26T12:05:04.337Z"
         }
       ]
     },
