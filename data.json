@@ -2338,9 +2338,10 @@
         {
           "id": "mwsx21y85slh",
           "text": "Were minutes issued from last meeting?",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-26T12:06:12.455Z"
         },
         {
           "id": "mwsx2hti02u7",
