@@ -4486,9 +4486,10 @@
         {
           "id": "mwsy40xurpko",
           "text": "Chat to Darrell, Paul, Stephen, David Smith",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-26T12:02:17.914Z"
         }
       ]
     }
