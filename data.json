@@ -4512,7 +4512,15 @@
       "priority": 3,
       "due": null,
       "recurrence": null,
-      "subtasks": []
+      "subtasks": [
+        {
+          "id": "mwxic3o46dvj",
+          "text": "Issue SMM 01 25.11.26",
+          "done": false,
+          "priority": 4,
+          "due": null
+        }
+      ]
     }
   ],
   "projects": [
