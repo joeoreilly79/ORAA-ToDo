@@ -1712,9 +1712,10 @@
         {
           "id": "mw8ws1koevtx",
           "text": "Follow up with Darren re the Team appointment and advance payment bond",
-          "done": false,
+          "done": true,
           "priority": 5,
-          "due": null
+          "due": null,
+          "completedAt": "2026-11-26T10:43:38.793Z"
         }
       ],
       "recurrence": null,
