@@ -581,10 +581,10 @@
         {
           "id": "mwac9lq6gy8q",
           "text": "Jamestown meeting notes tracker",
-          "done": true,
+          "done": false,
           "priority": 5,
           "due": null,
-          "completedAt": "2026-11-27T06:25:01.500Z"
+          "completedAt": null
         },
         {
           "id": "mwn5rlqg39in",
